@@ -1,14 +1,10 @@
-pages:
-  stage: deploy
-  script:
-    # Creates a hidden folder, copies all files into it, then renames it to 'public'
-    - mkdir .public
-    - cp -r * .public
-    - mv .public public
-  artifacts:
-    paths:
-      # GitLab Pages requires the artifact to be specifically named 'public'
-      - public
+# The Docker image that will be used to build your app
+image: alpine:latest
+create-pages:
+  pages:
+    # The folder that contains the files to be exposed at the Page URL
+    publish: public
   rules:
-    # Only run this job when pushing to the default branch (usually 'main' or 'master')
-    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCHs
+    # This ensures that only pushes to the default branch will trigger
+    # a pages deploy
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

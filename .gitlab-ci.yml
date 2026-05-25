@@ -1,0 +1,15 @@
+image: alpine:latest
+
+pages:
+  stage: deploy
+  script:
+    # Create the folder that GitLab Pages expects
+    - mkdir public
+    # Copy your HTML file into the folder and rename it to index.html so it loads automatically
+    - cp init_pitch.html public/index.html
+  artifacts:
+    paths:
+      # Tell GitLab to save and publish this folder
+      - public
+  rules:
+    - if: $CI_COMMIT_REF_NAME == $CI_DEFAULT_BRANCH

@@ -1,0 +1,14 @@
+pages:
+  stage: deploy
+  script:
+    # Creates a hidden folder, copies all files into it, then renames it to 'public'
+    - mkdir .public
+    - cp -r * .public
+    - mv .public public
+  artifacts:
+    paths:
+      # GitLab Pages requires the artifact to be specifically named 'public'
+      - public
+  rules:
+    # Only run this job when pushing to the default branch (usually 'main' or 'master')
+    - if: $CI_COMMIT_BRANCH == $CI_DEFAULT_BRANCHs

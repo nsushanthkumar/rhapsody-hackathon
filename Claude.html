@@ -1,0 +1,921 @@
+<!DOCTYPE html>
+<!-- saved from url=(0060)https://claude.ai/share/d4454452-71df-4915-9e6f-d62976c5591d -->
+<html data-build-id="9f94910bb3" data-git-hash="9f94910bb319abfbb3f61a3950f57e2804cf87be" data-build-timestamp="1779588286" data-version="1.0.0" data-env="" data-color-version="v2" lang="en-US" data-theme="claude" data-mode="dark" class="h-screen antialiased scroll-smooth"><head data-ion-ip-country="IN"><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><meta property="og:title" content="Claude"><meta name="twitter:title" content="Claude"><meta property="og:description" content="Shared via Claude, an AI assistant from Anthropic"><meta name="twitter:description" content="Shared via Claude, an AI assistant from Anthropic"><link rel="preconnect" href="https://assets-proxy.anthropic.com/" crossorigin=""><link rel="dns-prefetch" href="https://assets-proxy.anthropic.com/"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Claude</title><meta name="apple-itunes-app" content="app-id=6473753684"><meta property="og:type" content="website"><meta property="og:site_name" content="Claude"><meta property="og:image" content="https://claude.ai/images/claude_ogimage.png"><meta property="og:image:width" content="1200"><meta property="og:image:height" content="630"><meta name="twitter:card" content="summary_large_image"><link rel="icon" type="image/svg+xml" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cd02a42d9-Vq_H3mgS.svg"><link rel="icon" type="image/png" sizes="32x32" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/ce67964e7-CAX1bqSh.png"><link rel="icon" type="image/png" sizes="16x16" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c03e51811-DebilQLI.png"><link rel="shortcut icon" href="https://claude.ai/favicon.ico"><link rel="apple-touch-icon" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c129d018a-jJjJELY8.png"><link rel="apple-touch-startup-image" href="https://claude.ai/images/claude_app_icon.png"><link rel="manifest" href="https://claude.ai/manifest.json"><meta name="mobile-web-app-capable" content="yes"><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/cc27851ad-CFxw3nG7.woff2" as="font" type="font/woff2" crossorigin=""><link rel="preload" href="https://assets-proxy.anthropic.com/claude-ai/v2/assets/v1/c66fc489e-C-BHYa_K.woff2" as="font" type="font/woff2" crossorigin=""><script type="text/javascript" src="./Claude_files/f12a4347e1080fb88155.js.download" async="" status="loaded"></script><script nonce="">void 0===globalThis.process&&(globalThis.process={env:{},cwd:function(){return"/"}}),void 0===globalThis.global&&(globalThis.global=globalThis)</script><script type="application/ld+json" nonce="">{
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "WebSite",
+            "name": "Claude",
+            "alternateName": ["Claude.ai", "Claude by Anthropic"],
+            "url": "https://claude.com"
+          },
+          {
+            "@type": "Organization",
+            "name": "Anthropic",
+            "url": "https://www.anthropic.com",
+            "logo": "https://claude.ai/images/claude_ogimage.png",
+            "sameAs": [
+              "https://x.com/AnthropicAI",
+              "https://www.linkedin.com/company/anthropic",
+              "https://www.youtube.com/@anthropic-ai"
+            ]
+          }
+        ]
+      }</script><script nonce="">!function(){try{performance.mark?.("rq_cache:preload_start");const e="keyval-store",o="keyval",r="react-query-cache",t=new Promise(t=>{if(!window.indexedDB)return void t(void 0);const c=indexedDB.open(e);c.onupgradeneeded=()=>{c.transaction?.abort()},c.onerror=()=>t(void 0),c.onsuccess=()=>{const a=c.result;if(!a.objectStoreNames.contains(o))return a.close(),indexedDB.deleteDatabase(e),void t(void 0);try{const e=a.transaction(o,"readonly").objectStore(o).get(r);e.onerror=()=>{a.close(),t(void 0)},e.onsuccess=()=>{a.close(),window.__PRELOADED_IDB_CACHE_RESULT__=e.result,t(e.result)}}catch{a.close(),t(void 0)}}});window.__PRELOADED_IDB_CACHE__=t,performance.measure?.("rq_cache:preload_exec",{start:"rq_cache:preload_start"})}catch{}}()</script><script type="module" crossorigin="" src="./Claude_files/index-m17Hw2bt.js.download" nonce=""></script><link rel="stylesheet" crossorigin="" href="./Claude_files/cec18ad9a-D2qj8Jt9.css"><link rel="stylesheet" crossorigin="" href="./Claude_files/c6a992d55-B5iiIYsB.css"><meta name="x-route-title" data-router-head="" data-intended-title="Claude"><meta name="description" content="Shared via Claude, an AI assistant from Anthropic" data-router-head=""><meta name="theme-color" content="hsl(60,2%,9%)"></head><body class="bg-bg-100 text-text-100 font-ui min-h-screen" style="pointer-events: auto;"><div id="root"><div class="cds-root text-primary contents" data-density="comfortable" data-platform="web" data-font="anthropic" data-mode="dark" style="font-size: var(--cds-text-body);"><div class="root"><div class="grid w-full overflow-hidden print:!h-auto print:overflow-visible print:block" style="height: calc(100dvh - var(--app-install-banner-height, 0px) - var(--dev-dashboard-height, 0px) - var(--desktop-org-banner-height, 0px)); grid-template-rows: 0px 1fr; transition: grid-template-rows 0.15s ease-out;"><div></div><div class="flex min-h-0 min-w-0 w-full overflow-x-clip relative overflow-y-auto print:!overflow-visible"><div class="pointer-events-none absolute inset-0 bg-bg-100 [background-image:linear-gradient(to_right,hsl(var(--bg-200))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--bg-200))_1px,transparent_1px)] [background-size:32px_32px]" aria-hidden="true" style="clip-path: circle(150% at 50% 50%); opacity: 0;"></div><div class="shrink-0 print:hidden" style="overflow-x: clip; width: auto; opacity: 1;"><div class="fixed lg:sticky z-sidebar" style="width: 3.05rem;"><nav class="flex flex-col px-0 fixed left-0 border-r-0.5 h-screen lg:bg-gradient-to-t from-bg-200/5 to-bg-200/30 border-border-300 bg-bg-100 transition-[background-color,border-color,box-shadow] duration-[35ms]" aria-label="Sidebar" style="width: 3.05rem; top: 0px; padding-top: var(--app-install-banner-height, 0px); padding-bottom: var(--dev-dashboard-height, 0px);"><div class="relative flex w-full items-center p-2 pointer-events-auto pt-2"><div class="flex items-center gap-1.5 pl-2 h-8 overflow-clip [overflow-clip-margin:4px] transition-opacity duration-150 opacity-0 pointer-events-none"><a href="https://claude.ai/new" class="flex flex-col justify-start items-top" aria-label="Home" tabindex="-1"><svg data-cds="ClaudeLogo" xmlns="http://www.w3.org/2000/svg" viewBox="30 0 82 24" height="20" fill="currentColor" role="img" aria-label="Claude" shape-rendering="geometricPrecision" class="text-primary flex-shrink-0 text-text-100"><path d="M39.504 21.2643C37.688 21.2643 36.06 20.9003 34.62 20.1723C33.18 19.4443 32.048 18.4163 31.224 17.0883C30.408 15.7603 30 14.2243 30 12.4803C30 10.6563 30.412 9.03233 31.236 7.60833C32.06 6.17633 33.196 5.06833 34.644 4.28433C36.1 3.49233 37.74 3.09633 39.564 3.09633C40.692 3.09633 41.82 3.22033 42.948 3.46833C44.084 3.71633 45.072 4.09633 45.912 4.60833V8.56833H44.832C44.536 7.16833 43.96 6.12433 43.104 5.43633C42.256 4.74833 41.076 4.40433 39.564 4.40433C38.164 4.40433 36.996 4.73233 36.06 5.38833C35.132 6.03633 34.444 6.93633 33.996 8.08833C33.548 9.24033 33.324 10.5643 33.324 12.0603C33.324 13.5483 33.576 14.8883 34.08 16.0803C34.584 17.2723 35.328 18.2163 36.312 18.9123C37.296 19.6003 38.476 19.9443 39.852 19.9443C40.796 19.9443 41.608 19.7483 42.288 19.3563C42.968 18.9643 43.54 18.4363 44.004 17.7723C44.468 17.1003 44.908 16.2803 45.324 15.3123H46.464L45.684 19.6803C44.892 20.2003 43.936 20.5963 42.816 20.8683C41.704 21.1323 40.6 21.2643 39.504 21.2643ZM47.964 21.0003V19.9563C48.356 19.9003 48.668 19.8403 48.9 19.7763C49.14 19.7043 49.332 19.5883 49.476 19.4283C49.628 19.2683 49.704 19.0443 49.704 18.7563V5.83233L47.964 5.08833V4.28433L51.612 2.73633H52.56V18.7563C52.56 19.0523 52.632 19.2803 52.776 19.4403C52.928 19.6003 53.12 19.7123 53.352 19.7763C53.592 19.8403 53.912 19.9003 54.312 19.9563V21.0003H47.964ZM59.028 21.2643C58.38 21.2643 57.792 21.1363 57.264 20.8803C56.736 20.6243 56.32 20.2563 56.016 19.7763C55.712 19.2963 55.56 18.7363 55.56 18.0963C55.56 17.1203 55.86 16.3443 56.46 15.7683C57.068 15.1843 57.916 14.7403 59.004 14.4363L63.24 13.2363V11.7123C63.24 10.8883 63.048 10.2523 62.664 9.80433C62.288 9.34833 61.708 9.12033 60.924 9.12033C60.228 9.12033 59.704 9.33233 59.352 9.75633C59.008 10.1723 58.836 10.7483 58.836 11.4843V12.6123H56.988C56.764 12.4683 56.588 12.2763 56.46 12.0363C56.34 11.7883 56.28 11.5163 56.28 11.2203C56.28 10.5563 56.516 9.98833 56.988 9.51633C57.46 9.03633 58.06 8.67633 58.788 8.43633C59.516 8.19633 60.256 8.07633 61.008 8.07633C62.592 8.07633 63.836 8.44033 64.74 9.16833C65.644 9.89633 66.096 11.0003 66.096 12.4803V18.5403C66.096 18.8603 66.168 19.1043 66.312 19.2723C66.456 19.4403 66.644 19.5603 66.876 19.6323C67.116 19.6963 67.44 19.7563 67.848 19.8123V20.8563C67.536 20.9683 67.208 21.0563 66.864 21.1203C66.528 21.1843 66.204 21.2163 65.892 21.2163C65.148 21.2163 64.548 21.0483 64.092 20.7123C63.644 20.3683 63.372 19.8643 63.276 19.2003C62.716 19.8643 62.08 20.3763 61.368 20.7363C60.664 21.0883 59.884 21.2643 59.028 21.2643ZM60.444 19.3443C60.948 19.3443 61.44 19.2283 61.92 18.9963C62.408 18.7563 62.848 18.4403 63.24 18.0483V14.3403L60.168 15.2523C59.592 15.4283 59.152 15.7003 58.848 16.0683C58.544 16.4363 58.392 16.9003 58.392 17.4603C58.392 17.8203 58.48 18.1443 58.656 18.4323C58.832 18.7203 59.076 18.9443 59.388 19.1043C59.7 19.2643 60.052 19.3443 60.444 19.3443ZM73.608 21.2643C72.32 21.2643 71.356 20.9283 70.716 20.2563C70.084 19.5843 69.768 18.6363 69.768 17.4123V10.9083L68.016 10.2603L68.112 9.45633L71.664 8.07633H72.624V16.9323C72.624 17.6923 72.812 18.2563 73.188 18.6243C73.564 18.9923 74.14 19.1763 74.916 19.1763C75.428 19.1763 75.964 19.0603 76.524 18.8283C77.084 18.5883 77.6 18.2803 78.072 17.9043V10.9083L76.32 10.2603V9.45633L79.98 8.07633H80.928V17.8323C80.928 18.1523 81 18.4003 81.144 18.5763C81.288 18.7443 81.476 18.8643 81.708 18.9363C81.948 19.0083 82.272 19.0723 82.68 19.1283V20.1603L79.02 21.1803H78.072V19.0803C77.44 19.7363 76.728 20.2643 75.936 20.6643C75.144 21.0643 74.368 21.2643 73.608 21.2643ZM89.328 21.2643C88.264 21.2643 87.312 21.0083 86.472 20.4963C85.632 19.9763 84.976 19.2683 84.504 18.3723C84.032 17.4763 83.796 16.4843 83.796 15.3963C83.796 13.9643 84.08 12.6963 84.648 11.5923C85.224 10.4883 86.032 9.62833 87.072 9.01233C88.112 8.38833 89.32 8.07633 90.696 8.07633C91.12 8.07633 91.556 8.12433 92.004 8.22033C92.46 8.30833 92.896 8.43633 93.312 8.60433V5.82033L91.56 5.08833V4.28433L95.22 2.73633H96.168V17.8323C96.168 18.1523 96.24 18.4003 96.384 18.5763C96.536 18.7443 96.728 18.8643 96.96 18.9363C97.2 19.0083 97.52 19.0723 97.92 19.1283V20.1603L94.26 21.1803H93.312V19.5843C92.752 20.1123 92.132 20.5243 91.452 20.8203C90.78 21.1163 90.072 21.2643 89.328 21.2643ZM90.504 19.3323C90.976 19.3323 91.456 19.2363 91.944 19.0443C92.432 18.8523 92.888 18.5883 93.312 18.2523V10.3563C92.584 9.76433 91.776 9.46833 90.888 9.46833C89.992 9.46833 89.236 9.69633 88.62 10.1523C88.004 10.6083 87.54 11.2283 87.228 12.0123C86.924 12.7883 86.772 13.6563 86.772 14.6163C86.772 15.5283 86.908 16.3403 87.18 17.0523C87.452 17.7563 87.868 18.3123 88.428 18.7203C88.988 19.1283 89.68 19.3323 90.504 19.3323ZM105.252 21.2643C104.068 21.2643 103.004 20.9883 102.06 20.4363C101.116 19.8843 100.376 19.1163 99.84 18.1323C99.304 17.1483 99.036 16.0443 99.036 14.8203C99.036 13.5563 99.308 12.4123 99.852 11.3883C100.404 10.3563 101.156 9.54833 102.108 8.96433C103.068 8.37233 104.136 8.07633 105.312 8.07633C106.216 8.07633 107.048 8.26433 107.808 8.64033C108.568 9.01633 109.2 9.54433 109.704 10.2243C110.216 10.9043 110.552 11.6883 110.712 12.5763L101.928 15.2883C102.168 16.4003 102.644 17.2763 103.356 17.9163C104.076 18.5563 104.968 18.8763 106.032 18.8763C106.92 18.8763 107.716 18.6523 108.42 18.2043C109.124 17.7483 109.748 17.0603 110.292 16.1403L111.228 16.4403C111.012 17.4003 110.62 18.2443 110.052 18.9723C109.484 19.7003 108.784 20.2643 107.952 20.6643C107.128 21.0643 106.228 21.2643 105.252 21.2643ZM107.628 12.2043C107.516 11.6523 107.324 11.1683 107.052 10.7523C106.788 10.3283 106.46 10.0003 106.068 9.76833C105.676 9.53633 105.244 9.42033 104.772 9.42033C104.18 9.42033 103.656 9.60033 103.2 9.96033C102.752 10.3123 102.4 10.8163 102.144 11.4723C101.896 12.1203 101.772 12.8723 101.772 13.7283C101.772 13.8803 101.776 13.9963 101.784 14.0763L107.628 12.2043Z"></path></svg></a></div><div class="absolute right-2 top-2"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="pin-sidebar-toggle" aria-label="Open sidebar" aria-pressed="false" data-state="closed"><div class="relative size-4 flex items-center justify-center"><div class="transition text-text-400 group-hover:text-text-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition text-text-400 group-hover:text-text-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M16.5 4A1.5 1.5 0 0 1 18 5.5v9a1.5 1.5 0 0 1-1.5 1.5h-13A1.5 1.5 0 0 1 2 14.5v-9A1.5 1.5 0 0 1 3.5 4zM7 15h9.5a.5.5 0 0 0 .5-.5v-9a.5.5 0 0 0-.5-.5H7zM3.5 5a.5.5 0 0 0-.5.5v9a.5.5 0 0 0 .5.5H6V5z"></path></svg></div><div class="opacity-0 scale-75 absolute inset-0 transition-all text-text-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="opacity-0 scale-75 absolute inset-0 transition-all text-text-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M16.5 3a.5.5 0 0 1 .5.5v13l-.01.1a.5.5 0 0 1-.98 0l-.01-.1v-13a.5.5 0 0 1 .5-.5M8.128 5.165a.5.5 0 0 1 .625-.097l.082.06 5 4.5a.5.5 0 0 1 .07.666l-.07.078-5 4.5a.501.501 0 0 1-.67-.744l4.031-3.628H3.5a.5.5 0 0 1 0-1h8.696L8.165 5.872l-.067-.075a.5.5 0 0 1 .03-.632"></path></svg></div></div></button></div></div><div class="flex flex-col flex-grow align-center overflow-hidden min-h-0" aria-hidden="false"><div class="flex flex-col gap-px pt-2"><div class="px-2"><div class="relative group" data-state="closed"><a href="https://claude.ai/new" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="New chat" data-dd-action-name="sidebar-new-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100"><div class="flex items-center justify-center rounded-full transition-all ease-in-out group-hover:-rotate-3 group-hover:scale-110 group-active:rotate-6 group-active:scale-[0.98]"><div class="flex items-center justify-center rounded-full size-[1.4rem] -mx-[0.2rem] bg-text-500/15 active:bg-text-200 group-hover:bg-text-500/25"><svg width="16" height="16" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="text-text-300 group-hover:text-text-000" aria-hidden="true" style="flex-shrink: 0;"><path d="M10 3a.75.75 0 0 1 .75.75v5.5h5.5a.75.75 0 0 1 .077 1.496l-.077.004h-5.5v5.5a.75.75 0 0 1-1.5 0v-5.5h-5.5a.75.75 0 0 1 0-1.5h5.5v-5.5A.75.75 0 0 1 10 3"></path></svg></div></div></div><span class="truncate text-sm whitespace-nowrap flex-1"><div class="opacity-0 transition-opacity ease-out duration-150">New chat</div></span></div></a></div></div><div class="px-2"></div></div><div class="flex flex-grow flex-col overflow-x-hidden relative transition-[border-color] !outline-none overflow-y-auto [scrollbar-gutter:stable] border-t-0.5 border-transparent" tabindex="-1"><div class="flex flex-col px-2 gap-px"><div class="relative group" data-state="closed"><a href="https://claude.ai/recents" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="Chats" data-dd-action-name="sidebar-nav-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100"><div class="group" style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="group" aria-hidden="true" style="flex-shrink: 0;"><path class="group-hover:-translate-x-[0.5px] transition group-active:translate-x-0" d="M8.99962 2C12.3133 2 14.9996 4.68629 14.9996 8C14.9996 11.3137 12.3133 14 8.99962 14H2.49962C2.30105 13.9998 2.12113 13.8821 2.04161 13.7002C1.96224 13.5181 1.99835 13.3058 2.1334 13.1602L3.93516 11.2178C3.34317 10.2878 2.99962 9.18343 2.99962 8C2.99962 4.68643 5.68609 2.00022 8.99962 2ZM8.99962 3C6.23838 3.00022 3.99961 5.23871 3.99961 8C3.99961 9.11212 4.36265 10.1386 4.97618 10.9688C5.11884 11.1621 5.1035 11.4293 4.94004 11.6055L3.64512 13H8.99962C11.761 13 13.9996 10.7614 13.9996 8C13.9996 5.23858 11.761 3 8.99962 3Z"></path><path class="group-hover:translate-x-[0.5px] transition group-active:translate-x-0" d="M16.5445 9.72754C16.4182 9.53266 16.1678 9.44648 15.943 9.53418C15.7183 9.62215 15.5932 9.85502 15.6324 10.084L15.7369 10.3955C15.9073 10.8986 16.0006 11.438 16.0006 12C16.0006 13.1123 15.6376 14.1386 15.024 14.9687C14.8811 15.1621 14.8956 15.4302 15.0592 15.6064L16.3531 17H11.0006C9.54519 17 8.23527 16.3782 7.32091 15.3848L7.07091 15.1103C6.88996 14.9645 6.62535 14.9606 6.43907 15.1143C6.25267 15.2682 6.20668 15.529 6.31603 15.7344L6.58458 16.0625C7.68048 17.253 9.25377 18 11.0006 18H17.5006C17.6991 17.9998 17.8791 17.8822 17.9586 17.7002C18.038 17.5181 18.0018 17.3058 17.8668 17.1602L16.0631 15.2178C16.6554 14.2876 17.0006 13.1837 17.0006 12C17.0006 11.3271 16.8891 10.6792 16.6842 10.0742L16.5445 9.72754Z"></path></svg></div></div><span class="truncate text-sm whitespace-nowrap flex-1"><div class="opacity-0 transition-opacity ease-out duration-150"><span>Chats</span></div></span></div></a></div><div class="relative group" data-state="closed"><a href="https://claude.ai/projects" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="Projects" data-dd-action-name="sidebar-nav-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100"><div class="group" style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="group" aria-hidden="true" style="flex-shrink: 0;"><path class="group-hover:scale-95 origin-center" d="M15.8198 7C16.6885 7.00025 17.3624 7.73158 17.3178 8.57617L17.2993 8.74707L16.1332 15.7471C16.0126 16.4699 15.3865 16.9996 14.6538 17H5.34711C4.6142 16.9998 3.98833 16.47 3.86762 15.7471L2.7016 8.74707C2.54922 7.83277 3.25418 7 4.18109 7H15.8198ZM4.18109 8C3.87216 8 3.63722 8.27731 3.68793 8.58203L4.85394 15.582C4.89413 15.8229 5.10291 15.9998 5.34711 16H14.6538C14.8978 15.9996 15.1068 15.8228 15.1469 15.582L16.3129 8.58203L16.3188 8.46973C16.3036 8.21259 16.0899 8.00023 15.8198 8H4.18109Z"></path><path class="group-hover:-translate-y-[1.4px] group-hover:translate-x-[0.5px] group-hover:rotate-3 transition group-active:translate-y-0" d="M16.0004 5.5C16.0004 5.224 15.7764 5.00024 15.5004 5H4.50043C4.22428 5 4.00043 5.22386 4.00043 5.5C4.00043 5.77614 4.22428 6 4.50043 6H15.5004C15.7764 5.99976 16.0004 5.776 16.0004 5.5Z"></path><path class="group-hover:-translate-y-[2.8px] group-hover:translate-x-px group-hover:rotate-6 transition group-active:translate-y-0" d="M14.5004 3.5C14.5004 3.224 14.2764 3.00024 14.0004 3H6.00043C5.72428 3 5.50043 3.22386 5.50043 3.5C5.50043 3.77614 5.72428 4 6.00043 4H14.0004C14.2764 3.99976 14.5004 3.776 14.5004 3.5Z"></path></svg></div></div><span class="truncate text-sm whitespace-nowrap flex-1"><div class="opacity-0 transition-opacity ease-out duration-150"><span>Projects</span></div></span></div></a></div><div><div class="relative group" data-state="closed"><a href="https://claude.ai/artifacts/my" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="Artifacts" data-dd-action-name="sidebar-nav-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100"><div class="group backface-hidden" style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="group backface-hidden" aria-hidden="true" style="flex-shrink: 0;"><path fill-rule="evenodd" clip-rule="evenodd" d="M6.35352 3.1464L9.35352 6.14642C9.43935 6.25103 9.5 6.36003 9.5 6.50091C9.4998 6.6332 9.44704 6.75988 9.35352 6.85346L6.35352 9.85347C6.14584 10.0609 5.85611 10.0243 5.64648 9.85347L2.64648 6.85346C2.55296 6.75988 2.5002 6.6332 2.5 6.50091C2.5 6.36841 2.55285 6.24017 2.64648 6.14642L5.64648 3.1464C5.8552 2.97421 6.14635 2.93936 6.35352 3.1464ZM6 8.79194L3.70703 6.49994L6 4.20696L8.29297 6.49994L6 8.79194Z"></path><path class="group-hover:-rotate-90 transition-transform duration-200 ease-snappy-out" d="M16.8984 3.7509C16.9875 3.90632 16.986 4.09826 16.8955 4.25286L15.5791 6.49994L16.8955 8.74702C16.986 8.90159 16.9874 9.09354 16.8984 9.24898C16.8093 9.40436 16.643 9.49996 16.4638 9.49996H11.5C11.3198 9.49996 11.1532 9.4028 11.0644 9.24605C10.976 9.08949 10.9789 8.89736 11.0713 8.74312L12.417 6.49994L11.0713 4.25676C10.9789 4.1025 10.976 3.91037 11.0644 3.75383C11.1532 3.59717 11.3199 3.49992 11.5 3.49992H16.4638C16.6429 3.51309 16.8055 3.58909 16.8984 3.7509ZM13.4287 6.2431C13.5152 6.4107 13.5166 6.58638 13.4287 6.75678L12.3828 8.49995H15.5918L14.5683 6.75287C14.477 6.59683 14.477 6.40303 14.5683 6.24701L15.5918 4.49993H12.3828L13.4287 6.2431Z" style="transform-origin: 14px 6.5px;"></path><path class="group-hover:rotate-[120deg] transition-transform duration-200 ease-snappy-out" fill-rule="evenodd" clip-rule="evenodd" d="M7.25293 10.9668C7.40708 10.8793 7.59647 10.8801 7.75 10.9687C7.90356 11.0574 7.99869 11.2211 8 11.3984L8.01074 12.8388L9.30762 13.6054C9.42811 13.6994 9.49994 13.8448 9.5 14C9.5 14.1773 9.40587 14.3418 9.25293 14.4316L8.01074 15.1601L7.99512 16.667C7.97406 16.8184 7.88446 16.9536 7.75 17.0312C7.59642 17.1199 7.40713 17.1207 7.25293 17.0332L6 16.3203L4.74707 17.0332C4.59287 17.1207 4.40358 17.1199 4.25 17.0312C4.09643 16.9425 4.00124 16.7789 4 16.6015L3.99023 15.1601L2.74707 14.4316C2.59413 14.3418 2.5 14.1773 2.5 14C2.50006 13.8448 2.57188 13.6994 2.69238 13.6054L3.99023 12.8388L4 11.3984C4.00131 11.2211 4.09644 11.0574 4.25 10.9687C4.40353 10.8801 4.59292 10.8793 4.74707 10.9668L6 11.6787L7.25293 10.9668ZM4.99512 12.2568L5.75293 12.6884C5.90608 12.7754 6.09392 12.7754 6.24707 12.6884L7.00586 12.2568L7.01172 13.1308C7.01308 13.3068 7.10706 13.4695 7.25879 13.5586L8.01172 14L7.25879 14.4414C7.10706 14.5304 7.01315 14.6932 7.01172 14.8691L7.00586 15.7422L6.24707 15.3115C6.09397 15.2246 5.90603 15.2246 5.75293 15.3115L4.99512 15.7422L4.98828 14.8691C4.98703 14.7152 4.91459 14.5716 4.79492 14.4785L3.98926 14L4.74121 13.5586C4.87421 13.4805 4.96267 13.3457 4.9834 13.1953L4.99512 12.2568Z" style="transform-origin: 6px 14px;"></path><path fill-rule="evenodd" clip-rule="evenodd" d="M14 11C15.6568 11 16.9999 12.3432 17 14C17 15.6568 15.6569 17 14 17C12.3431 17 11 15.6568 11 14C11.0001 12.3432 12.3432 11 14 11ZM12 14C12.0001 12.8955 12.8955 12 14 12C15.1045 12 15.9999 12.8955 16 14C16 15.1045 15.1046 16 14 16C12.8954 16 12 15.1045 12 14Z"></path></svg></div></div><span class="truncate text-sm whitespace-nowrap flex-1"><div class="opacity-0 transition-opacity ease-out duration-150 flex items-center gap-2">Artifacts</div></span></div></a></div></div><div class="relative group" data-state="closed"><a href="https://claude.ai/upgrade" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="Code" data-dd-action-name="sidebar-nav-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100 text-text-400/40 group-hover:!text-text-100/40"><div class="group" style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="group" aria-hidden="true" style="flex-shrink: 0;"><path class="transition" d="M11.6318 4.01757C11.898 4.09032 12.055 4.36555 11.9824 4.63183L8.98242 15.6318C8.90966 15.8981 8.63449 16.0551 8.36816 15.9824C8.10193 15.9097 7.94495 15.6345 8.01758 15.3682L11.0176 4.36816C11.0904 4.102 11.3656 3.94497 11.6318 4.01757Z"></path><path class="group-hover:translate-x-[1px] transition" d="M13.124 6.17089C13.3059 5.96325 13.6213 5.9423 13.8291 6.12402L17.8291 9.62402L17.9014 9.70215C17.9647 9.78754 18 9.89182 18 10C18 10.1441 17.9375 10.281 17.8291 10.376L13.8291 13.876L13.7471 13.9346C13.5449 14.0498 13.2833 14.011 13.124 13.8291C12.9649 13.6472 12.9606 13.3824 13.1016 13.1973L13.1709 13.124L16.7412 10L13.1709 6.87597C12.9632 6.69411 12.9422 6.37866 13.124 6.17089Z"></path><path class="group-hover:-translate-x-[1px] transition" d="M6.25293 6.06542C6.45509 5.95025 6.71675 5.98908 6.87598 6.17089C7.03513 6.35279 7.03933 6.6176 6.89844 6.80273L6.8291 6.87597L3.25879 10L6.8291 13.124C7.03682 13.3059 7.05771 13.6213 6.87598 13.8291C6.69413 14.0369 6.37869 14.0578 6.1709 13.876L2.1709 10.376L2.09863 10.2979C2.03528 10.2124 2 10.1082 2 10C2.00005 9.85591 2.06247 9.71893 2.1709 9.62402L6.1709 6.12402L6.25293 6.06542Z"></path></svg></div></div><span class="truncate text-sm whitespace-nowrap flex-1 text-text-000/40"><div><div class="opacity-0 transition-opacity ease-out duration-150"><span>Code</span></div></div></span></div></a></div><div class="relative group" data-state="closed"><a href="https://claude.ai/customize" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="Customize" data-dd-action-name="sidebar-nav-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100"><div class="flex items-center justify-center transition-all ease-in-out group-hover:-rotate-3 group-hover:scale-110 group-active:rotate-6 group-active:scale-[0.98]"><div style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h.5A3.5 3.5 0 0 1 18 9.5v6a1.5 1.5 0 0 1-1.5 1.5h-13a1.5 1.5 0 0 1-1.492-1.347L2 15.5v-6A3.5 3.5 0 0 1 5.5 6H6V4.5A1.5 1.5 0 0 1 7.5 3zM3 15.5l.01.1a.5.5 0 0 0 .49.4h13a.5.5 0 0 0 .5-.5V12h-4v.5a.5.5 0 0 1-1 0V12H8v.5a.5.5 0 0 1-1 0V12H3zM5.5 7A2.5 2.5 0 0 0 3 9.5V11h4v-.5a.5.5 0 0 1 1 0v.5h4v-.5a.5.5 0 0 1 1 0v.5h4V9.5A2.5 2.5 0 0 0 14.5 7zm2-3a.5.5 0 0 0-.5.5V6h6V4.5a.5.5 0 0 0-.5-.5z"></path></svg></div></div></div><span class="truncate text-sm whitespace-nowrap flex-1"><div class="opacity-0 transition-opacity ease-out duration-150">Customize</div></span></div></a></div></div><div class="flex-1 relative overflow-hidden"><div class="opacity-0 transition-opacity ease-out duration-150" aria-hidden="true" inert=""><div class="px-2 mt-4"><div class="flex flex-col flex-grow"><div aria-hidden="true" class="group/nsh flex items-center gap-1 min-w-0 mt-1 pb-2 pl-2 text-xs text-text-500 select-none pointer-events-none pr-2"><h2 class="contents"><span role="button" aria-expanded="true" class="group/header cursor-pointer flex items-center gap-1 min-w-0 hover:text-text-300 transition-colors duration-150"><span class="truncate">Recents</span><span data-cds="Icon" class="shrink-0 opacity-0 transition-[opacity,transform] duration-150 group-hover/header:opacity-60 group-focus-visible/header:opacity-100 hover:!opacity-100 rotate-90" aria-hidden="true" style="font-family: var(--font-anthropicons, Anthropicons-Variable); font-feature-settings: &quot;liga&quot; 0; font-optical-sizing: auto; font-style: normal; font-variation-settings: normal; line-height: 1; width: 1em; height: 1em; display: flex; align-items: center; justify-content: center; flex-shrink: 0; user-select: none; font-size: 12px; font-weight: 577.8;"></span></span></h2></div><ul class="flex flex-col gap-px"><li style="opacity: 1;"><div class="relative group" data-state="closed"><a href="https://claude.ai/chat/3afd0d9c-92d3-41ce-9c1a-9eed84c97466" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" data-dd-action-name="sidebar-chat-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><span class="truncate text-sm whitespace-nowrap flex-1 group-hover:[mask-image:linear-gradient(to_right,hsl(var(--always-black))_78%,transparent_95%)] group-focus-within:[mask-image:linear-gradient(to_right,hsl(var(--always-black))_78%,transparent_95%)] [mask-size:100%_100%]">24-hour hackathon for Rhapsody company event</span></div></a><div class="absolute right-0 top-1/2 -translate-y-1/2 hidden group-hover:block group-focus-within:block opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md active:!scale-100 aria-expanded:!bg-bg-400 !transition-none before:!transition-none _fill_10ocf_9 _ghost_10ocf_96" type="button" aria-label="More options for 24-hour hackathon for Rhapsody company event" tabindex="0" aria-haspopup="menu" aria-expanded="false" id="_r_25_"><div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;"><path d="M10 14a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m0-5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3"></path></svg></div></button></div></div></li><li style="opacity: 1;"><div class="relative group" data-state="closed"><a href="https://claude.ai/chat/5549f024-80bc-4a92-915c-7ce976d12125" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" data-dd-action-name="sidebar-chat-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><span class="truncate text-sm whitespace-nowrap flex-1 group-hover:[mask-image:linear-gradient(to_right,hsl(var(--always-black))_78%,transparent_95%)] group-focus-within:[mask-image:linear-gradient(to_right,hsl(var(--always-black))_78%,transparent_95%)] [mask-size:100%_100%]">Classifying research manuscript paragraphs with LLM accuracy</span></div></a><div class="absolute right-0 top-1/2 -translate-y-1/2 hidden group-hover:block group-focus-within:block opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md active:!scale-100 aria-expanded:!bg-bg-400 !transition-none before:!transition-none _fill_10ocf_9 _ghost_10ocf_96" type="button" aria-label="More options for Classifying research manuscript paragraphs with LLM accuracy" tabindex="0" aria-haspopup="menu" aria-expanded="false" id="_r_2a_"><div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;"><path d="M10 14a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m0-5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3"></path></svg></div></button></div></div></li><li style="opacity: 1;"><div class="relative group" data-state="closed"><a href="https://claude.ai/chat/e81cd2e3-bfc5-4b72-a6ad-828e74698dd0" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" data-dd-action-name="sidebar-chat-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><span class="truncate text-sm whitespace-nowrap flex-1 group-hover:[mask-image:linear-gradient(to_right,hsl(var(--always-black))_78%,transparent_95%)] group-focus-within:[mask-image:linear-gradient(to_right,hsl(var(--always-black))_78%,transparent_95%)] [mask-size:100%_100%]">Using graphify in Claude code</span></div></a><div class="absolute right-0 top-1/2 -translate-y-1/2 hidden group-hover:block group-focus-within:block opacity-0 group-hover:opacity-100 group-focus-within:opacity-100"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md active:!scale-100 aria-expanded:!bg-bg-400 !transition-none before:!transition-none _fill_10ocf_9 _ghost_10ocf_96" type="button" aria-label="More options for Using graphify in Claude code" tabindex="0" aria-haspopup="menu" aria-expanded="false" id="_r_2f_"><div style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="flex-shrink: 0;"><path d="M10 14a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3m0-5.5a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3M10 3a1.5 1.5 0 1 1 0 3 1.5 1.5 0 0 1 0-3"></path></svg></div></button></div></div></li></ul></div></div></div><div class="absolute inset-0 cursor-pointer"></div></div></div><div class="px-2"><div class="relative"><div class="relative group" data-state="closed"><a href="https://claude.ai/downloads" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs w-full !min-w-0 group py-1.5 rounded-lg px-4 !transition-none before:!transition-none !-outline-offset-2 overflow-hidden active:bg-bg-300 active:scale-[1.0] _fill_10ocf_9 _ghost_10ocf_96" aria-label="Get apps and extensions" data-dd-action-name="sidebar-nav-item"><div class="-translate-x-2 w-full flex flex-row items-center justify-start gap-3"><div class="flex items-center justify-center text-text-100"><div class="group" style="width: 16px; height: 16px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="group" aria-hidden="true" style="flex-shrink: 0;"><path class="group-hover:translate-y-[1px] transition" d="M10 3C10.2761 3 10.5 3.22386 10.5 3.5V12.1855L13.626 8.66797C13.8094 8.46166 14.1256 8.44275 14.332 8.62598C14.5383 8.80936 14.5573 9.12563 14.374 9.33203L10.374 13.832L10.2949 13.9033C10.21 13.9654 10.107 14 10 14C9.85718 14 9.72086 13.9388 9.62598 13.832L5.62598 9.33203L5.56738 9.25C5.45079 9.04872 5.48735 8.78653 5.66797 8.62598C5.84854 8.46567 6.1127 8.46039 6.29883 8.59961L6.37402 8.66797L9.5 12.1855V3.5C9.5 3.22386 9.72386 3 10 3Z"></path><path class="group-hover:translate-x-[0.5px] transition" d="M3.5 13C3.22386 13 3 13.2239 3 13.5V15.5C3 16.3284 3.67157 17 4.5 17H10V16H4.5C4.22386 16 4 15.7761 4 15.5V13.5C4 13.2239 3.77614 13 3.5 13Z"></path><path class="group-hover:-translate-x-[0.5px] transition" d="M16.5 13C16.7761 13 17 13.2239 17 13.5V15.5C17 16.3284 16.3284 17 15.5 17H10V16H15.5C15.7761 16 16 15.7761 16 15.5V13.5C16 13.2239 16.2239 13 16.5 13Z"></path></svg></div></div><span class="truncate text-sm whitespace-nowrap flex-1"><span></span></span></div></a></div><span class="absolute top-0.5 right-1 pointer-events-none"><span class="relative flex size-2" aria-hidden="true"><span class="absolute inline-flex h-full w-full animate-ping motion-reduce:animate-none rounded-full bg-accent-100 opacity-75"></span><span class="relative inline-flex size-2 rounded-full bg-accent-100"></span></span></span></div></div><div class="flex items-center gap-2 transition border-t-0.5 border-transparent"><div class="flex-1 min-w-0"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-9 px-4 py-2 rounded-lg min-w-[5rem] whitespace-nowrap !scale-100 flex-row !min-w-0 w-full rounded-none group px-2 !-outline-offset-2 transition-[gap] duration-150 ease-out gap-0 !bg-transparent !py-6 my-2 [&amp;:has(.downloads-link:hover)]:!bg-transparent _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="user-menu-button" aria-label="Naga Sushanth Kumar, Settings" tabindex="0" aria-haspopup="menu" aria-expanded="false" id="_r_2j_"><div class="relative flex-shrink-0"><div class="relative flex-shrink-0"><div class="flex items-center justify-center rounded-full text-text-200 border-0.5 border-transparent group-hover:border-border-200 transition group-hover:opacity-90"><div class="flex shrink-0 items-center justify-center rounded-full font-bold select-none h-9 w-9 text-[16px] bg-text-200 text-bg-100">NS</div></div></div></div><div class="opacity-0 transition-opacity ease-out duration-150 flex flex-1 text-sm justify-between items-center font-medium min-w-0"><div class="flex flex-col items-start min-w-0 flex-1 pr-1"><span class="w-full text-start block truncate">Naga Sushanth Kumar</span><span class="w-full truncate text-xs text-text-500 font-normal text-start">Free plan</span></div><div class="flex items-center gap-2 flex-shrink-0 overflow-visible"><svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" viewBox="0 0 256 256" class="flex-shrink-0"><path d="M181.66,170.34a8,8,0,0,1,0,11.32l-48,48a8,8,0,0,1-11.32,0l-48-48a8,8,0,0,1,11.32-11.32L128,212.69l42.34-42.35A8,8,0,0,1,181.66,170.34Zm-96-84.68L128,43.31l42.34,42.35a8,8,0,0,0,11.32-11.32l-48-48a8,8,0,0,0-11.32,0l-48,48A8,8,0,0,0,85.66,85.66Z"></path></svg></div></div></button></div></div></div></nav></div></div><div id="main-content" class="w-full relative min-w-0 h-full print:!h-auto" style="padding: 0px;"><div class="flex flex-1 h-full w-full overflow-hidden max-md:relative md:-mt-[var(--df-header-h,0px)] md:h-[calc(100%+var(--df-header-h,0px))] print:!h-auto print:!overflow-visible print:!mt-0"><div class="h-full flex flex-col overflow-hidden md:pt-[var(--df-header-h,0px)] print:h-auto print:overflow-visible" style="flex: 100 1 0%;"><header class="flex w-full bg-bg-100 sticky top-0 z-header h-12 -mb-3" aria-hidden="false" data-testid="page-header" style="height: 48px;"><div class="from-bg-100 via-bg-100 via-65% to-bg-100/0 pointer-events-none absolute inset-0 -bottom-5 z-[-1] bg-gradient-to-b blur-sm"></div><div class="flex w-full items-center justify-between gap-4 pl-11 lg:px-8 gap-6 p-3 lg:pl-4 lg:pr-3 pr-3"><div class="flex min-w-0 md:items-center font-base-bold flex-1 pr-[100px]"><div class="flex min-w-0 shrink-1 items-center group -ml-1"><div class="truncate text-text-300">Designing INIT(0→1): A 24-hour internal hackathon framework</div></div></div><div class="right-3 flex gap-2"><div class="bg-bg-300 text-text-300 rounded-full px-3 py-1.5 font-base-bold">Shared by Anand</div></div></div></header><div class="overflow-y-auto overflow-x-hidden [scrollbar-gutter:stable] pt-6 flex-1 print:!overflow-visible print:!h-auto" data-autoscroll-container="true"><div class="relative w-full min-h-full"><div class="relative mx-auto flex h-full w-full max-w-3xl flex-1 flex-col md:px-2 mt-4"><div class="flex-1 flex flex-col px-4 max-w-3xl mx-auto w-full"><div class="border-0.5 border-border-400 text-text-400 flex items-center justify-between gap-2 rounded-xl px-3 py-2"><div class="flex items-center gap-2"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 256 256" class="shrink-0"><path d="M128,24A104,104,0,1,0,232,128,104.11,104.11,0,0,0,128,24Zm0,192a88,88,0,1,1,88-88A88.1,88.1,0,0,1,128,216Zm16-40a8,8,0,0,1-8,8,16,16,0,0,1-16-16V128a8,8,0,0,1,0-16,16,16,0,0,1,16,16v40A8,8,0,0,1,144,176ZM112,84a12,12,0,1,1,12,12A12,12,0,0,1,112,84Z"></path></svg><p class="text-xs leading-snug">This is a copy of a chat between Claude and Anand. Content may include unverified or unsafe content that do not represent the views of Anthropic. Shared snapshot may contain attachments and data not displayed here.</p></div><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 rounded-md px-3 min-w-[4rem] whitespace-nowrap !text-xs _fill_10ocf_9 _ghost_10ocf_96" type="button">Report</button></div><div data-test-render-count="1"><div class="contents"><div class="mb-1 mt-6 group"><h2 class="sr-only select-none">You said: This is the idea that Sushanth has pitched for a hackathon that we're thinking of running for Rhapsody.</h2><div class="flex flex-col items-end gap-1"><div data-user-message-bubble="true" class="group relative inline-flex gap-2 bg-bg-300 rounded-xl pl-2.5 py-2.5 break-words text-text-100 transition-all max-w-[75ch] flex-col !px-4 max-w-[85%]" style="opacity: 1; transform: none;"><div class="flex flex-row gap-2 relative"><div class="flex-1"><div data-testid="user-message" class="font-large !font-user-message grid grid-cols-1 gap-2 py-0.5 relative [&amp;_ul]:!space-y-0 [&amp;_ol]:!space-y-0 [&amp;_ul]:pl-8 [&amp;_ol]:pl-8" style="max-height: none; overflow: hidden; position: relative;"><p class="whitespace-pre-wrap break-words">This is the idea that Sushanth has pitched for a hackathon that we're thinking of running for Rhapsody. Rhapsody is Straive's (Gramener's) data analytics team internal annual fest, not particularly formal.</p><p class="whitespace-pre-wrap break-words">It includes fairly diverse teams and we want to excite them. Maybe they'll learn something, maybe we will learn something from the experiments that we might be able to run. In the past, we've had comic generation hackathons, storytelling hackathons, kinds of things that anyone can participate in. They don't necessarily need to have technical skills. And yet, who will take people towards something that is modern in technology.</p><p class="whitespace-pre-wrap break-words">Keeping this kind of an objective in mind and knowing my style of experimenting and the kind of work that I do, as well as Straive's' overall objective.</p><ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-2.5 pl-7"><li class="whitespace-normal break-words">IDEATE prioritizing novelty over feasibility. Do not filter.
+<ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-2.5 pl-7"><li class="whitespace-normal break-words">Choose 3–5 distinct people who'd see this differently. For each, generate 3 short candidate ideas.</li><li class="whitespace-normal break-words">Choose 2 UNRELATED domains and for each, extract 3 atomic structural rules, and use them to create 4 more candidate ideas.</li><li class="whitespace-normal break-words">List the 5 most obvious / conventional ideas across all candidates. Ban them, along with near-duplicates.</li><li class="whitespace-normal break-words">Merge all remaining ideas removing overlaps. Keep the set maximally diverse across mechanisms, users, and time horizons.</li></ul></li><li class="whitespace-normal break-words">CONVERGE:
+<ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-2.5 pl-7"><li class="whitespace-normal break-words">Critique each surviving idea: what assumption must hold, why it is non-obvious, and why it may fail.</li><li class="whitespace-normal break-words">Score each idea on impact, novelty, and speed.</li><li class="whitespace-normal break-words">Recommend the best practical idea(s) and the best wildcard idea(s), explaining the non-obvious insight each is built on.</li></ul></li></ul><p class="whitespace-pre-wrap break-words">Plan like an expert. In this context, first think about:
+- What patterns would an expert in this field check / recognize that beginners would miss?
+- What questions would an expert ask that a beginner would not know to?
+- What problems / failures would an expert anticipate that beginners may not be aware of?
+- What powerful &amp; relevant mental models would an expert apply in this context?</p><p class="whitespace-pre-wrap break-words">&lt;PROPOSAL
+Rhapsody · A Tech Event Proposal · Hyderabad
+A 24-hour internal hackathon — initialize something from nothing. Cross-functional teams. Real pain points from Sales. Working prototypes, and decks.
+Proposed by **Naga Sushanth Kumar** · Associate Data Scientist, Gramener Hyderabad Rhapsody · Late July / Early August 2026
+Gramener has POC methodology of **72 hours, end to end.** We build a working solution — not a deck, not a roadmap, an actual thing that runs.
+And yet for all the times we have proven this to outsiders, we have never quite turned the same lens on ourselves. We have never asked, on a single weekend, what would happen if our own people — the designers, the data scientists, the marketers, the consultants, the managers — were given a real problem and 24 hours to invent something new for it. Not improve something. _Invent._
+This is a pitch for that weekend. The vehicle is Rhapsody — Gramener's annual day, already on the calendar for late July or early August, already a celebration of sports and a party. The proposal is to add a tech component to it that lives in the same spirit as everything else Gramener does, but with a sharper edge.
+&gt; We already prove our capabilities to clients in 72 hours. **INIT(0→1)** proves our capabilities to ourselves in 24. — The Pitch in One Line
+## The Why — A Hackathon That Looks Like Us
+Hackathons are not new. Most companies run them. Most hackathons are _tech-only echo chambers._ They optimize for the thing that's easiest to demo — a screen with something blinking on it — and they exclude the people who would have told you, on hour two, that no real client would ever pay for that thing. The engineers are correct. The engineers are also, by themselves, not the company.
+INIT(0→1) is structured to fix this from the first hour. Teams are **strictly cross-functional** — every team has a Data Consultant, a Data Scientist or Engineer, someone from Marketing, and a Manager or Business person. The roles are interchangeable and they're decorative. Each is there because each, on their own, sees a part of the problem the others can't see.
+Data Consultant + Data Scientist / Engineer + Marketing + Manager / Business \= One INIT(0→1) Team
+The themes do not come out of thin air. **Vijayam Sirikonda, SVP Sales,** sits closer to the market than anyone else in the building. He hears, every week, what clients are frustrated by and what they wish existed. He pitches the real pain points and trends; we distill them into hackathon themes; employees pick and build on them. The problem statement is not invented for the event — it is sourced from the market the event is supposed to serve.
+This is talent-powered innovation at near-zero cost. The office is already paid for. The people are already employed. The clients have already told Sales what they need. All we are doing is putting those three facts in the same room for one weekend.
+24
+Hours, kickoff to final
+4–5
+People per cross-functional team
+3
+Mark checkpoints across the night
+5
+Evaluation dimensions, none dominant
+## The North Star — 0→1, Not 1→2
+Every hackathon needs a filter. Without one, teams default to the safest path: take something that exists, change one thing about it, ship the variant. You get a competent project; you do not get a memorable one.
+The filter for INIT(0→1) is in the name. **0→1.** Build something that doesn't exist yet. Not an improvement to an existing tool, not a polished version of a thing already in the pipeline — genuine creation. New tools, new solutions to problems that have so far been unsolved or unsolved well.
+This is a hard filter. It will rule out comfortable ideas. That is the point. The whole reason for compressing the format to 24 hours and forcing cross-functional teams is to make sure the output isn't another version of what we already do — it's the thing we _haven't_ done yet, that we should have.
+The title itself is the philosophy. **INIT(0→1)** — initialize something from nothing. Technical enough to excite engineers. Conceptual enough to excite the business side. Communicates the entire premise in one glance. We are not improving — we are starting.
+&gt; Build something that doesn't exist yet. Not improving what's already there. Genuine creation — new tools, new solutions to unsolved problems. — The North Star
+### Structure
+-   **24 hours**, kickoff Saturday 9 AM → finals Sunday 9 AM.
+-   Divided into **3 Marks** — Mark 1, Mark 2, Mark 3 — each a checkpoint, each timed.
+-   Teams of **4–5**, strictly cross-functional.
+-   Teams formed via a **registration form** rolled out to all Hyderabad employees, balanced across roles.
+-   Themes pitched by **Vijayam Sirikonda** from Sales — sourced from real client pain points.
+#### The Run of Play
+### 24 Hours, Three Marks
+From kickoff to final pitch, the weekend is paced by milestone checkpoints. Each Mark resets the room — teams present, judges score, the field narrows.
+9:00 AMSaturday
+Kickoff Hour 0
+Teams revealed. Topics released, sourced from Vijayam's market pain points. Briefing. The clock starts.
+1:00 PMSaturday
+Lunch at office Hour 4
+Teams in flow. First version of the idea forming. Last meal before the first cut.
+5:00 PMSaturday
+Mark 1 — Evaluation Hour 8
+First checkpoint. Problem clarity, direction, originality. Elimination round — teams that aren't going anywhere stop here.
+EveningSaturday
+Dinner at office Hour 12
+Qualified teams only. Fuel for the long night. The room thins, the survivors lock in.
+1:00 AMSunday
+Mark 2 — Evaluation Hour 16
+Second checkpoint. Working version of something must exist. Elimination round. Cross-functional contribution starts to matter visibly here.
+9:00 AMSunday
+Mark 3 — Final pitches Hour 24
+Final submissions and presentations. Working prototype, live demo, full evaluation across all 5 dimensions. The winner is the team that genuinely went 0→1.
+The Marks are deliberate. They are not arbitrary stage-gates — they are the rhythm that keeps a 24-hour event from collapsing into a sleep-deprived blur. **Mark 1 at hour 8** tests whether the idea is real. **Mark 2 at hour 16** tests whether it's getting built. **Mark 3 at hour 24** tests whether the team can sell it.
+⚠ Open Questions on Format — for Management
+Q1**Elimination at Mark 1 &amp; 2 — cut or cumulative?** Are teams eliminated, or does everyone continue with cumulative scoring? Cumulative keeps energy up; elimination raises stakes.
+Q2**Final output — demo, deck, or link?** At 9 AM Sunday, do teams give a live demo, a presentation, or submit a working prototype URL?
+Q3**Judges panel.** Who evaluates at each Mark? Is Vijayam one of them at all 3? Is upper management present at the final? Same panel throughout, or a rotating set?
+Q4**Tools allowed.** No restrictions, including AI?
+Q5**Team size — 4 or 5?** Cross-functional structure works at both, but the final number affects total team count and judging load.
+## The Evaluation Framework — Five Dimensions, None Dominant
+The single most important design principle in INIT(0→1) is this: **no single dimension wins on its own.** A team with zero working code but a brilliant, well-argued, high-impact idea can still beat a team that shipped something shallow. A team with the slickest demo can still lose to a team that genuinely thought harder about the problem.
+This is deliberate departure from typical hackathon scoring, which over-rewards whatever happens to compile by Sunday morning. Compiling is a low bar; _creating something worth compiling_ is a much higher one. The framework below makes that explicit.
+#### 5-Dimension Evaluation Framework
+### No single dimension dominates
+A brilliant idea can beat a shallow prototype. A working prototype can beat a vague concept. A team that pitches well can beat one that mumbles. The five dimensions weigh together — the final weightages are for management to set.
+Problem &amp; Originality
+Weightage: TBD
+Is this a genuine 0→1 idea? Does it address a real, unsolved pain point — not something already being done inside or outside the company?
+Is the problem real &amp; validated?
+Is the idea truly new (0→1)?
+Is the scope well defined?
+Business Impact
+Weightage: TBD
+If this solution were implemented tomorrow, what would the measurable impact be? Revenue, efficiency, client acquisition, cost saving?
+Scale of impact (team, org, market)
+Measurability of outcome
+Alignment with Gramener's goals
+Solution &amp; Implementation
+Weightage: TBD
+How well is the solution designed and executed? A working prototype scores here — but so does a deeply reasoned architecture with a clear build path.
+Soundness of the approach
+Working demo / prototype
+Tech &amp; data choices made
+Persuasion &amp; Pitch Quality
+Weightage: TBD
+Did the team convince the judges? Storytelling, clarity, confidence, and how well they sold the idea — the "effort to convince us" dimension.
+Clarity of the narrative
+Strength of the case made
+Handling Q&amp;A from judges
+Cross-Functional Collaboration
+Weightage: TBD
+Did the team truly leverage every role — or did the engineers do everything while the others watched? The output should reflect multiple POVs.
+Visible contribution of each role
+Business + tech perspective merged
+Team dynamics &amp; synergy
+**Weightages total to 100.** Final distribution to be decided by upper management. A working prototype does _not_ automatically outrank a brilliantly argued, high-impact concept — that's the whole point.
+⚠ Open Questions on Evaluation
+Q6**Do all 5 dimensions apply at every Mark, or does the focus shift?** For example, Mark 1 at hour 8 might focus on problem clarity and direction, while Mark 3 at hour 24 is the full picture.
+Q7**Final weightages — who sets them?** The framework deliberately leaves these open. A single VP, a panel vote, or a published default before the event?
+Q8**Human judges or an AI scoring layer?** Could a structured LLM-based rubric complement human judges for consistency across teams?
+---
+## Side Quests — The Secret Weapon
+The single biggest failure mode of an overnight hackathon is not bad ideas. It's the **2 AM energy crash.** Around that hour, every team hits the same wall — the room goes quiet, screens dim, the original spark from kickoff feels distant. Most events lose their best people right there.
+INIT(0→1) builds in a counter. **Side Quests** — bonus point challenges that run in parallel to the main hackathon throughout the 24 hours. Completely optional, completely random, completely fun. Announced on the spot, no preparation, no penalty for skipping.
+The points sit on top of the main evaluation. They don't replace it — a strong side-quest run cannot win the hackathon on its own — but they can be the tiebreaker in a close final. More importantly, they keep the room alive when energy is at its lowest.
+&gt; The side quests are the secret weapon. They solve the biggest problem with overnight hackathons — the 2 AM energy crash. Push-ups, MonkeyType, helping other teams — that keeps the room alive and human. — Why Side Quests Matter
+#### Side Quest Categories
+### Bonus points across the 24 hours
+Five categories. A dedicated quest-master tracks claims and verifies them throughout the night. Points stack on top of main evaluation scores.
+⚡
+Physical challenges
+Keep the energy alive
+30 push-upsAny team member, verified on the spot
+60-second plankWhole team planks together
+3 AM survivor badgeWhole team still present at 3 AM
+Office lap sprintFastest team member around the floor
+⌨
+Tech skill challenges
+For the nerds in the room
+MonkeyType 100 WPMScreenshot required as proof
+First GitHub commitFirst team to push a public repo
+Best prompt awardWildest LLM prompt that actually worked
+Live demo in under 60sSpeed-pitch your idea in one minute
+♥
+Collaboration bonus
+The spirit of INIT(0→1)
+Help another teamVerified by the team you helped
+Knowledge share sessionTeach something useful to the room
+Cross-team feedbackGive structured feedback to another team
+The Good SamaritanHelp 3 different teams in 24 hours
+✦
+Wildcard &amp; creative
+Announced on the spot — no prep
+Best team name storyMost creative explanation of team name
+Meme of the nightFunniest meme about their own project
+Surprise triviaRandom data/AI trivia — first to answer wins
+Best desk setupMost impressive / creative workspace
+⏱
+Milestone unlocks
+Time-locked bonus moments
+Hour 1 declarationFirst team to post their idea publicly
+Midnight checkpointAll members present at midnight check-in
+Pivot badgeTeam that changed direction &amp; recovered
+Early bird bonusFirst team to submit final output before 9 AM
+**Side quest points are bonus.** They cannot replace a weak main submission — but in a close final, they absolutely can be the tiebreaker. A dedicated _quest-master_ (1 person, ideally from outside the participating teams) tracks and verifies all claims throughout the night.
+## Awards — Built for Story
+If the evaluation framework is how teams are scored, the awards are how they're _remembered._ Single trophy at the end. Single team's name on it. That's a thin event. What we want is a room where, by 10 AM Sunday, a dozen teams walk away with something — a story, a badge, a thing to put on LinkedIn.
+The award categories below cover the spectrum: the overall winner, the strongest in each dimension of judging, the spirit awards, and the side-quest king. They are written so that there's a meaningful award for every kind of team that walks in.
+Main Awards
+INIT Champion
+Overall winner. Best across all 5 dimensions. The team that truly went from 0 to 1.
+First Commit
+Runner-up. Second best overall — strong across the board, just edged out.
+Idea &amp; Impact
+North Star
+Highest business impact. If one idea had to be built next Monday, it's this one.
+The Blueprint
+Best concept or idea — even if not fully built. The vision was undeniable.
+Zero Day
+Most original 0→1 idea. Nobody has thought of this before — inside or outside Gramener.
+Moon Shot
+Most ambitious idea. Swung the biggest — even if it didn't fully land.
+Build &amp; Execution
+Ship It
+Best working product or prototype. Something real, live, and demonstrable at 9 AM.
+Full Stack
+Best technical execution. Cleanest architecture, smartest use of tools and AI.
+Pitch &amp; Storytelling
+The Pitch
+Best presentation and persuasion. The judges were sold — even the skeptical ones.
+Data Story
+Best use of data to tell a compelling story. Very Gramener — this one's in the DNA.
+Spirit &amp; Culture
+The Samaritan
+Most collaborative team. Helped others, shared knowledge, lifted the whole room.
+The Pivot
+Team that changed direction mid-hackathon and recovered brilliantly.
+Night Owl
+Most resilient team. All members present and pushing at every Mark — no dropouts.
+People's Choice
+Voted by all participants — not judges. The team everyone else loved the most.
+Side Quest
+Quest Master
+Most side-quest points accumulated across the 24 hours. The chaos champion.
+Meme of the Night
+Best meme created during the hackathon. Crowd voted. Purely for glory.
+## The ROI — What Upper Management Actually Gets
+Every event has a budget question behind it. The budget question for INIT(0→1) is unusually easy to answer: **the cost is near-zero.** The office is paid for. The people are employed. The food was already in the Rhapsody budget. The differentiator is one weekend, an SVP's hour to pitch themes, and a small panel of judges.
+What comes back, in exchange, is a list that is hard to manufacture any other way:
+-   **Working prototypes** sourced from real client pain points, surfaced by Sales — not theoretical R&amp;D.
+-   **Cross-functional muscle memory.** A marketer and a data scientist who have shipped together once will work together better forever.
+-   **A signal to the rest of the company** that Gramener takes its own people seriously as inventors, not just executors of client work.
+-   **Knowledge sharing.** Twenty-four hours of side quests, demos, and pivots is a year's worth of informal learning compressed into a weekend.
+-   **A pipeline of ideas** for next year's roadmap. Even the losing teams generate insight that's worth capturing.
+-   **Internal marketing.** Photos, clips, quotes — the story of teams grinding at 2 AM, the side quests, the final pitches — is the thing that sells next year's Rhapsody before it's announced.
+&gt; It's talent-powered innovation, at near-zero cost, solving real pain points sourced directly from Sales — with cross-functional collaboration, knowledge sharing, and working prototypes (not decks) as output. — The ROI in One Paragraph
+One more thing worth saying explicitly. **If this goes well in 2026, it doesn't stay a one-time event.** It becomes the thing people look forward to at Rhapsody every year — the Pro-Plus-Max version of Anand's Innovation team, the cinematic _Mudhalvan_ moment where the whole company becomes the Innovation team for one day. That kind of ritual is not built by repeating talks. It's built by one weekend that goes right, and then doing it again.
+## Open Logistics Questions
+A handful of practical questions that need a yes/no from management before the registration form goes out:
+⚠ Open Questions on Logistics
+Q9**Prizes &amp; rewards.** What do winners actually get? Cash, certificates, time off, conference budget, internal recognition? The strength of the prize sets the seriousness of the event.
+Q10**Post-hackathon fate of winning ideas.** Do they get resourced and built? This is a _huge_ motivator. If teams know the winning idea actually ships, the quality of submissions changes.
+Q11**Office logistics.** Is the Hyderabad office open all night? Seating, power, internet, security confirmed for a 24-hour event?
+Q12**Internal announcement.** How and when do employees first hear about INIT(0→1)? An all-hands? An email? Vijayam framing the themes live?
+Q13**Documentation.** Assign 1–2 people to photograph, record short clips, capture quotes. The story of INIT(0→1) is internal marketing gold for next year's edition.
+## Top Takeaways
+What we want upper management to remember
+-   1</p><p class="whitespace-pre-wrap break-words">    INIT(0→1) is the 72-hour client model, inverted on ourselves</p><p class="whitespace-pre-wrap break-words">    We already prove our capabilities to clients in 72 hours. This is the 24-hour version, pointed inward. Same engine, half the runtime, applied to our own people.</p><ul class="[&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc space-y-2.5 pl-7"><li class="whitespace-normal break-words"><p class="whitespace-pre-wrap break-words">2</p><p class="whitespace-pre-wrap break-words">Cross-functional teams are non-negotiable</p><p class="whitespace-pre-wrap break-words">Most hackathons are tech echo chambers. Forcing a marketer, a manager, a consultant, and a data scientist to share one problem is how genuinely different ideas surface. This is the structural difference, and it's the smartest decision in the design.</p></li><li class="whitespace-normal break-words"><p class="whitespace-pre-wrap break-words">3</p><p class="whitespace-pre-wrap break-words">0→1 is the filter that protects against forgettable output</p><p class="whitespace-pre-wrap break-words">"Build something new" rules out comfortable variants of what we already do. It is a hard filter on purpose. Without it, teams default to safe; with it, they have to invent.</p></li><li class="whitespace-normal break-words"><p class="whitespace-pre-wrap break-words">4</p><p class="whitespace-pre-wrap break-words">Themes from Sales make the event commercially serious</p><p class="whitespace-pre-wrap break-words">Vijayam pitches real client pain points. The hackathon stops being abstract play and starts being a 24-hour answer to questions the market is actually asking. The winning ideas have a buyer already.</p></li><li class="whitespace-normal break-words"><p class="whitespace-pre-wrap break-words">5</p><p class="whitespace-pre-wrap break-words">A 5-dimension scoring framework — none of them dominant</p><p class="whitespace-pre-wrap break-words">A brilliant idea can beat a shallow prototype. A working build can beat a vague concept. A great pitch can beat a mumbled one. The framework is intellectually honest — and forces teams to be balanced.</p></li><li class="whitespace-normal break-words"><p class="whitespace-pre-wrap break-words">6</p><p class="whitespace-pre-wrap break-words">Side quests solve the 2 AM problem</p><p class="whitespace-pre-wrap break-words">The biggest failure mode of overnight events is the energy crash. Push-ups, MonkeyType, "help another team" — these keep the room alive and human. They cost nothing and pay back in stories.</p></li><li class="whitespace-normal break-words"><p class="whitespace-pre-wrap break-words">7</p><p class="whitespace-pre-wrap break-words">Near-zero cost, high-signal output, high-story output</p><p class="whitespace-pre-wrap break-words">The budget is essentially marginal — food, judges' time, prizes. The output is working prototypes from cross-functional teams, an idea pipeline for next year's roadmap, and one weekend's worth of internal-marketing gold that sells Rhapsody '27 before it's announced.</p><p class="whitespace-pre-wrap break-words">"We already prove our capabilities to clients in 72 hours. INIT(0→1) proves our capabilities to ourselves in 24."
+— The Pitch, In One Line
+&lt;/PROPOSAL&gt;</p></li></ul></div><button class="pb-3 pt-1 text-xs text-text-500/80 hover:text-text-100 transition w-3/4 text-left rounded-lg">Show less</button></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><span class="text-text-500 text-xs flex items-center mr-2" data-state="closed">11:07 AM</span><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div></div></div><div data-test-render-count="1"><div class="group" style="height: auto; opacity: 1; transform: none;"><div class="contents"><div data-is-streaming="false" class="group relative relative pb-3" style="opacity: 1; transform: none;"><h2 class="sr-only select-none">Claude responded: Expert planning notes (before ideating)</h2><div class="font-claude-response relative leading-[1.65rem] [&amp;_pre&gt;div]:bg-bg-000/50 [&amp;_pre&gt;div]:border-0.5 [&amp;_pre&gt;div]:border-border-400 [&amp;_.ignore-pre-bg&gt;div]:bg-transparent [&amp;_.standard-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.standard-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8 [&amp;_.progressive-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.progressive-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8"><div><div class="standard-markdown grid-cols-1 grid [&amp;_&gt;_*]:min-w-0 gap-3 standard-markdown"><h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Expert planning notes (before ideating)</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">A few things an expert running internal corporate creativity events would catch that a first-time organiser might miss.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Pattern recognition.</strong> "Cross-functional team" is necessary but not sufficient — without forced interdependence (rules that <em>prohibit</em> certain roles from doing certain things), engineers still drive and others "support." Sushanth's proposal mitigates this with judging rubrics, but rubrics are post-hoc; the failure happens upstream. Also: 80% of hackathon submissions are forgettable. Formats that <em>guarantee</em> memorable artefacts beat formats that hope for them.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Questions a beginner wouldn't ask.</strong> Is this event optimising for <em>output</em> or for <em>experience</em>? Rhapsody historically has been the latter (comic generation, storytelling — anyone can play). Sushanth's INIT(0→1) is squarely the former. Those are different events and shouldn't be conflated. Second: who gets <em>excluded</em> by the format? Overnight excludes parents and people with health constraints. "Build a prototype" excludes most non-engineers in spirit, even if not in letter. Third: what survives the event a year later? A trophy? A photo? A story? Designing backwards from the <em>artefact that survives</em> is more useful than designing the schedule.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Failure modes to anticipate.</strong></p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Engineers carry; everyone else watches.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Output is unshowable to clients (so the marketing-asset ROI collapses).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">The "0→1" filter is unenforceable — judges can't reliably distinguish genuine novelty from competent recombination in 24 hours.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">2 AM crash kills quality. Side quests help; they don't fix it.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Sales pain points produce B2B-flavoured ideas that don't match Rhapsody's celebratory mood.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Mental models worth applying.</strong></p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Format as filter</em> (the rules determine the population and the output more than the brief does).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Constraint multiplies creativity</em> (sonnets, haikus, dogme95 — narrower brief, sharper output).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Power inversion, not power addition</em> (real inclusion happens when the powerful are restricted, not when the weak are invited).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Generation is cheap, evaluation is scarce</em> (AI inverted the value chain — Anand's own Bach Faucet / Jevons framing).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Tournament vs. festival</em> (Sushanth's design is a tournament; past Rhapsody was a festival; choose deliberately).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Variance is the signal</em> (with identical tools available to everyone, what diverges is the only interesting data).</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">With that lens, here's the ideation.</p>
+<hr class="border-border-200 border-t-0.5 my-3 mx-1.5">
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">IDEATE</h3>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">Five personas, three ideas each</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>A children's TV producer (Sesame Street / Bluey lens).</strong> Optimises for engagement, accessibility, learning through play.</p>
+<ol class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Show &amp; Tell.</em> Final demos are to <strong>actual children</strong> (employees' kids, 8–14). Kids vote. Any team whose pitch a 10-year-old can't explain back loses.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Co-Pilot.</em> Every team includes one <strong>non-employee child</strong> as a full member with equal vote on direction. Not decoration — forced naive perspective.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>The Explainer.</em> Build a tool that <em>teaches itself</em> in 60 seconds — output is a self-onboarding artefact that makes a non-trivial Straive capability legible to a stranger.</li>
+</ol>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>A sports league commissioner (Adam Silver lens).</strong> Optimises for narrative, drama, repeat viewing.
+4. <em>Draft Format.</em> Captains are chosen by lottery and draft teams live, on stage, in front of everyone — <em>the drama is the event.</em> Roles, skills, and past performance are public.
+5. <em>League Season.</em> Not 24 hours — <strong>24 days</strong>. Weekly micro-challenges, public leaderboard, mid-season trade window, finals weekend.
+6. <em>The Combine.</em> Before any teaming, a public 4-hour combine tests individuals on micro-skills (prompt-writing, viz, narration, pitch). Public scores. Teams form afterwards using combine data.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>A behavioural economist (Dan Ariely / Thaler lens).</strong> Optimises for revealing how people actually behave under constraint.
+7. <em>Reverse Hackathon.</em> Start with an <strong>AI-generated baseline prototype</strong> of mediocre quality. Teams have 24 hours to break it — expose failure modes, find adversarial inputs, document fragility. Generation was free; evaluation is the prize.
+8. <em>Switch Day.</em> At hour 12, every team's project is randomly handed to another team. Receiving team has 12 hours to finish, transform, or kill it. Final pitch is given by the second team.
+9. <em>Sunk Cost Challenge.</em> All ideas published at hour 4. At hour 12 each team must publicly DOUBLE DOWN or KILL. Teams that kill spend remaining 12 hours trying to convince others to kill too. Meta-game about commitment vs. judgment.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>A jazz musician / improv performer.</strong> Optimises for ensemble play, constraint-as-enabler.
+10. <em>Theme-and-Variations.</em> One single prompt for the whole room. Twelve teams, twelve responses. The art is the <strong>divergence</strong> — same constraint, radically different answers. The exhibition of variance is the event.
+11. <em>Solo &amp; Ensemble.</em> Hour 0–4: each person builds something alone. Hour 4–12: random pairs combine solos. Hour 12–24: pairs of pairs combine into quads. Final output is composed, not authored.
+12. <em>Yes-And.</em> Every team must build <em>on top of</em> something from a previous Rhapsody (the comic generator, the storytelling tools, an internal demo). Genuinely 1→2, honestly done — harder than 0→1 done badly.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>A museum curator.</strong> Optimises for what artefact survives and how it gets told.
+13. <em>Future Exhibition 2031.</em> Output isn't a prototype — it's a <strong>speculative artefact from five years from now</strong>. A fake product page, a fake client testimonial video, a fake academic paper. Final event is an exhibition visitors walk through.
+14. <em>Single Artefact.</em> The deliverable is <em>one</em> thing: one image, one PDF, one tweet, one URL, one 30-second video. Teams compete on what single artefact best represents their idea if it's all that survives.
+15. <em>Time Capsule.</em> Build something that unlocks in 1 year. Must improve with age, be relevant 12 months later, and contain a "do not open until" mechanism.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">Two unrelated domains, atomic rules, more ideas</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Domain A — Iron Chef / Bake Off cooking shows.</strong></p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>A1.</em> Secret ingredient revealed at T=0; no preparation allowed.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>A2.</em> Multiple rounds with different formats — speed, signature, pressure test.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>A3.</em> Judges <em>consume</em> the output and narrate the experience live; subjective, embodied evaluation.</li>
+</ul>
+<ol class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal flex flex-col gap-1 pl-8 mb-3" start="16">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Iron Hacker.</em> Two teams at a time, on stage, live. Secret "ingredient" (a dataset, an API, a constraint) revealed at start. Audience watches them build for 60 minutes. Judges <em>use</em> the output in real time and react out loud. Eliminates the "tell vs. show" gap.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Pressure Test Rotation.</em> The 24 hours split into three 8-hour rounds — Speed (build in 2 hours), Signature (showcase your team's strongest skill), Constraint (one arm tied: no code / no internet / only AI-generated assets).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Showstopper.</em> Final outputs revealed <em>simultaneously</em> to the whole room on synchronised screens — 90 seconds of narration, then silent vote. Borrowed directly from Bake Off's reveal moment.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Taste Test.</em> The entire evaluation is consumption-based. Judges don't read decks. They use each prototype for 5 minutes while narrating the experience to the room, like food critics on camera.</li>
+</ol>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Domain B — Tabletop RPG (D&amp;D).</strong></p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>B1.</em> Character classes have asymmetric abilities — each role has unique powers <em>and prohibitions.</em></li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>B2.</em> Dice rolls introduce shared, witnessed randomness mid-play.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>B3.</em> A Game Master controls the world, introducing obstacles and rewards in response to player actions.</li>
+</ul>
+<ol class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal flex flex-col gap-1 pl-8 mb-3" start="20">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Class System.</em> Five fictional classes — Architect, Wizard, Bard, Strategist, Oracle. Each has POWERS (only this class can do X) and PROHIBITIONS (this class <em>cannot</em> do Y). E.g., Wizards (engineers) cannot speak to judges — only the Bard (marketing) can. Architects cannot type — only diagram. Real interdependence by design.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>GM-Driven Hackathon.</em> Every 4 hours, a Game Master (Vijayam, or a panel) drops a plot twist. <em>"A client just asked for a legal pivot." "Your data source is down — here's a 1000x messier backup." "A competitor just announced your idea."</em> Teams must respond. Reality changes mid-project — bake it in.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>Roll for Initiative.</em> At each checkpoint teams roll dice. The roll determines what <em>resource</em> they get next — extra time, an expert consult, API credits, 30 minutes of a senior's attention. Randomness creates story.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><em>The Campaign.</em> Multi-session arc. Teams have ongoing "characters" and projects. Rhapsody is Session 1 of a longer quarterly campaign with evolving lore.</li>
+</ol>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">Banning the obvious</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Five ideas (and near-duplicates) are out:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Standard "build a working AI prototype in 24 hours" (the canonical hackathon — Sushanth's proposal already covers this lane).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Generic "use this dataset to build a dashboard" data-hack.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">"Build a chatbot / LLM wrapper" (the obvious AI hackathon shape).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Comic / storytelling generation (already done in past Rhapsodies).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Pure ideation + pitch with no build (the safe, low-energy alternative).</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Anything that's a structural clone of Sushanth's INIT(0→1) (cross-functional team builds a prototype from a sales pain point) is also off the table — the point is <em>alternatives,</em> not minor variants.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">Merged surviving set (maximally diverse across mechanism, user, time horizon)</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Twelve ideas survive, grouped by the <em>mechanism</em> they exploit:</p>
+<div class="overflow-x-auto w-full px-2 mb-6"><table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal"><thead class="text-left"><tr><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">#</th><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">Idea</th><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">Mechanism</th><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">Time horizon</th></tr></thead><tbody><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">1</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Iron Hacker</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Theatrical, embodied evaluation</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Hours, live</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">2</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Class System</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Asymmetric roles with prohibitions</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">3</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Reverse Hackathon</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Adversarial / break-don't-build</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">4</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Switch Day</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Mid-event project handoff</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">5</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">GM-Driven Hackathon</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">External chaos injection</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">6</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Yes-And</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Build on prior year (honest 1→2)</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">7</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">The Combine</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Skill-first transparency before teaming</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Pre-event + main</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">8</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Future Exhibition 2031</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Speculative artefact as output</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">9</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Theme-and-Variations</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">One prompt, twelve answers, study the variance</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Flexible</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">10</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Co-Pilot</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Outside-perspective forcing (a child on every team)</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">11</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Sunk Cost Challenge</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Meta-game about killing vs. defending</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">12</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">League Season</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Distributed-time competition</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 days</td></tr></tbody></table></div>
+<hr class="border-border-200 border-t-0.5 my-3 mx-1.5">
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">CONVERGE</h3>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">Critique, scored</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Scores are out of 5. <em>Impact</em> = how memorable + commercially useful the output. <em>Novelty</em> = how genuinely distinct from a standard hackathon. <em>Speed</em> = ease of executing this Rhapsody (logistics, learning curve, risk).</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>1. Iron Hacker.</strong> Assumption: people perform creatively under live audience pressure; judges can <em>use</em> a tool meaningfully in 5 minutes. Non-obvious insight: evaluation by consumption eliminates the demo-vs-reality gap that makes most hackathon scoring noisy. Failure mode: engineers freeze on stage; throughput too low for 12+ teams. <strong>Impact 4 · Novelty 4 · Speed 2.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>2. Class System.</strong> Assumption: people accept hard role prohibitions without cheating, and the prohibitions don't feel like cosplay. Non-obvious insight: cross-functional collaboration is enforced by restricting the powerful, not by inviting the powerless. Inclusion = inversion. Failure mode: feels gimmicky; engineers feel hobbled; classes map awkwardly to messy real skills. <strong>Impact 5 · Novelty 5 · Speed 4.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>3. Reverse Hackathon.</strong> Assumption: adversarial thinking is generative; "breaking" is celebrated, not seen as negative. Non-obvious insight: in an AI-saturated world, generation is cheap and <em>evaluation</em> is the scarce capability — this format trains the actually scarce skill. Strongly resonant with Verifiable Autonomy and LLM-Psychologist framing. Failure mode: harder to demo to clients ("we broke things" sells worse than "we built things"); risk of feeling pessimistic. <strong>Impact 5 · Novelty 5 · Speed 4.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>4. Switch Day.</strong> Assumption: teams care enough about their work to engage when handed a stranger's project. Non-obvious insight: the real test of a prototype is <em>handover quality</em> — can a fresh team pick it up? Most hackathons reward authorship; this rewards legibility. Failure mode: receiving team resents the handoff; second team feels punished for the first team's mess. <strong>Impact 3 · Novelty 4 · Speed 3.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>5. GM-Driven Hackathon.</strong> Assumption: external twists energise rather than frustrate. Non-obvious insight: reality changes mid-project — formalising this is honest training for real client work; the GM is a "client simulator." Failure mode: the GM becomes the show; twists feel arbitrary; teams game the twist schedule. <strong>Impact 3 · Novelty 4 · Speed 4.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>6. Yes-And.</strong> Assumption: there is enough past Rhapsody material to build on, and people know about it. Non-obvious insight: 0→1 done badly produces forgettable demos; 1→2 done honestly produces <em>compounding</em> assets. Anand's own blog / open-source style is yes-and, not 0→1. This is the <em>counter-thesis</em> to Sushanth's North Star. Failure mode: new joiners feel excluded; past work may be cringe in 2026. <strong>Impact 4 · Novelty 4 · Speed 4.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>7. The Combine.</strong> Assumption: public skill measurement is culturally acceptable in Straive. Non-obvious insight: most team formation throws away information about who is actually good at what — a measured combine surfaces hidden talent and produces better teams. Failure mode: embarrassment for low performers; HR risk; eats hours before the main event. <strong>Impact 3 · Novelty 4 · Speed 3.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>8. Future Exhibition 2031.</strong> Assumption: people can imagine 5 years forward without it collapsing into sci-fi. Non-obvious insight: exhibition format guarantees every team produces a <em>photographable, story-shaped artefact</em> — the marketing asset is built into the brief. Failure mode: too speculative to have business follow-through; visitor experience hard to design in 24 hours. <strong>Impact 4 · Novelty 4 · Speed 3.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>9. Theme-and-Variations.</strong> Assumption: a single shared prompt is interesting enough to compare 12 answers to. Non-obvious insight: when everyone has the same AI tools, the only interesting data left is <em>variance</em> — the event becomes a behavioural study of how a diverse team interprets the same brief. This is the most LLM-Psychologist-shaped event possible. Failure mode: solutions converge; comparison is tedious if not well-curated. <strong>Impact 4 · Novelty 4 · Speed 5.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>10. Co-Pilot (Child).</strong> Assumption: enough employees have kids in the right age range; childcare logistics work; HR is comfortable. Non-obvious insight: children are unembarrassed by "stupid questions" — they reveal what the project is <em>really</em> about and force simplicity; also turns Rhapsody into a family event. Failure mode: not all teams can have a child; schedule clashes with school; novelty wears off if kids disengage. <strong>Impact 4 · Novelty 5 · Speed 2.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>11. Sunk Cost Challenge.</strong> Assumption: people will publicly kill their own ideas; game-theory dynamics stay fun rather than political. Non-obvious insight: the rarest, most undervalued skill in corporate work is <em>knowing when to stop</em> — every other hackathon rewards stubbornness; this rewards judgment. Failure mode: alliance-formation makes it political; complex rules confuse participants. <strong>Impact 4 · Novelty 5 · Speed 3.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>12. League Season (24 days).</strong> Assumption: people will sustain attention over 24 days alongside their day jobs. Non-obvious insight: 24 hours rewards stamina; 24 days rewards consistency — completely different skill, completely different talent surfaced. Failure mode: drops off mid-season; harder to bookend with Rhapsody as a single weekend event. <strong>Impact 3 · Novelty 4 · Speed 2.</strong></p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">Recommendations</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Best practical pick: Theme-and-Variations.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The non-obvious insight is that in 2026, <em>everyone in the room has the same AI tools.</em> The only interesting signal left is divergence. One prompt to all twelve teams. Twelve answers walking through the same constraint, ending up in radically different places. The output is a wall of twelve responses you can literally line up and look at — comparison <em>is</em> the event. Every team produces something, nothing is wasted, and the meta-finding (what made teams diverge?) is exactly the kind of LLM-Psychology / human-as-interface observation Straive can use externally. Inclusive, easy to run at any time format (4 hours, a day, a week), cheap to judge, and the comparison artefact is <em>instantly</em> shareable as a Straive blog post or LinkedIn carousel. Highest impact-per-unit-effort in the set.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Best wildcard: Class System.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The non-obvious insight: cross-functional collaboration fails not because non-tech people aren't invited but because tech people aren't <em>prohibited.</em> Real interdependence requires power inversion. Five classes, each with explicit powers AND prohibitions ("Wizards cannot speak to judges — only the Bard can. Architects cannot type — only diagram. The Oracle is the only one who can touch the data."). Engineers will hate this for the first three hours and then love it for the next twenty-one. It's the only format in the set that <em>structurally guarantees</em> the marketer and the consultant are not decorative. It's also the format that's been hiding inside Sushanth's proposal all along — his rubric tries to score for cross-functional contribution post-hoc; this enforces it ex-ante.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Second wildcard: Reverse Hackathon.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">This is the one that's most "you," Anand. The premise — an AI-generated baseline prototype is the <em>starting</em> point, and teams compete to break it, expose its failure modes, find adversarial inputs, write the brutal evaluation — sits directly on top of Verifiable Autonomy, the LLM-Psychologist identity, and the Jevons-applied-to-knowledge-work frame. It's also a sharp signal to the company about where the actual scarcity is. Output: a public catalogue of "ways AI breaks at Straive's use cases" — which is <em>also</em> the most defensible commercial IP you could produce in one weekend. The risk is that breaking things feels less celebratory than building them; the counter is that <em>narrating the breakage</em> (Iron Hacker–style live consumption) makes it theatre.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>One framing worth surfacing.</strong> Sushanth's INIT(0→1) is a tournament — a tightly-paced, high-stakes commercial-output event. Past Rhapsodies (comic generation, storytelling) have been festivals — inclusive, anyone-can-play, celebratory. These are different events and Rhapsody historically has been the latter. Three options worth deciding between explicitly:</p>
+<ol class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-decimal flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Keep Sushanth's tournament as-is</strong> — and accept that it filters out the non-technical half of Rhapsody.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Run a festival format</strong> (Theme-and-Variations is the lead candidate) — keeping the historic Rhapsody DNA.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Layer them</strong> — Class System wrapped around Sushanth's structure (his time-format and Marks, but with class powers/prohibitions doing the cross-functional enforcement his rubric does post-hoc). This is the highest-upside synthesis and probably the one most worth a 30-minute conversation with Sushanth.</li>
+</ol></div></div></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div><div data-test-render-count="1"><div class="contents"><div class="mb-1 mt-6 group"><h2 class="sr-only select-none">You said: What questions should I answer to decide the type of hackathon?</h2><div class="flex flex-col items-end gap-1"><div data-user-message-bubble="true" class="group relative inline-flex gap-2 bg-bg-300 rounded-xl pl-2.5 py-2.5 break-words text-text-100 transition-all max-w-[75ch] flex-col !px-4 max-w-[85%]" style="opacity: 1; transform: none;"><div class="flex flex-row gap-2 relative"><div class="flex-1"><div data-testid="user-message" class="font-large !font-user-message grid grid-cols-1 gap-2 py-0.5 relative [&amp;_ul]:!space-y-0 [&amp;_ol]:!space-y-0 [&amp;_ul]:pl-8 [&amp;_ol]:pl-8" style="max-height: none; overflow: hidden; position: relative;"><p class="whitespace-pre-wrap break-words">What questions should I answer to decide the type of hackathon?</p></div></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><span class="text-text-500 text-xs flex items-center mr-2" data-state="closed">11:13 AM</span><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div></div></div><div data-test-render-count="1"><div class="group" style="height: auto; opacity: 1; transform: none;"><div class="contents"><div data-is-streaming="false" class="group relative relative pb-3" style="opacity: 1; transform: none;"><h2 class="sr-only select-none">Claude responded: Decision questions, in the order they matter</h2><div class="font-claude-response relative leading-[1.65rem] [&amp;_pre&gt;div]:bg-bg-000/50 [&amp;_pre&gt;div]:border-0.5 [&amp;_pre&gt;div]:border-border-400 [&amp;_.ignore-pre-bg&gt;div]:bg-transparent [&amp;_.standard-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.standard-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8 [&amp;_.progressive-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.progressive-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8"><div><div class="standard-markdown grid-cols-1 grid [&amp;_&gt;_*]:min-w-0 gap-3 standard-markdown"><h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Decision questions, in the order they matter</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">These are sequenced so each answer narrows the field for the next. Skipping ahead is tempting but produces incoherent events.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">1. What is Rhapsody <em>for</em> this year?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The single most consequential question. Three honest answers; pick one.</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>A celebration</strong> — the team has worked hard, this is the reward; inclusion and energy matter more than output.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>A showcase</strong> — Straive wants something to point at externally (clients, recruits, LinkedIn); the artefact is the point.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>An R&amp;D bet</strong> — you genuinely want to surface ideas/people you'd back commercially; the output feeds the roadmap.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">If you can't pick one, the format will try to serve all three and serve none.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">2. Who is the <em>median</em> participant you're designing for?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Not the best engineer, not the most nervous marketer — the median. Three options:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A data scientist who codes daily.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A consultant or designer who uses AI tools but doesn't build software.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A manager or business person whose hands-on AI use is occasional.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Sushanth's INIT(0→1) is designed for the first. Past Rhapsodies (comic, storytelling) were designed for the third. The choice determines whether the event feels welcoming or alienating to half the room.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">3. What artefact do you want to exist on Monday morning?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Work backwards from this. Each implies a different format.</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A <strong>working prototype</strong> → tournament, deadline, judging.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A <strong>gallery / exhibition</strong> of many outputs → festival, parallel tracks, no single winner.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A <strong>published comparison or study</strong> (one prompt, many answers; or one baseline, many breakages) → constrained brief, post-event curation.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">A <strong>story / video</strong> that markets next year's event → optimise for moments, not outputs.</li>
+</ul>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">4. How much exclusion can you tolerate?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Be specific:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Overnight format</strong> — excludes parents of young children, people with health constraints, people on caregiving duties. Acceptable cost?</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Tech-build format</strong> — excludes anyone who doesn't code. Acceptable cost?</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Public scoring</strong> — excludes those uncomfortable with public ranking. Acceptable cost?</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Each exclusion buys you something (intensity, depth, drama). The question isn't whether to exclude but <em>whom you're willing to lose.</em></p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">5. How do you want cross-functional collaboration to be enforced?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">This is the question Sushanth's proposal answers softly (via rubric) and the Class System answers hard (via prohibition). Three positions:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Trust the team</strong> — rely on goodwill and a judging rubric to score collaboration.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Structure the team</strong> — mandate composition (1 of each role) and hope it works.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Restrict the team</strong> — give each role hard prohibitions ("engineers cannot present"; "marketers cannot touch code"). Power inversion, not just power addition.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Be honest: at past Straive events, has goodwill alone produced genuinely cross-functional output, or have engineers dominated?</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">6. What is the <em>real</em> time budget — people-hours and calendar?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Two different questions:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Per person:</strong> 4 hours? 12? 24 overnight? Distributed across 2 weeks?</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Calendar shape:</strong> single weekend, multi-weekend, league season?</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">24 hours overnight is the conventional choice and the worst-tested for ROI. The right answer depends on Q1 — celebration favours short and sharp; R&amp;D favours longer and lower-intensity.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">7. What is your tolerance for risk on the format?</h4>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Conservative</strong> — proven hackathon format, predictable output, low surprise.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Moderate</strong> — one or two unusual rules layered on a standard format.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>High</strong> — genuinely novel format (Reverse Hackathon, Class System, Theme-and-Variations).</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Anand-shaped events tend to be high-risk on format and produce disproportionate signal <em>or</em> visible failure. Both have their place; the choice should be deliberate, not accidental.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">8. Who is the spending authority and what's the unspoken budget?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Not just rupees. Three budgets:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Money</strong> — food, prizes, AV, after-party.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Senior attention</strong> — Vijayam's themes, judges' hours, leadership presence.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Political capital</strong> — if it flops, who absorbs it? You? Sushanth? The team?</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">A novel format consumes more political capital than a conventional one for the same outcome. Worth pricing in.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">9. What happens to the winning ideas / outputs <em>after</em> the event?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Decide before the event, not after.</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Nothing</strong> — the event is its own reward.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Internal showcase</strong> — winners present to leadership; ideas archived.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Resourced for build</strong> — winning idea(s) get a team, budget, runway.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Published externally</strong> — write-up on the blog, the LinkedIn carousel, the Straive case studies page.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The answer is the single biggest motivator for participants and it should be in the announcement, not discovered afterwards.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">10. Is this a one-off or a ritual?</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">If a ritual:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2">The format must be <strong>repeatable</strong> — boring as it sounds, "we'll figure it out each year" doesn't build the muscle.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Year-2 needs an <strong>explicit relationship to Year-1</strong> (Yes-And as a structural choice, or a deliberate reset).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">The naming, branding, and aesthetic should be durable — "INIT(0→1)" works for one event, less so for an annual series unless you commit to the bit.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">If a one-off, you can be more experimental and disposable.</p>
+<hr class="border-border-200 border-t-0.5 my-3 mx-1.5">
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">A short way to use these: answer 1, 2, and 3 first — those three alone collapse most of the option space. The rest are refinement. If the answers to 1/2/3 are "celebration / median is non-technical / gallery of outputs," then Sushanth's INIT(0→1) is the wrong event and Theme-and-Variations or a festival format is right. If they're "R&amp;D bet / median is technical / working prototype," then Sushanth's design is essentially correct and the open question is just whether to layer Class System on top of it.</p></div></div></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div><div data-test-render-count="1"><div class="contents"><div class="mb-1 mt-6 group"><h2 class="sr-only select-none">You said: Rhapsody is a celebration.</h2><div class="flex flex-col items-end gap-1"><div data-user-message-bubble="true" class="group relative inline-flex gap-2 bg-bg-300 rounded-xl pl-2.5 py-2.5 break-words text-text-100 transition-all max-w-[75ch] flex-col !px-4 max-w-[85%]" style="opacity: 1; transform: none;"><div class="flex flex-row gap-2 relative"><div class="flex-1"><div data-testid="user-message" class="font-large !font-user-message grid grid-cols-1 gap-2 py-0.5 relative [&amp;_ul]:!space-y-0 [&amp;_ol]:!space-y-0 [&amp;_ul]:pl-8 [&amp;_ol]:pl-8" style="max-height: 200px; overflow: hidden; position: relative;"><p class="whitespace-pre-wrap break-words">Rhapsody is a celebration.
+Audience: consultant or designer who uses AI tools but doesn't build software.
+Artefact: working prototype.
+Exclusion: don't exclude as much as possible.
+Trust the team for collaboration.
+8 hours across a couple of days.
+Vijayam is the spending authority and we have reasonable budget across all three.
+Internal showcase as well as published externally for a few good ones.
+One-off is fine.</p><p class="whitespace-pre-wrap break-words">Suggest a format. Suggest SPECIFIC hackathons within this constraint. Evaluate how Sushanth's idea can be shaped according to this. Recommend one.</p><div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-bg-300 to-transparent pointer-events-none"></div></div><button class="pb-3 pt-1 text-xs text-text-500/80 hover:text-text-100 transition w-3/4 text-left rounded-lg">Show more</button></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><span class="text-text-500 text-xs flex items-center mr-2" data-state="closed">11:18 AM</span><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div></div></div><div data-test-render-count="1"><div class="group" style="height: auto; opacity: 1; transform: none;"><div class="contents"><div data-is-streaming="false" class="group relative relative pb-3" style="opacity: 1; transform: none;"><h2 class="sr-only select-none">Claude responded: The format</h2><div class="font-claude-response relative leading-[1.65rem] [&amp;_pre&gt;div]:bg-bg-000/50 [&amp;_pre&gt;div]:border-0.5 [&amp;_pre&gt;div]:border-border-400 [&amp;_.ignore-pre-bg&gt;div]:bg-transparent [&amp;_.standard-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.standard-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8 [&amp;_.progressive-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.progressive-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8"><div><div class="standard-markdown grid-cols-1 grid [&amp;_&gt;_*]:min-w-0 gap-3 standard-markdown"><h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">The format</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Given the constraints, the format almost designs itself:</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Two half-days, four hours each.</strong> Saturday morning kickoff + first sprint; Sunday morning second sprint + showcase. Overnight is gone, so caregivers, introverts, and the health-conscious are all in.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>AI build tools are the explicit medium</strong>, not a permitted exception. Claude artifacts, v0, Lovable, Bolt, Cursor, Replit. The thesis baked into the event is the one you already teach: in 2026, a consultant or designer with AI tools ships software faster than an engineer without them did three years ago. The hackathon is the <em>demonstration</em> of that thesis, not a workaround for it.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Cross-functional teams of 4, self-organised.</strong> A registration form collects preferences and skills; people pick their own teams within soft balance guidance. Trust over enforcement, as you said.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Output: anything that runs in a browser.</strong> A URL, an artifact link, a clickable thing. No infrastructure burden — vibe-coded apps, AI-rendered videos, generated PDFs, interactive Claude artifacts. If a visitor on Sunday afternoon can't click it and use it in 60 seconds, it doesn't qualify.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Showcase: gallery walk.</strong> Not stage pitches. Twelve laptops on twelve tables, teams stationed beside their work, visitors (other Straive employees, invited guests) circulate, use the artefacts, and vote. Three judges curate the externally-publishable top 3–5 afterwards.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Side quests preserved from Sushanth's design</strong> — they're pure upside in a celebration, and they don't depend on the main format choice.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">That's the chassis. The brief that sits on top of it is the actual design decision.</p>
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Specific hackathons within the format</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Five options, each fully buildable inside the chassis above.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">1. Twelve Answers</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">One prompt, issued at hour zero, identical for every team. Twelve interpretations. Examples of the kind of prompt that would work:</p>
+<blockquote class="ml-2 border-l-4 border-border-300/10 pl-4 text-text-300">
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>"Build the report a CEO would actually open every Monday."</em>
+<em>"Build the thing a Straive client would quietly steal from us."</em>
+<em>"Build the dashboard that replaces a meeting."</em>
+<em>"Build the tool you wish existed in your last project."</em></p>
+</blockquote>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The output isn't "the winner" — it's <em>the wall of twelve.</em> The artefact that survives is a curated comparison, externally publishable as "Twelve teams, one prompt, eight hours: how Straive responded." A study in variance, which is the most LLM-Psychology-shaped possible event and the only one of the five whose <em>meta-output</em> (the comparison itself) is a publishable thing.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>Risk:</em> the prompt has to be excellent. A weak prompt produces convergent solutions and the variance story collapses.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">2. Postcards from 2031</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Every team builds a <strong>speculative artefact from five years in the future</strong> — a working one, not a concept. A clickable product page for a Straive offering that doesn't exist yet. A fake client testimonial video (AI-generated). A "Straive Research 2031" academic paper as a real PDF. A fake newsletter from a future BU. A dashboard from a client engagement that hasn't happened.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The showcase is a literal exhibition — visitors walk through 2031 and read/click each artefact. Externally, this publishes beautifully as a design-led piece. Designers and consultants thrive here because the medium is <em>storytelling and aesthetic</em>, not infrastructure.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>Risk:</em> the speculative frame can drift into sci-fi cosplay if no one anchors it to commercial plausibility.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">3. The Sequel</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Surface five or six past Rhapsody outputs (comic generator, storytelling tools, anything still extant). Teams pick one and build its "Season 2" using 2026 AI tools. Honest 1→2 done well, which is harder and more useful than 0→1 done badly. It's also the inversion of Sushanth's North Star, which is intellectually interesting on its own.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>Risk:</em> depends entirely on whether the existing baseline material is alive enough to build on. If most past outputs are stale, this falls flat.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">4. Personal Pilot</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Brief: <em>"Build the tool that solves a problem YOU personally have at work."</em> No client framing, no sales pain points — just real, felt, internal friction. The five most useful become real internal Straive tools post-event.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Inclusive to the extreme — everyone has a pet annoyance. Output is a portfolio of micro-tools that are <em>immediately</em> deployable internally, which means leadership sees concrete value in week one.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>Risk:</em> outputs are narrow and idiosyncratic — harder to publish externally because each tool is context-specific. Internal ROI is strong; external storytelling is weaker.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">5. The Vijayam Prompt (compressed Sushanth)</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Sushanth's INIT(0→1) compressed: Vijayam pitches three or four real client pain points at kickoff; teams pick one and build a working prototype. Same chassis as above (8 hours, two days, AI build tools, gallery showcase).</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">This is the most directly commercial choice and the easiest to defend to leadership. It's also the least Rhapsody-shaped — it leans tournament when the brief is festival.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>Risk:</em> despite the format-softening, the <em>energy</em> still tilts toward serious-business rather than celebration, because the prompts are commercial.</p>
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">How Sushanth's INIT(0→1) reshapes against your constraints</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Honest mapping of what survives and what doesn't:</p>
+<div class="overflow-x-auto w-full px-2 mb-6"><table class="min-w-full border-collapse text-sm leading-[1.7] whitespace-normal"><thead class="text-left"><tr><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">Sushanth's design</th><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">Survives?</th><th scope="col" class="text-text-100 border-b-0.5 border-border-300/60 py-2 pr-4 align-top font-bold">Reshape</th></tr></thead><tbody><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">24 hours overnight</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">No</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">8 hours across two days</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Themes from Vijayam (Sales pain points)</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Partially</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">One option of several brief styles; keep Vijayam as theme-pitcher if you go with that brief</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Cross-functional teams, mandated composition</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Softened</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Cross-functional, self-organised, soft balance only</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">5-dimension scoring, none dominant</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Yes</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Keep; add "AI-tool fluency" as a sixth dimension</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Marks 1/2/3 (three checkpoints)</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Reduced</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Two checkpoints — end of Day 1 (idea check), end of Day 2 (showcase)</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">0→1 filter as North Star</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">No</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Drop. Unenforceable, and Yes-And is more honest in 2026</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Side quests</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Yes</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Fully preserved — pure celebration fuel</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Many award categories (15+)</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Yes</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Even expand. More awards = more stories = better celebration</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Elimination at each Mark</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">No</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Cumulative scoring. Celebrations don't eliminate; they curate</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Strictly working prototype</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Yes</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">But explicitly via AI build tools — that's the whole thesis</td></tr><tr><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Stage pitches</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">No</td><td class="border-b-0.5 border-border-300/30 py-2 pr-4 align-top">Gallery walk instead — more inclusive, more celebratory</td></tr></tbody></table></div>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">What's <em>structurally</em> great in Sushanth's proposal and worth keeping in any format: the side quests, the multi-award culture, the cross-functional default, and the rubric that explicitly refuses to let a working prototype automatically beat a brilliant non-build. What needs to go: the overnight intensity, the tournament framing, the elimination rounds, the "0→1 or nothing" filter, and stage-pitch finals.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The shaped version of INIT is essentially option 5 above (The Vijayam Prompt). It's a perfectly defensible choice. It's just not the most Rhapsody-shaped one.</p>
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Recommendation</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Twelve Answers, with Sushanth's structural ideas layered in.</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Concretely:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2">One prompt to all teams at kickoff. The prompt is the single most important design artefact of the event — worth a week of work to get right. (My instinct: <em>"Build the thing a Straive client would quietly steal from us."</em> Ambiguous, commercially provocative, and forces interpretation work that non-coders do well.)</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Eight hours across two days. AI build tools the explicit medium.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Cross-functional teams of 4, self-organised. Trust-based.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Two checkpoints, both light. End of Day 1: every team posts a one-line interpretation of the prompt publicly. End of Day 2: gallery walk + showcase.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Side quests preserved from Sushanth's design, untouched.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Award categories — keep most of Sushanth's list; add <strong>Most Divergent Interpretation</strong> as the signature award (it's the one that pays off the variance thesis).</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">Vijayam plays the role of <em>prompt-issuer</em> and head judge rather than theme-curator. The prompt itself can be co-developed with him from a client conversation he's had recently — gives it commercial roots without forcing the tournament shape.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2">External publication is the natural output: <em>"Twelve teams, one prompt, eight hours."</em> A single LinkedIn carousel and a blog post on s-anand.net comparing all twelve interpretations side-by-side. The comparison is the asset.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Why this over the alternatives.</strong> Postcards from 2031 is more aesthetically striking but harder to defend commercially to Vijayam; The Sequel depends on baselines that may not exist; Personal Pilot has weak external publishability; the shaped Sushanth is solid but trades away the Rhapsody-as-celebration brief you just confirmed.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>The non-obvious insight Twelve Answers is built on.</strong> When everyone in the room has the same AI tools, the only interesting signal left is <em>variance.</em> What makes Straive's people different from each other is the only thing left to study, and it's the only thing worth publishing. The hackathon isn't producing twelve products — it's producing one <em>study</em> about how a diverse company interprets a single ambiguous brief in eight hours with the same toolkit. That's the externally publishable Pudding-shaped artefact, and it's the one you, specifically, are unusually well-positioned to author.</p></div></div></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div><div data-test-render-count="1"><div class="contents"><div class="mb-1 mt-6 group"><h2 class="sr-only select-none">You said: I like the twelve answers ideas.</h2><div class="flex flex-col items-end gap-1"><div data-user-message-bubble="true" class="group relative inline-flex gap-2 bg-bg-300 rounded-xl pl-2.5 py-2.5 break-words text-text-100 transition-all max-w-[75ch] flex-col !px-4 max-w-[85%]" style="opacity: 1; transform: none;"><div class="flex flex-row gap-2 relative"><div class="flex-1"><div data-testid="user-message" class="font-large !font-user-message grid grid-cols-1 gap-2 py-0.5 relative [&amp;_ul]:!space-y-0 [&amp;_ol]:!space-y-0 [&amp;_ul]:pl-8 [&amp;_ol]:pl-8" style="max-height: 200px; overflow: hidden; position: relative;"><p class="whitespace-pre-wrap break-words">I like the twelve answers ideas. It might generate output in different formats (images, video, audio, text, reports, games, apps, ...)
+This is what Vijayam suggested (with phonetic transcription errors.) If you were to weave this in as well, can you give me ideas for specific prompts that would meet our criteria?
+There are 380 GCs in Hyderabad, and more and more GCCs are coming up. Also, like if you have them are a clients also like one of brothers, make the You have Goldman Sachs, you have you know, all these you know this is Are there. So if you're on a team around, you know, what can we, you know, do for GCCs is the theme is hackathon for, you know, ideas on GCCs. all follower as a follow-up, I'm thinking of, you know, having, you know, one meat for all the gcc's So this can be, you know, amazingly helpful, wherein, you know, we can go and showcase these, you know, actual working prototypes are, you know, whatever mvps to the GCC please. So, that way even the org will benefit in a big way rather than not having. So over here then we are having a focused approach and with precision rather than keeping it open you think Hey you know pick up whatever you want in GCCs you want to pick up finance, you want to pick up HR or you want to pick up, you know any stream supply chain, whatever you want to pick up. You want to pick up media or you know whichever industry because you have banking industries, you have me. Yeah everything so go and pick up whatever you like but the theme is around GCCs. So and you want as a prep maybe, you know, a day before the event or a couple of days before they even we will give you an overview of this is and record it and, you know, put it up also. So you want to understand, you know, how this is work. Then you have, you know, a little bit of info and on top of it, you do your research. And you know, build around this is only then, you know, it can be very helpful for the whole world.</p><div class="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-bg-300 to-transparent pointer-events-none"></div></div><button class="pb-3 pt-1 text-xs text-text-500/80 hover:text-text-100 transition w-3/4 text-left rounded-lg">Show more</button></div></div></div><div class="flex justify-start opacity-0 group-hover:opacity-100 group-focus-within:opacity-100 transition" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><span class="text-text-500 text-xs flex items-center mr-2" data-state="closed">11:25 AM</span><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div></div></div><div data-test-render-count="1"><div class="group" style="height: auto; opacity: 1; transform: none;"><div class="contents"><div data-is-streaming="false" class="group relative relative pb-3" style="opacity: 1; transform: none;"><h2 class="sr-only select-none">Claude responded: How Vijayam's GCC theme fits into Twelve Answers</h2><div class="font-claude-response relative leading-[1.65rem] [&amp;_pre&gt;div]:bg-bg-000/50 [&amp;_pre&gt;div]:border-0.5 [&amp;_pre&gt;div]:border-border-400 [&amp;_.ignore-pre-bg&gt;div]:bg-transparent [&amp;_.standard-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.standard-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8 [&amp;_.progressive-markdown_:is(p,blockquote,h1,h2,h3,h4,h5,h6)]:pl-2 [&amp;_.progressive-markdown_:is(p,blockquote,ul,ol,h1,h2,h3,h4,h5,h6)]:pr-8"><div><div class="standard-markdown grid-cols-1 grid [&amp;_&gt;_*]:min-w-0 gap-3 standard-markdown"><h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">How Vijayam's GCC theme fits into Twelve Answers</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">There's a tension to resolve up front. Anand-style Twelve Answers is <strong>one prompt, twelve interpretations</strong> — variance is the artefact. Vijayam-style is <strong>one theme (GCCs), teams pick their own function/industry</strong> — focus is the artefact. These look different but they collapse into one design if the prompt is <em>invariant in form but variable in domain.</em> That is: a single prompt all teams answer, but the prompt's structure forces each team to pick a GCC function (finance, HR, supply chain, R&amp;D, customer ops, procurement, legal) and/or a GCC parent industry (banking, pharma, consumer, tech). The prompt is one; the answers diverge because each team chooses a different slice of the GCC universe.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The downstream "GCC summit" plan Vijayam mentions is what makes this commercially serious. The hackathon stops being internal entertainment — it's the <em>content pipeline</em> for a Straive GCC showcase event. Twelve working demos walk into a room of GCC heads. That changes what "good" looks like for the prompt: it has to produce things you'd be proud to show a real GCC CFO or a Goldman Hyderabad MD.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">His suggestion of a <strong>pre-event recorded GCC primer</strong>, posted a day or two before, is also a quietly excellent piece of design. It levels the room for non-GCC-savvy people (designers, junior consultants, marketers) without watering down the theme. The primer also becomes a <em>reusable Straive asset</em> in its own right — a 20-minute "GCC landscape in 2026" explainer that can be republished externally with light editing. Free leverage.</p>
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">Specific prompt candidates</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Five strong options. Each is GCC-themed, format-agnostic (images, video, audio, app, report, game, agent all qualify), 8-hour-buildable with AI tools, and forces a domain choice that produces variance.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">A. "Build what a GCC's first AI-native hire would build on day one."</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The strongest balance of variance and commercial bite. The persona is specific (first AI-native hire), the timeframe is constrained (day one — so it must be small and shippable), and the <em>function/industry</em> is entirely up to the team. One team builds a procurement copilot for a pharma GCC; another builds a compliance triage agent for a banking GCC; another builds a "first 30 days" onboarding tool for a tech GCC. Twelve different "day one builds" across twelve different GCC slices. Highly demoable at the downstream GCC summit — every output is a thing the audience could plausibly deploy.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">B. "Build the thing a GCC would quietly steal from its parent company."</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Inversion-shaped. The whole GCC narrative in 2026 is <em>we're not a cost center, we're a value center</em> — this prompt makes that the brief. Teams have to identify something a Hyderabad office now does better than its New York / Zurich / London parent and build the artefact that proves it. Outputs lean toward benchmarking tools, productivity demonstrators, internal-marketing artefacts, or speculative product extensions. Most Anand-shaped of the five — provocative, counter-narrative, very publishable as a study. Slightly less directly commercial than (A); the GCC head you demo it to needs a moment to register the framing.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">C. "Build the artefact that justifies a GCC's existence in 2031."</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Future-shifted. Five years out, when AI has eaten half of what GCCs currently do, what's left? Teams build the speculative artefact — a 2031 internal pitch deck, a 2031 client testimonial, a 2031 GCC org chart, a 2031 service catalogue — that answers the existential question. Highly aesthetic, very designer-friendly, beautifully publishable. Risk: a GCC head at the summit may find it too speculative to act on immediately.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">D. "Build the demo that closes a GCC client in the next meeting."</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">The most Vijayam-shaped prompt. Direct, commercial, every output is by definition a pitch asset for the downstream summit. Teams pick a GCC function and build the live demo that would actually win the room. Output is unambiguously useful to Sales. Risk: the prompt is <em>too</em> convergent — most teams will end up building variations of the same three or four obvious things, and the variance story collapses.</p>
+<h4 class="text-text-100 mt-2 -mb-1 text-base font-bold">E. "Build the thing a GCC head would expense without asking their CFO."</h4>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Friction-shaped. The implicit constraint is <em>small enough to slip through, useful enough to justify itself.</em> Forces teams to build precise, scoped tools rather than ambitious platforms. Function/industry choice is wide open. Outputs are concrete, demoable, and fit the GCC summit narrative ("here are twelve things you could deploy this quarter without going through procurement"). Slightly less narratively rich than (A) or (B) but the highest realism-to-effort ratio.</p>
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">My recommendation</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><strong>Prompt A: "Build what a GCC's first AI-native hire would build on day one."</strong></p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">Three reasons.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>It satisfies both you and Vijayam.</em> You get variance — twelve teams, twelve functions, twelve industries, twelve very different "day one" builds. Vijayam gets focus — every output is a <em>deployable thing for a real GCC</em>, not a speculative artefact. The synthesis is genuine, not a compromise.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>The persona ("first AI-native hire") is the hidden design feature.</em> It lets non-coders answer authentically. A designer or consultant who's never written production code can absolutely imagine what they'd build on their first day — that's an <em>ideas</em> and <em>vibe-coding</em> question, not an infrastructure question. The persona also forces realism: a first-day build is small, fast, and uses what's already there. No team can hide behind a six-month roadmap.</p>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]"><em>The downstream summit narrative writes itself.</em> "Twelve teams. Twelve GCC functions. Eight hours. The first AI-native hire's day-one build." That's the carousel, the blog post on s-anand.net, the headline at the GCC summit. Each demo is naturally bite-sized — five to seven minutes — which is exactly the right length for a roomful of GCC heads. Twelve such demos in a half-day summit is a credible programme on its own.</p>
+<h3 class="text-text-100 mt-3 -mb-1 text-[1.125rem] font-bold">How the meta-design slots together</h3>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">A clean sequence emerges:</p>
+<ul class="[li_&amp;]:mb-0 [li_&amp;]:mt-1 [li_&amp;]:gap-1 [&amp;:not(:last-child)_ul]:pb-1 [&amp;:not(:last-child)_ol]:pb-1 list-disc flex flex-col gap-1 pl-8 mb-3">
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>T minus 3–4 days:</strong> Vijayam (or you + Vijayam) records a 20-minute <em>GCC primer in 2026</em> — the landscape, the 380 in Hyderabad, the functions, the parent relationships, the AI-adoption tension. Posted internally; also republished on the Straive blog as a teaser. This becomes a reusable asset independent of the hackathon.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Day 1 (Saturday morning, 4 hours):</strong> Kickoff. Vijayam delivers the prompt live. Each team posts, within the first hour, the GCC function and parent industry they've chosen — public, on a shared board, so the room can see the spread in real time. (If five teams cluster on the same function, that's information you want surfaced early.) First build sprint.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>Day 2 (Sunday morning, 4 hours):</strong> Second sprint. Gallery walk in the final 90 minutes. Side quests run throughout both days. Cross-functional teams of 4, self-organised.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>T plus 1 week:</strong> Top 5 outputs curated. Published as "Twelve First Days at a GCC" — carousel on LinkedIn, longer post on the Straive blog, embedded demos.</li>
+<li class="font-claude-response-body whitespace-normal break-words pl-2"><strong>T plus 4–8 weeks:</strong> GCC summit. Top 5 (or all 12) demoed live to a room of GCC heads.</li>
+</ul>
+<p class="font-claude-response-body break-words whitespace-normal leading-[1.7]">One subtle thing worth pre-deciding: if a team's chosen GCC function is one Vijayam knows is <em>commercially live for Straive right now</em> (i.e. there's an open conversation with a real client), say so privately to that team before kickoff. Don't bias the field — but if you can quietly route a team toward a function where their output has a real buyer waiting, the ROI on that one team multiplies. Just don't announce it publicly.</p></div></div></div></div></div><div class="flex justify-start" role="group" aria-label="Message actions"><div class="text-text-300"><div class="text-text-300 flex items-stretch justify-between"><div class="w-fit" data-state="closed"><button class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none border-transparent
+          transition
+          font-base
+          duration-300
+          ease-[cubic-bezier(0.165,0.85,0.45,1)] h-8 w-8 rounded-md group/btn _fill_10ocf_9 _ghost_10ocf_96" type="button" data-testid="action-bar-copy" aria-label="Copy"><div class="relative text-text-500 group-hover/btn:text-text-100"><div class="transition-all opacity-100 scale-100" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="transition-all opacity-100 scale-100" aria-hidden="true" style="flex-shrink: 0;"><path d="M12.5 3A1.5 1.5 0 0 1 14 4.5V6h1.5A1.5 1.5 0 0 1 17 7.5v8a1.5 1.5 0 0 1-1.5 1.5h-8A1.5 1.5 0 0 1 6 15.5V14H4.5A1.5 1.5 0 0 1 3 12.5v-8A1.5 1.5 0 0 1 4.5 3zm1.5 9.5a1.5 1.5 0 0 1-1.5 1.5H7v1.5a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5H14zM4.5 4a.5.5 0 0 0-.5.5v8a.5.5 0 0 0 .5.5h8a.5.5 0 0 0 .5-.5v-8a.5.5 0 0 0-.5-.5z"></path></svg></div><div class="absolute top-0 left-0 transition-all opacity-0 scale-50" style="width: 20px; height: 20px; display: flex; align-items: center; justify-content: center;"><svg width="20" height="20" viewBox="0 0 20 20" fill="currentColor" xmlns="http://www.w3.org/2000/svg" class="absolute top-0 left-0 transition-all opacity-0 scale-50" aria-hidden="true" style="flex-shrink: 0;"><path d="M15.188 5.11a.5.5 0 0 1 .752.626l-.056.084-7.5 9a.5.5 0 0 1-.738.033l-3.5-3.5-.064-.078a.501.501 0 0 1 .693-.693l.078.064 3.113 3.113 7.15-8.58z"></path></svg></div></div></button></div><div class="flex items-center"></div></div></div></div></div></div></div><div class="sticky bottom-0 flex flex-col items-center justify-center gap-3 pb-4 pt-4 pointer-events-none print:hidden"><div class="pointer-events-auto"><a href="https://claude.ai/new" class="inline-flex
+  items-center
+  justify-center
+  relative
+  isolate
+  shrink-0
+  can-focus
+  select-none
+  disabled:pointer-events-none
+  disabled:opacity-50
+  disabled:shadow-none
+  disabled:drop-shadow-none font-base-bold
+        overflow-hidden
+        transition-transform
+        will-change-transform
+        ease-[cubic-bezier(0.165,0.85,0.45,1)]
+        duration-150
+        hover:scale-y-[1.015]
+        hover:scale-x-[1.005]
+        backface-hidden
+        after:absolute
+        after:inset-0
+        after:bg-[radial-gradient(at_bottom,hsla(var(--bg-000)/20%),hsla(var(--bg-000)/0%))]
+        after:opacity-0
+        after:transition
+        after:duration-200
+        after:translate-y-2
+        hover:after:opacity-100
+        hover:after:translate-y-0 h-9 px-4 py-2 rounded-lg min-w-[5rem] whitespace-nowrap _fill_10ocf_9 _primary_10ocf_44">Start your own conversation</a></div></div></div></div></div></div><div class="group w-2 relative h-full cursor-col-resize -mr-1 z-30 grid place-items-center max-md:hidden print:hidden hidden"><div class="absolute top-0 bottom-0 right-1 w-[0.5px] bg-border-300 transition-all group-hover:delay-75 group-hover:bg-accent-100 group-hover:w-px group-hover:translate-x-[0.5px]"></div><div class="h-6 w-2 relative rounded-full border-0.5 bg-bg-100 shadow border-border-300 transition duration-200 group-hover:delay-75 group-hover:border-accent-900 group-hover:bg-accent-900 cursor-col-resize"></div></div><div class="max-md:absolute top-0 right-0 bottom-0 left-0 z-20 draggable-none print:hidden md:flex-grow-0 md:flex-shrink-0 md:basis-0 overflow-hidden h-full md:pt-[var(--df-header-h,0px)] max-md:hidden" aria-hidden="true" inert="" style="flex: 0 1 0%;"><div class="flex flex-col h-full" style="width: auto;"><div class="h-12 md:hidden bg-bg-000/30 backdrop-blur border-b-0.5 border-border-300"></div><div class="flex-1 overflow-hidden h-full bg-bg-100"></div></div></div></div></div></div></div></div></div><div role="region" aria-label="Notifications (F8)" tabindex="-1" style="pointer-events: none;"><ol tabindex="-1" class="fixed top-0 z-toast flex flex-col gap-3 p-4 draggable-none" style="right: var(--launch-drawer-width, 0px);"></ol></div><iframe src="./Claude_files/isolated-segment.html" referrerpolicy="no-referrer" sandbox="allow-scripts allow-same-origin" title="Marketing analytics" style="display: none;"></iframe></div><script nonce="">(function(){function c(){var b=a.contentDocument||a.contentWindow.document;if(b){var d=b.createElement('script');d.nonce='fEWNN+Z/BTEsRhKo++2tyA==';d.innerHTML="window.__CF$cv$params={r:'a01a8d1abe74deba',t:'MTc3OTc3NTEzOA=='};var a=document.createElement('script');a.nonce='fEWNN+Z/BTEsRhKo++2tyA==';a.src='/cdn-cgi/challenge-platform/scripts/jsd/main.js';document.getElementsByTagName('head')[0].appendChild(a);";b.getElementsByTagName('head')[0].appendChild(d)}}if(document.body){var a=document.createElement('iframe');a.height=1;a.width=1;a.style.position='absolute';a.style.top=0;a.style.left=0;a.style.border='none';a.style.visibility='hidden';document.body.appendChild(a);if('loading'!==document.readyState)c();else if(window.addEventListener)document.addEventListener('DOMContentLoaded',c);else{var e=document.onreadystatechange||function(){};document.onreadystatechange=function(b){e(b);'loading'!==document.readyState&&(document.onreadystatechange=e,c())}}}})();</script><iframe height="1" width="1" style="position: absolute; top: 0px; left: 0px; border-width: medium; border-style: none; border-color: currentcolor; border-image: initial; visibility: hidden;" src="./Claude_files/saved_resource.html"></iframe><script src="./Claude_files/s.js.download" async=""></script><div class="cds-root" data-density="comfortable" data-mode="dark"></div></body></html>

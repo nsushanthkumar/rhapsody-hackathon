@@ -1,2006 +1,771 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>INIT(0→1) — A 24-Hour Hackathon for Rhapsody | Gramener</title>
-  <meta name="description"
-    content="A pitch for INIT(0→1) — Gramener's first internal 24-hour hackathon for Rhapsody. Cross-functional teams. Real pain points from Sales. Working prototypes, and decks. Talent-powered innovation at near-zero cost.">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,500;1,8..60,400&family=JetBrains+Mono:wght@400;500&display=swap"
-    rel="stylesheet">
+  <title>INVENT' 26 Hackathon · Participant Guidelines</title>
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link crossorigin href="https://fonts.gstatic.com" rel="preconnect">
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <style>
-    /* ── Variables ── */
     :root {
-      --bg: #f8f5f0;
-      --ink: #1a1207;
-      --ink2: #3d2f1a;
-      --accent: #1B3F6E;
-      /* Gramener navy */
-      --accent2: #c0392b;
-      /* alert red */
-      --gold: #b8860b;
-      --gold-light: #f7f0d8;
-      --muted: #7a6a55;
-      --border: #e2d9cc;
-      --highlight: #fef9ec;
-      --dark: #0d1a2b;
-      --dark2: #111822;
-
-      /* Evaluation dimension colors */
-      --dim-green: #1D9E75;
-      --dim-blue: #378ADD;
-      --dim-orange: #D85A30;
-      --dim-purple: #7F77DD;
-      --dim-amber: #BA7517;
-
-      --font-display: 'Playfair Display', Georgia, serif;
-      --font-body: 'Source Serif 4', Georgia, serif;
-      --font-mono: 'JetBrains Mono', monospace;
+      --bg: #0d0d12;
+      --fg: #e2e8f0;
+      --fg-muted: #94a3b8;
+      --accent: #3b82f6;
+      --accent-muted: #1e40af;
+      --font-body: 'IBM Plex Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
     }
 
-    *,
-    *::before,
-    *::after {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-    }
-
-    html {
-      scroll-behavior: smooth;
-    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
 
     body {
       font-family: var(--font-body);
-      background: var(--bg);
-      color: var(--ink);
-      line-height: 1.8;
-      font-size: 18px;
-      -webkit-font-smoothing: antialiased;
-      overflow-x: hidden;
-    }
-
-    /* ── Reading progress ── */
-    #progress {
-      position: fixed;
-      top: 0;
-      left: 0;
-      height: 3px;
-      width: 0%;
-      background: linear-gradient(90deg, var(--accent), var(--gold));
-      z-index: 1000;
-      transition: width 0.1s linear;
-    }
-
-    /* ── Masthead ── */
-    .masthead {
-      position: sticky;
-      top: 0;
-      z-index: 200;
-      background: rgba(248, 245, 240, 0.96);
-      border-bottom: 1px solid var(--border);
-      padding: 0.75rem 2rem;
-      backdrop-filter: blur(8px);
-    }
-
-    .masthead-inner {
-      max-width: 1200px;
-      margin: 0 auto;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 1rem;
-      flex-wrap: wrap;
-    }
-
-    .masthead-brand {
-      font-family: var(--font-display);
-      font-size: 0.88rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      text-decoration: none;
-    }
-
-    .masthead-brand:hover {
-      color: var(--accent);
-    }
-
-    .masthead-right {
-      display: flex;
-      gap: 1rem;
-      align-items: center;
-      flex-wrap: wrap;
-    }
-
-    .masthead-date {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--muted);
-    }
-
-    .masthead-link {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      color: var(--accent);
-      text-decoration: none;
-      border: 1px solid var(--accent);
-      padding: 0.28rem 0.55rem;
-      transition: all 0.2s;
-      white-space: nowrap;
-    }
-
-    .masthead-link:hover {
-      background: var(--accent);
-      color: #fff;
-    }
-
-    /* ── Hero ── */
-    .hero {
-      max-width: 820px;
-      margin: 0 auto;
-      padding: 4.5rem 2rem 2.5rem;
-      text-align: center;
-    }
-
-    .hero-kicker {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.22em;
-      text-transform: uppercase;
-      color: var(--accent);
-      margin-bottom: 1.4rem;
-    }
-
-    .hero-title {
-      font-family: var(--font-display);
-      font-size: clamp(2.6rem, 6.2vw, 4.6rem);
-      font-weight: 700;
-      line-height: 1.05;
-      letter-spacing: -0.025em;
-      margin-bottom: 1.25rem;
-      color: var(--ink);
-    }
-
-    .hero-title .init-mark {
-      color: var(--accent);
-      font-style: italic;
-    }
-
-    .hero-title .arrow {
-      color: var(--gold);
-      font-style: normal;
-    }
-
-    .hero-subtitle {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-style: italic;
-      color: var(--ink2);
-      max-width: 660px;
-      margin: 0 auto 2rem;
-      line-height: 1.5;
-    }
-
-    .hero-meta {
-      display: flex;
-      justify-content: center;
-      gap: 1.5rem;
-      flex-wrap: wrap;
-      font-size: 0.83rem;
-      color: var(--muted);
-    }
-
-    .hero-meta strong {
-      color: var(--ink2);
-      font-weight: 600;
-    }
-
-    /* ── Quick-links bar ── */
-    .quick-links {
-      background: var(--accent);
-      padding: 0.85rem 2rem;
-    }
-
-    .quick-links-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-      display: flex;
-      gap: 0.65rem;
-      flex-wrap: wrap;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .quick-link {
-      display: inline-flex;
-      align-items: center;
-      gap: 0.35rem;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.88);
-      text-decoration: none;
-      border: 1px solid rgba(255, 255, 255, 0.3);
-      padding: 0.32rem 0.7rem;
-      transition: all 0.2s;
-    }
-
-    .quick-link:hover {
-      background: rgba(255, 255, 255, 0.15);
-      color: #fff;
-      border-color: rgba(255, 255, 255, 0.6);
-    }
-
-    .quick-link.primary {
-      background: var(--gold);
-      color: var(--dark);
-      border-color: var(--gold);
-      font-weight: 700;
-    }
-
-    .quick-link.primary:hover {
-      background: #d4a012;
-      border-color: #d4a012;
-    }
-
-    /* ── Article column ── */
-    .article {
-      max-width: 720px;
-      margin: 0 auto;
-      padding: 2.5rem 2rem 3rem;
-    }
-
-    .article p {
-      margin-bottom: 1.55rem;
-    }
-
-    .article a {
-      color: var(--accent);
-      text-decoration: none;
-      border-bottom: 1px solid rgba(27, 63, 110, 0.25);
-      transition: border-color 0.2s;
-    }
-
-    .article a:hover {
-      border-bottom-color: var(--accent);
-    }
-
-    .article h2 {
-      font-family: var(--font-display);
-      font-size: 2rem;
-      font-weight: 700;
-      margin: 3.5rem 0 1.2rem;
-      padding-top: 2.5rem;
-      border-top: 2px solid var(--border);
-      line-height: 1.2;
-    }
-
-    .article h3 {
-      font-family: var(--font-display);
-      font-size: 1.3rem;
-      font-weight: 600;
-      margin: 2rem 0 0.7rem;
-      color: var(--accent);
-    }
-
-    .article ul,
-    .article ol {
-      margin: 1.1rem 0;
-      padding-left: 1.75rem;
-    }
-
-    .article li {
-      margin-bottom: 0.5rem;
-    }
-
-    strong {
-      font-weight: 700;
-    }
-
-    em {
-      font-style: italic;
-    }
-
-    /* ── Drop cap ── */
-    .dropcap::first-letter {
-      font-family: var(--font-display);
-      font-size: 5.5rem;
-      float: left;
-      line-height: 0.8;
-      padding-right: 0.4rem;
-      padding-top: 0.12rem;
-      font-weight: 700;
-      color: var(--accent);
-    }
-
-    /* ── Blockquote ── */
-    .article blockquote {
-      font-family: var(--font-display);
-      font-size: 1.35rem;
-      font-style: italic;
-      font-weight: 500;
-      line-height: 1.42;
-      color: var(--dark2);
-      border-left: 5px solid var(--gold);
-      padding: 1.1rem 0 1.1rem 1.65rem;
-      margin: 2.5rem 0 2.5rem -0.25rem;
-      background: var(--gold-light);
-    }
-
-    .article blockquote cite {
-      display: block;
-      font-style: normal;
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 0.65rem;
-    }
-
-    /* ── Pull quote (full-bleed) ── */
-    .pullquote {
-      background: var(--dark);
-      padding: 3.5rem 2rem;
-      margin: 3rem calc(-50vw + 50%);
-      width: 100vw;
-      text-align: center;
-    }
-
-    .pullquote-text {
-      font-family: var(--font-display);
-      font-size: clamp(1.45rem, 3vw, 2.2rem);
-      font-style: italic;
-      line-height: 1.35;
-      color: #fff;
-      max-width: 840px;
-      margin: 0 auto 0.9rem;
-    }
-
-    .pullquote-attr {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      letter-spacing: 0.15em;
-      text-transform: uppercase;
-      color: var(--gold);
-    }
-
-    /* ── Callout ── */
-    .callout {
-      background: var(--highlight);
-      border-left: 4px solid var(--gold);
-      padding: 1.2rem 1.5rem;
-      margin: 2rem 0;
-      font-size: 0.95rem;
-    }
-
-    .callout-label {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      text-transform: uppercase;
-      letter-spacing: 0.15em;
-      color: var(--gold);
-      margin-bottom: 0.4rem;
-      display: block;
-    }
-
-    .callout ul {
-      margin: 0.5rem 0 0;
-      padding-left: 1.4rem;
-    }
-
-    .callout li {
-      margin-bottom: 0.35rem;
-      font-size: 0.92rem;
-    }
-
-    /* ── Stat cards ── */
-    .stat-band {
-      background: var(--accent);
-      padding: 2.5rem 2rem;
-      margin: 2.5rem calc(-50vw + 50%);
-      width: 100vw;
-    }
-
-    .stat-band-inner {
-      max-width: 980px;
-      margin: 0 auto;
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
-      gap: 1.5rem;
-      text-align: center;
-    }
-
-    .stat-card {
-      color: #fff;
-    }
-
-    .stat-number {
-      font-family: var(--font-display);
-      font-size: clamp(2.4rem, 5vw, 3.4rem);
-      font-weight: 700;
-      line-height: 1;
-      margin-bottom: 0.3rem;
-      color: var(--gold);
-    }
-
-    .stat-label {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.78);
-      line-height: 1.4;
-    }
-
-    /* ── Full-bleed dark explainer (timeline / dimension / awards) ── */
-    .explainer {
-      margin: 2.5rem calc(-50vw + 50%);
-      width: 100vw;
-      background: var(--dark);
-      padding: 3rem 2rem;
-      overflow: hidden;
-    }
-
-    .explainer-inner {
-      max-width: 1000px;
-      margin: 0 auto;
-    }
-
-    .explainer h4 {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: rgba(255, 255, 255, 0.45);
-      margin-bottom: 0.5rem;
-      text-align: center;
-    }
-
-    .explainer h3.exp-title {
-      font-family: var(--font-display);
-      color: #fff;
-      font-size: 1.8rem;
-      font-weight: 700;
-      text-align: center;
-      margin-bottom: 2rem;
-      line-height: 1.2;
-    }
-
-    .explainer .exp-sub {
-      text-align: center;
-      color: rgba(255, 255, 255, 0.55);
-      max-width: 640px;
-      margin: 0 auto 2.2rem;
-      font-size: 0.95rem;
-      line-height: 1.55;
-    }
-
-    /* ── Timeline (24-hour schedule) ── */
-    .timeline {
-      max-width: 880px;
-      margin: 0 auto;
-      position: relative;
-    }
-
-    .timeline::before {
-      content: "";
-      position: absolute;
-      left: 105px;
-      top: 8px;
-      bottom: 8px;
-      width: 2px;
-      background: linear-gradient(180deg, var(--gold), rgba(184, 134, 11, 0.2));
-    }
-
-    .tl-row {
-      display: grid;
-      grid-template-columns: 105px 24px 1fr;
-      align-items: flex-start;
-      gap: 1rem;
-      margin-bottom: 1.6rem;
-      opacity: 0;
-      transform: translateX(-12px);
-      animation: tlIn 0.55s forwards;
-    }
-
-    .tl-row:nth-child(1) {
-      animation-delay: .05s
-    }
-
-    .tl-row:nth-child(2) {
-      animation-delay: .15s
-    }
-
-    .tl-row:nth-child(3) {
-      animation-delay: .25s
-    }
-
-    .tl-row:nth-child(4) {
-      animation-delay: .35s
-    }
-
-    .tl-row:nth-child(5) {
-      animation-delay: .45s
-    }
-
-    .tl-row:nth-child(6) {
-      animation-delay: .55s
-    }
-
-    @keyframes tlIn {
-      to {
-        opacity: 1;
-        transform: translateX(0);
-      }
-    }
-
-    .tl-time {
-      font-family: var(--font-mono);
-      font-size: 0.72rem;
-      color: var(--gold);
-      text-align: right;
-      padding-top: 0.3rem;
-      letter-spacing: 0.04em;
-      line-height: 1.4;
-    }
-
-    .tl-time .day {
-      display: block;
-      color: rgba(255, 255, 255, 0.45);
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      margin-top: 0.15rem;
-    }
-
-    .tl-dot {
-      width: 14px;
-      height: 14px;
-      border-radius: 50%;
-      background: var(--gold);
-      margin: 0.5rem 5px 0;
-      box-shadow: 0 0 0 4px rgba(184, 134, 11, 0.18);
-      position: relative;
-      z-index: 1;
-    }
-
-    .tl-row.major .tl-dot {
-      background: var(--accent2);
-      box-shadow: 0 0 0 5px rgba(192, 57, 43, 0.25);
-    }
-
-    .tl-row.final .tl-dot {
-      background: #68d391;
-      box-shadow: 0 0 0 5px rgba(104, 211, 145, 0.25);
-    }
-
-    .tl-body {
-      color: #fff;
-    }
-
-    .tl-title {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 1.1rem;
-      color: #fff;
-      margin-bottom: 0.15rem;
-    }
-
-    .tl-row.major .tl-title {
-      color: #ffd9d0;
-    }
-
-    .tl-row.final .tl-title {
-      color: #b6f0cd;
-    }
-
-    .tl-desc {
-      font-family: var(--font-body);
-      font-size: 0.88rem;
-      color: rgba(255, 255, 255, 0.6);
-      line-height: 1.55;
-    }
-
-    .tl-mark {
-      display: inline-block;
-      font-family: var(--font-mono);
-      font-size: 0.6rem;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      padding: 0.2rem 0.55rem;
-      border-radius: 2px;
-      background: rgba(184, 134, 11, 0.18);
-      color: var(--gold);
-      margin-left: 0.6rem;
-    }
-
-    /* ── Dimension cards (evaluation framework) ── */
-    .dim-grid {
-      display: grid;
-      gap: 14px;
-      margin: 0 auto;
-      max-width: 880px;
-    }
-
-    .dim-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-left: 4px solid var(--accent);
-      padding: 1.4rem 1.5rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .dim-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.06);
-    }
-
-    .dim-head {
-      display: flex;
-      justify-content: space-between;
-      align-items: flex-start;
-      margin-bottom: 0.6rem;
-      gap: 1rem;
-    }
-
-    .dim-name {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--ink);
-      line-height: 1.25;
-    }
-
-    .dim-tag {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      padding: 0.3rem 0.65rem;
-      border-radius: 3px;
-      white-space: nowrap;
-      flex-shrink: 0;
-    }
-
-    .dim-desc {
-      font-size: 0.93rem;
-      color: var(--ink2);
+      background-color: var(--bg);
+      color: var(--fg);
       line-height: 1.6;
-      margin-bottom: 0.9rem;
+      font-size: 16px;
+      -webkit-font-smoothing: antialiased;
+      -moz-osx-font-smoothing: grayscale;
     }
 
-    .dim-criteria {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(170px, 1fr));
-      gap: 8px;
-    }
+    a { color: inherit; text-decoration: none; transition: color 0.15s; }
+    a:hover { color: var(--accent); }
 
-    .dim-chip {
-      font-family: var(--font-mono);
-      font-size: 0.7rem;
-      background: var(--bg);
-      border: 1px solid var(--border);
-      color: var(--ink2);
-      padding: 0.5rem 0.7rem;
-      line-height: 1.4;
-    }
+    strong { font-weight: 600; color: #fff; }
+    em { font-style: normal; color: var(--accent); }
 
-    /* per-dimension theming */
-    .dim-card.d-green {
-      border-left-color: var(--dim-green);
-    }
-
-    .dim-card.d-blue {
-      border-left-color: var(--dim-blue);
-    }
-
-    .dim-card.d-orange {
-      border-left-color: var(--dim-orange);
-    }
-
-    .dim-card.d-purple {
-      border-left-color: var(--dim-purple);
-    }
-
-    .dim-card.d-amber {
-      border-left-color: var(--dim-amber);
-    }
-
-    .dim-card.d-green .dim-tag {
-      background: #E1F5EE;
-      color: #0F6E56;
-    }
-
-    .dim-card.d-blue .dim-tag {
-      background: #E6F1FB;
-      color: #185FA5;
-    }
-
-    .dim-card.d-orange .dim-tag {
-      background: #FAECE7;
-      color: #993C1D;
-    }
-
-    .dim-card.d-purple .dim-tag {
-      background: #EEEDFE;
-      color: #3C3489;
-    }
-
-    .dim-card.d-amber .dim-tag {
-      background: #FAEEDA;
-      color: #854F0B;
-    }
-
-    /* ── Side quest categories ── */
-    .quest-grid {
-      display: grid;
-      gap: 14px;
-      max-width: 920px;
+    header, section, nav, main, footer > div, .layout-timeline > div, .layout-eval > div > div {
+      max-width: 1280px;
       margin: 0 auto;
+      padding: 0 48px;
     }
 
-    .quest-card {
-      background: rgba(255, 255, 255, 0.04);
-      border: 1px solid rgba(255, 255, 255, 0.1);
-      padding: 1.3rem 1.4rem;
-    }
+    header { border-bottom: 1px solid #2d3748; padding-top: 24px; padding-bottom: 24px; }
+    header > div { display: flex; justify-content: space-between; align-items: center; }
+    header a.brand { font-size: 1.125rem; font-weight: 500; }
+    header .meta { display: flex; align-items: center; gap: 24px; color: var(--fg-muted); font-size: 0.875rem; }
+    header .meta span { white-space: nowrap; }
 
-    .quest-head {
+    section.hero { padding-top: 80px; padding-bottom: 100px; text-align: center; }
+    section.hero p.tagline { color: var(--fg-muted); font-size: 1.25rem; margin-bottom: 12px; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em;}
+    
+    section.hero h1 { 
+      font-size: 7.5rem; 
+      line-height: 1.1; 
+      font-weight: 700; 
+      margin-bottom: 32px; 
+      color: #e2e8f0; 
+      letter-spacing: -0.02em; 
+    }
+    
+    section.hero .desc { max-width: 760px; margin: 0 auto 32px; font-size: 1.375rem; color: #fff; }
+    section.hero .desc strong { color: var(--accent); font-weight: 600; }
+
+    section.hero .event-details {
       display: flex;
-      align-items: center;
-      gap: 0.6rem;
-      margin-bottom: 0.9rem;
-    }
-
-    .quest-icon {
-      width: 28px;
-      height: 28px;
-      display: inline-flex;
-      align-items: center;
       justify-content: center;
-      font-family: var(--font-mono);
-      font-size: 0.9rem;
-      font-weight: 700;
-      border-radius: 4px;
+      gap: 16px;
+      margin-bottom: 56px;
+      flex-wrap: wrap;
     }
-
-    .quest-name {
-      font-family: var(--font-display);
-      font-weight: 600;
-      font-size: 1.05rem;
-      color: #fff;
-    }
-
-    .quest-sub {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      color: rgba(255, 255, 255, 0.4);
-      margin-left: auto;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-    }
-
-    .quest-items {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 8px;
-    }
-
-    .quest-item {
-      padding: 0.65rem 0.8rem;
-      border-radius: 4px;
-      font-size: 0.84rem;
-      line-height: 1.4;
-    }
-
-    .quest-item-title {
-      font-weight: 600;
-      display: block;
-      margin-bottom: 2px;
-    }
-
-    .quest-item-desc {
-      font-family: var(--font-body);
-      font-size: 0.78rem;
-      opacity: 0.85;
-    }
-
-    /* per quest category */
-    .q-physical .quest-icon {
-      background: #FAECE7;
-      color: #993C1D;
-    }
-
-    .q-physical .quest-item {
-      background: rgba(216, 90, 48, 0.12);
-      color: #ffd0c1;
-      border: 1px solid rgba(216, 90, 48, 0.3);
-    }
-
-    .q-tech .quest-icon {
-      background: #E6F1FB;
-      color: #185FA5;
-    }
-
-    .q-tech .quest-item {
-      background: rgba(55, 138, 221, 0.12);
-      color: #c8e1f7;
-      border: 1px solid rgba(55, 138, 221, 0.3);
-    }
-
-    .q-collab .quest-icon {
-      background: #E1F5EE;
-      color: #0F6E56;
-    }
-
-    .q-collab .quest-item {
-      background: rgba(29, 158, 117, 0.12);
-      color: #c0eedb;
-      border: 1px solid rgba(29, 158, 117, 0.3);
-    }
-
-    .q-wild .quest-icon {
-      background: #EEEDFE;
-      color: #3C3489;
-    }
-
-    .q-wild .quest-item {
-      background: rgba(127, 119, 221, 0.14);
-      color: #d8d5fa;
-      border: 1px solid rgba(127, 119, 221, 0.3);
-    }
-
-    .q-milestone .quest-icon {
-      background: #FAEEDA;
-      color: #854F0B;
-    }
-
-    .q-milestone .quest-item {
-      background: rgba(186, 117, 23, 0.14);
-      color: #f1d9ad;
-      border: 1px solid rgba(186, 117, 23, 0.32);
-    }
-
-    /* ── Awards grid ── */
-    .award-section {
-      margin-bottom: 2.2rem;
-    }
-
-    .award-section-label {
-      font-family: var(--font-mono);
-      font-size: 0.66rem;
-      letter-spacing: 0.14em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-bottom: 0.75rem;
-    }
-
-    .award-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
-      gap: 12px;
-    }
-
-    .award-card {
-      background: #fff;
-      border: 1px solid var(--border);
-      border-top: 3px solid var(--gold);
-      padding: 1rem 1.15rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-
-    .award-card:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 5px 18px rgba(0, 0, 0, 0.06);
-    }
-
-    .award-title {
-      font-family: var(--font-display);
-      font-weight: 700;
-      font-size: 1.02rem;
-      color: var(--ink);
-      margin-bottom: 0.35rem;
+    section.hero .event-details span {
+      background: rgba(59, 130, 246, 0.1);
+      border: 1px solid rgba(59, 130, 246, 0.25);
+      color: #bfdbfe;
+      padding: 12px 24px;
+      border-radius: 50px;
+      font-size: 1.125rem;
+      font-weight: 500;
       display: flex;
       align-items: center;
-      gap: 0.45rem;
+      gap: 8px;
     }
+    section.hero .event-details span i { font-style: normal; }
 
-    .award-marker {
-      display: inline-block;
-      width: 8px;
-      height: 8px;
-      border-radius: 50%;
-      background: var(--gold);
-    }
+    section.hero div.metadata { color: var(--fg-muted); font-size: 0.95rem; line-height: 1.8; }
+    section.hero div.metadata span { display: block; }
 
-    .award-desc {
-      font-size: 0.82rem;
-      color: var(--ink2);
-      line-height: 1.5;
-    }
+    nav[aria-label="Jump to section"] { border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; background: #0d0d12cc; -webkit-backdrop-filter: blur(10px); backdrop-filter: blur(10px); position: -webkit-sticky; position: sticky; top: 0; z-index: 100; margin-bottom: 64px; }
+    nav[aria-label="Jump to section"] > div { display: flex; gap: 32px; padding-top: 16px; padding-bottom: 16px; justify-content: center; overflow-x: auto; -webkit-overflow-scrolling: touch; }
+    nav[aria-label="Jump to section"] a { font-size: 0.875rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; }
+    nav[aria-label="Jump to section"] a:hover, nav[aria-label="Jump to section"] a.active { color: #fff; }
 
-    .award-card.gold {
-      border-top-color: var(--dim-amber);
-    }
+    main { display: grid; grid-template-columns: 2fr 1fr; gap: 64px 80px; font-size: 1.125rem; }
+    main * { grid-column: 1 / -1; }
+    main h2 { font-size: 3rem; font-weight: 700; margin-top: 100px; margin-bottom: 40px; color: #fff; line-height: 1.15; letter-spacing: -0.01em; }
+    main h3 { font-size: 1.5rem; font-weight: 600; margin-top: 56px; margin-bottom: 20px; color: #fff; }
+    main p { color: var(--fg-muted); margin-bottom: 24px; }
+    main p strong { color: #fff; }
+    main blockquote { background-color: #1a1a24; border-left: 4px solid var(--accent); padding: 24px 32px; margin: 40px 0; grid-column: 1 / 3; width: fit-content; border-radius: 8px; }
+    main blockquote p { color: #fff; margin-bottom: 12px; font-size: 1.25rem; font-weight: 500; }
+    main cite { font-style: normal; color: var(--fg-muted); font-size: 0.95rem; }
+    main ul { list-style: none; color: var(--fg-muted); margin-bottom: 24px; }
+    main li { margin-bottom: 12px; position: relative; padding-left: 20px; }
+    main li::before { content: '→'; color: var(--accent); position: absolute; left: 0; }
 
-    .award-card.silver {
-      border-top-color: #888780;
-    }
+    .stat-blocks { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; padding: 64px 48px; background: #1a1a24; grid-column: 1 / -1; margin: 80px -48px 100px; }
+    .stat-blocks .stat-item { text-align: center; color: var(--fg-muted); border-right: 1px solid #333; }
+    .stat-blocks .stat-item:last-child { border-right: none; }
+    .stat-blocks .stat-val { font-size: 6rem; line-height: 1; font-weight: 700; color: var(--accent); font-feature-settings: 'tnum', 'lnum'; }
+    .stat-blocks .stat-label { font-size: 0.95rem; max-width: 140px; margin: 12px auto 0; }
 
-    .award-card.idea .award-marker {
-      background: var(--dim-blue);
-    }
+    .cross-functional-teams { display: flex; flex-wrap: wrap; gap: 12px; align-items: center; color: var(--fg-muted); justify-content: center; grid-column: 1 / -1; margin: 32px 0 56px; font-size: 1.25rem; }
+    .cross-functional-teams span { background-color: #1a1a24; border: 1px solid #2d3748; padding: 12px 20px; border-radius: 30px; white-space: nowrap; font-weight: 500; }
+    .cross-functional-teams span.math { background: transparent; border: none; font-size: 1.5em; padding: 0; width: 30px; text-align: center; }
+    .cross-functional-teams span.result { background-color: var(--accent); color: #fff; border-color: var(--accent); }
 
-    .award-card.idea {
-      border-top-color: var(--dim-blue);
-    }
+    .layout-timeline { background: #1a1a24; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; padding: 100px 0; margin-top: 100px; }
+    .layout-timeline h4 { font-size: 0.875rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; text-align: center; }
+    .layout-timeline h3 { font-size: 3rem; font-weight: 700; margin-bottom: 24px; color: #fff; text-align: center; }
+    .layout-timeline h3 + p { color: var(--fg-muted); max-width: 640px; margin: 0 auto 64px; text-align: center; }
 
-    .award-card.build .award-marker {
-      background: var(--dim-orange);
-    }
+    .timeline { position: relative; margin-top: 100px; display: grid; gap: 0px 48px; grid-template-columns: repeat(3, minmax(0, 1fr)); }
+    .timeline .checkpoint { position: relative; display: flex; flex-direction: column; align-items: center; }
+    .timeline .checkpoint .meta { text-align: center; color: var(--fg-muted); font-size: 0.875rem; margin-bottom: 16px; line-height: 1.4; display: flex; flex-direction: column; }
+    .timeline .checkpoint .meta .day { font-weight: 600; color: #fff; }
+    .timeline .checkpoint .dot { width: 16px; height: 16px; border-radius: 50%; background: var(--bg); border: 2px solid var(--accent); position: relative; z-index: 10; margin: 0 0 40px; }
+    .timeline .checkpoint:first-child .dot, .timeline .checkpoint.start .dot { margin-top: 0px; }
+    .timeline .checkpoint::before { content: ''; position: absolute; top: 0; left: 50%; height: calc(100% + 48px); width: 1px; background: #333; transform: translateX(-50%); z-index: 5; }
+    .timeline .checkpoint:last-child::before, .timeline .checkpoint.submission::before { display: none; }
+    .timeline .checkpoint .details { width: 100%; border: 1px solid #2d3748; background: #0d0d1299; border-radius: 8px; padding: 24px; text-align: left; position: relative; grid-row: 2 / 3; align-self: start; }
+    
+    .timeline.elimination { display: grid; gap: 48px; grid-template-columns: 1fr; }
+    .timeline.elimination .checkpoint { flex-direction: row; align-items: flex-start; text-align: left; }
+    .timeline.elimination .checkpoint::before { top: 32px; height: calc(100% + 48px); }
+    .timeline.elimination .checkpoint.start .dot, .timeline.elimination .checkpoint.start::before { margin-top: 0; top: 32px; }
+    .timeline.elimination .checkpoint.elimination-mark .dot, .timeline.elimination .checkpoint.elimination-mark::before { border-color: #ef4444; }
+    .timeline.elimination .checkpoint .details { background: transparent; border: none; padding: 0; grid-row: auto; align-self: auto; grid-column: auto; text-align: left; flex: 1; display: flex; flex-direction: column; align-items: start; max-width: 600px; margin-left: 24px; padding-top: 32px; }
+    .timeline.elimination .checkpoint .details-wrapper { flex: 1; display: flex; }
+    .timeline.elimination .checkpoint .meta { width: 140px; flex-shrink: 0; margin-right: 24px; margin-bottom: 0; padding-top: 32px; }
+    .timeline.elimination .checkpoint .dot { margin: 32px 0; }
+    .timeline.elimination .checkpoint .title { font-size: 1.25rem; font-weight: 600; color: #fff; display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; justify-content: flex-start; margin-bottom: 12px; }
+    .timeline.elimination .checkpoint .title span { font-weight: 400; color: var(--accent); font-size: 0.9em; white-space: nowrap; }
+    .timeline.elimination .checkpoint .content { color: var(--fg-muted); font-size: 1rem; }
 
-    .award-card.build {
-      border-top-color: var(--dim-orange);
-    }
+    .layout-eval { background: #1a1a24; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; padding: 100px 0; margin: 100px 0 0; }
+    .layout-eval h4 { font-size: 0.875rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; text-align: center; }
+    .layout-eval h3 { font-size: 3rem; font-weight: 700; margin-bottom: 24px; color: #fff; text-align: center; }
+    .layout-eval h3 + p { color: var(--fg-muted); max-width: 640px; margin: 0 auto 64px; text-align: center; }
+    .eval-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 32px; grid-column: 1 / -1; }
+    .eval-item { border: 1px solid #2d3748; background: #0d0d1299; border-radius: 8px; padding: 32px; }
+    .eval-item:last-child { grid-column: 1 / 3; width: calc(50% - 16px); margin: 0 auto; }
+    .eval-item .head { display: flex; justify-content: space-between; align-items: flex-start; margin-bottom: 20px; gap: 16px; }
+    .eval-item .title { font-size: 1.5rem; font-weight: 600; color: #fff; }
+    .eval-item .weight { font-size: 0.875rem; color: #10b981; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 6px 12px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; font-weight: 600; }
+    .eval-item p { font-size: 1.125rem; color: var(--fg-muted); margin-bottom: 24px; }
+    .eval-item .points { list-style: none; color: #fff; font-size: 1rem; border-top: 1px solid #2d3748; padding-top: 24px; }
+    .eval-item .points li { margin-bottom: 12px; padding-left: 24px; position: relative; color: #fff; font-weight: 500; }
+    .eval-item .points li::before { content: '✓'; color: var(--accent); left: 0; font-size: 1.1em; top: -1px; }
 
-    .award-card.pitch .award-marker {
-      background: var(--dim-purple);
-    }
+    /* ============ MATRIX SECTION ============ */
+    .layout-matrix { background: #1a1a24; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; padding: 100px 0; margin: 100px 0 0; max-width: none; width: 100%; }
+    .layout-matrix > div { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .layout-matrix h4 { font-size: 0.875rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; text-align: center; text-indent: 0.05em; }
+    .layout-matrix h3 { font-size: 3rem; font-weight: 700; margin-bottom: 24px; color: #fff; text-align: center; letter-spacing: -0.01em; }
+    .layout-matrix h3 + p { color: var(--fg-muted); max-width: 720px; margin: 0 auto 56px; text-align: center; font-size: 1.125rem; }
 
-    .award-card.pitch {
-      border-top-color: var(--dim-purple);
-    }
+    .matrix-equation { display: flex; flex-wrap: wrap; gap: 16px; align-items: center; justify-content: center; margin: 40px 0 80px; font-size: 1.125rem; color: var(--fg-muted); }
+    .matrix-equation .chip { background-color: #0d0d12; border: 1px solid #2d3748; padding: 16px 28px; border-radius: 30px; white-space: nowrap; font-weight: 600; color: #fff; }
+    .matrix-equation .chip small { display: block; color: var(--fg-muted); font-size: 0.7rem; font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 4px; }
+    .matrix-equation .op { font-size: 2rem; color: var(--accent); font-weight: 300; width: 20px; text-align: center; }
+    .matrix-equation .result { background-color: var(--accent); color: #fff; border-color: var(--accent); font-size: 1.25rem; }
+    .matrix-equation .result small { color: rgba(255,255,255,0.85); }
 
-    .award-card.spirit .award-marker {
-      background: var(--dim-green);
-    }
+    .matrix-subhead { font-size: 0.875rem; color: var(--accent); font-weight: 600; text-transform: uppercase; letter-spacing: 0.1em; text-align: center; margin: 80px 0 12px; text-indent: 0.1em; }
+    .matrix-subhead-title { font-size: 2rem; font-weight: 700; color: #fff; text-align: center; margin-bottom: 48px; letter-spacing: -0.01em; }
 
-    .award-card.spirit {
-      border-top-color: var(--dim-green);
-    }
+    .prompts-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .prompts-grid .prompt-card:nth-child(4), .prompts-grid .prompt-card:nth-child(5) { grid-column: span 1; }
+    .prompt-card { border: 1px solid #2d3748; background: #0d0d1299; border-radius: 12px; padding: 32px; display: flex; flex-direction: column; position: relative; overflow: hidden; transition: border-color 0.2s, transform 0.2s; }
+    .prompt-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .prompt-card .badge { display: inline-flex; align-items: center; justify-content: center; width: 44px; height: 44px; border-radius: 10px; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.35); color: var(--accent); font-weight: 700; font-size: 1.25rem; margin-bottom: 20px; letter-spacing: 0; }
+    .prompt-card .title { font-size: 1.375rem; font-weight: 600; color: #fff; margin-bottom: 16px; line-height: 1.3; }
+    .prompt-card .quote { color: #fff; font-size: 1rem; font-style: italic; border-left: 3px solid var(--accent); padding-left: 16px; margin-bottom: 20px; line-height: 1.5; }
+    .prompt-card .focus { color: var(--fg-muted); font-size: 0.95rem; line-height: 1.55; margin-top: auto; }
+    .prompt-card .focus strong { color: #fff; font-weight: 600; }
 
-    .award-card.gold .award-marker {
-      background: var(--dim-amber);
-    }
+    .domains-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
+    .domain-card { border: 1px solid #2d3748; background: #0d0d1299; border-radius: 12px; padding: 28px; transition: border-color 0.2s, transform 0.2s; }
+    .domain-card:hover { border-color: #10b981; transform: translateY(-4px); }
+    .domain-card .icon { font-size: 1.75rem; margin-bottom: 16px; display: block; }
+    .domain-card .name { font-size: 1.125rem; font-weight: 600; color: #fff; margin-bottom: 6px; line-height: 1.3; }
+    .domain-card .abbr { font-size: 0.75rem; color: #10b981; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 16px; display: block; }
+    .domain-card .desc { color: var(--fg-muted); font-size: 0.9rem; line-height: 1.55; }
 
-    .award-card.silver .award-marker {
-      background: #888780;
-    }
+    .matrix-rule { max-width: 800px; margin: 64px auto 0; padding: 20px 28px; background: rgba(59, 130, 246, 0.08); border: 1px solid rgba(59, 130, 246, 0.3); border-radius: 10px; text-align: center; color: #fff; font-size: 1rem; }
+    .matrix-rule strong { color: var(--accent); }
 
-    /* ── Takeaways ── */
-    .takeaways-band {
-      background: var(--accent);
-      padding: 3rem 2rem;
-      margin: 3rem calc(-50vw + 50%);
-      width: 100vw;
-    }
+    /* ============ EVALUATION SECTION ============ */
+    .layout-evaluation { background: #1a1a24; border-top: 1px solid #2d3748; border-bottom: 1px solid #2d3748; padding: 100px 0; margin: 100px 0 0; max-width: none; width: 100%; }
+    .layout-evaluation > div { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .layout-evaluation h4 { font-size: 0.875rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; text-align: center; text-indent: 0.05em; }
+    .layout-evaluation h3 { font-size: 3rem; font-weight: 700; margin-bottom: 24px; color: #fff; text-align: center; letter-spacing: -0.01em; }
+    .layout-evaluation h3 + p { color: var(--fg-muted); max-width: 780px; margin: 0 auto 24px; text-align: center; font-size: 1.125rem; }
 
-    .takeaways-inner {
+    .eval-principle {
       max-width: 820px;
-      margin: 0 auto;
-    }
-
-    .takeaways-band h2 {
-      font-family: var(--font-display);
-      font-size: 2.1rem;
+      margin: 0 auto 56px;
+      padding: 24px 32px;
+      background: rgba(59, 130, 246, 0.06);
+      border-left: 4px solid var(--accent);
+      border-radius: 8px;
       color: #fff;
-      font-weight: 700;
-      margin-bottom: 0.35rem;
-    }
-
-    .takeaways-band .sub {
-      font-family: var(--font-mono);
-      font-size: 0.68rem;
-      text-transform: uppercase;
-      letter-spacing: 0.14em;
-      color: rgba(255, 255, 255, 0.5);
-      margin-bottom: 2rem;
-    }
-
-    .takeaway-list {
-      list-style: none;
-      padding: 0;
-    }
-
-    .takeaway-item {
-      display: flex;
-      gap: 1.25rem;
-      align-items: flex-start;
-      margin-bottom: 1.5rem;
-      padding-bottom: 1.5rem;
-      border-bottom: 1px solid rgba(255, 255, 255, 0.12);
-    }
-
-    .takeaway-item:last-child {
-      border-bottom: none;
-      margin-bottom: 0;
-      padding-bottom: 0;
-    }
-
-    .takeaway-num {
-      font-family: var(--font-display);
-      font-size: 2.4rem;
-      font-weight: 700;
-      color: rgba(255, 255, 255, 0.18);
-      line-height: 1;
-      flex-shrink: 0;
-      width: 2.4rem;
-    }
-
-    .takeaway-body {
-      flex: 1;
-    }
-
-    .takeaway-title {
-      font-family: var(--font-display);
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: #fff;
-      margin-bottom: 0.3rem;
-      line-height: 1.3;
-    }
-
-    .takeaway-desc {
-      font-family: var(--font-body);
-      font-size: 0.92rem;
-      color: rgba(255, 255, 255, 0.68);
+      font-size: 1.05rem;
       line-height: 1.65;
     }
+    .eval-principle strong { color: var(--accent); }
 
-    /* ── Open questions list ── */
-    .oq-list {
-      display: grid;
-      gap: 0.7rem;
-      margin: 1.5rem 0;
+    .scoring-split {
+      max-width: 900px;
+      margin: 0 auto 64px;
     }
-
-    .oq-item {
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 0.85rem 1.1rem;
-      display: flex;
-      gap: 0.8rem;
-      align-items: flex-start;
-      font-size: 0.92rem;
-      line-height: 1.5;
-    }
-
-    .oq-q {
-      font-family: var(--font-mono);
-      font-size: 0.62rem;
-      letter-spacing: 0.12em;
+    .scoring-split .split-label {
+      text-align: center;
+      font-size: 0.75rem;
+      font-weight: 700;
+      color: var(--fg-muted);
       text-transform: uppercase;
-      color: var(--accent2);
-      padding-top: 0.18rem;
-      flex-shrink: 0;
+      letter-spacing: 0.12em;
+      margin-bottom: 20px;
     }
-
-    /* ── Team formula visual ── */
-    .team-formula {
+    .scoring-split .split-bar {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border-radius: 12px;
+      overflow: hidden;
+      border: 1px solid #2d3748;
+    }
+    .scoring-split .split-half {
+      padding: 32px 28px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      position: relative;
+    }
+    .scoring-split .split-half.ai {
+      background: linear-gradient(135deg, rgba(168, 85, 247, 0.15) 0%, rgba(168, 85, 247, 0.05) 100%);
+      border-right: 1px solid #2d3748;
+    }
+    .scoring-split .split-half.human {
+      background: linear-gradient(135deg, rgba(16, 185, 129, 0.15) 0%, rgba(16, 185, 129, 0.05) 100%);
+    }
+    .scoring-split .split-percent { font-size: 3.5rem; font-weight: 700; line-height: 1; margin-bottom: 8px; font-feature-settings: 'tnum', 'lnum'; }
+    .scoring-split .split-half.ai .split-percent { color: #a855f7; }
+    .scoring-split .split-half.human .split-percent { color: #10b981; }
+    .scoring-split .split-who { font-size: 1.25rem; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .scoring-split .split-what { font-size: 0.9rem; color: var(--fg-muted); max-width: 260px; }
+    .scoring-split .split-plus {
+      position: absolute;
+      top: 50%;
+      right: -18px;
+      transform: translateY(-50%);
+      width: 36px;
+      height: 36px;
+      border-radius: 50%;
+      background: #0d0d12;
+      border: 1px solid #2d3748;
       display: flex;
       align-items: center;
       justify-content: center;
-      flex-wrap: wrap;
-      gap: 0.5rem;
-      padding: 1.5rem 1rem;
-      background: var(--bg);
-      border: 1px dashed var(--border);
-      margin: 2rem 0;
-      font-family: var(--font-display);
+      color: var(--fg-muted);
+      font-size: 1.25rem;
+      font-weight: 300;
+      z-index: 5;
     }
 
-    .team-pill {
-      background: #fff;
-      border: 1px solid var(--border);
-      padding: 0.45rem 0.85rem;
-      font-size: 0.92rem;
-      color: var(--ink2);
+    .dimensions-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+    .dim-card { border: 1px solid #2d3748; background: #0d0d1299; border-radius: 12px; padding: 28px; display: flex; flex-direction: column; transition: border-color 0.2s, transform 0.2s; position: relative; overflow: hidden; }
+    .dim-card:hover { border-color: var(--accent); transform: translateY(-4px); }
+    .dim-card .dim-head { display: flex; justify-content: space-between; align-items: flex-start; gap: 12px; margin-bottom: 16px; }
+    .dim-card .dim-num { font-size: 0.75rem; color: var(--accent); font-weight: 700; letter-spacing: 0.1em; text-transform: uppercase; }
+    .dim-card .dim-weight { font-size: 0.7rem; color: #10b981; background: rgba(16, 185, 129, 0.1); border: 1px solid rgba(16, 185, 129, 0.3); padding: 4px 10px; border-radius: 20px; text-transform: uppercase; letter-spacing: 0.05em; white-space: nowrap; font-weight: 600; }
+    .dim-card .dim-title { font-size: 1.375rem; font-weight: 600; color: #fff; margin-bottom: 12px; line-height: 1.25; }
+    .dim-card .dim-desc { color: var(--fg-muted); font-size: 0.975rem; line-height: 1.6; }
+    .dim-card .dim-desc strong { color: #fff; font-weight: 600; }
+
+    .dim-card.tbd { border-style: dashed; opacity: 0.7; }
+    .dim-card.tbd:hover { border-color: #2d3748; transform: none; }
+    .dim-card.tbd .dim-num, .dim-card.tbd .dim-weight { color: var(--fg-muted); background: transparent; border-color: #2d3748; }
+    .dim-card.tbd .dim-title { color: var(--fg-muted); }
+
+    .protip-callout {
+      max-width: 900px;
+      margin: 64px auto 0;
+      background: rgba(251, 191, 36, 0.06);
+      border: 1px solid rgba(251, 191, 36, 0.3);
+      border-radius: 12px;
+      padding: 32px;
+    }
+    .protip-callout .protip-label {
+      display: inline-block;
+      font-size: 0.7rem;
+      font-weight: 700;
+      color: #fbbf24;
+      background: rgba(251, 191, 36, 0.12);
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 16px;
+    }
+    .protip-callout .protip-title { font-size: 1.5rem; font-weight: 600; color: #fff; margin-bottom: 12px; }
+    .protip-callout p { color: var(--fg-muted); font-size: 1rem; line-height: 1.6; margin-bottom: 16px; }
+    .protip-callout p:last-child { margin-bottom: 0; }
+    .protip-callout p strong { color: #fff; }
+    .protip-callout .prompt-block {
+      background: #0d0d12;
+      border: 1px solid #2d3748;
+      border-left: 3px solid #fbbf24;
+      border-radius: 8px;
+      padding: 18px 20px;
+      margin: 20px 0;
+      font-family: 'IBM Plex Mono', 'Consolas', monospace;
+      font-size: 0.9rem;
+      color: #e2e8f0;
+      line-height: 1.55;
       font-style: italic;
     }
+    .protip-callout .protip-kicker {
+      font-size: 1.05rem;
+      color: #fff;
+      font-weight: 500;
+      padding-top: 16px;
+      border-top: 1px solid rgba(251, 191, 36, 0.2);
+    }
+    .protip-callout .protip-kicker strong { color: #fbbf24; }
 
-    .team-plus {
-      font-family: var(--font-mono);
-      color: var(--gold);
-      font-weight: 700;
-      font-size: 1.1rem;
+    /* ============ SUBMISSION SECTION ============ */
+    .layout-submission { padding: 120px 0 40px; max-width: none; width: 100%; }
+    .layout-submission > div { max-width: 1280px; margin: 0 auto; padding: 0 48px; }
+    .layout-submission h4 { font-size: 0.875rem; color: var(--fg-muted); font-weight: 500; text-transform: uppercase; letter-spacing: 0.05em; margin-bottom: 12px; text-align: center; text-indent: 0.05em; }
+    .layout-submission h3 { font-size: 3rem; font-weight: 700; margin-bottom: 24px; color: #fff; text-align: center; letter-spacing: -0.01em; }
+    .layout-submission h3 + p { color: var(--fg-muted); max-width: 720px; margin: 0 auto 56px; text-align: center; font-size: 1.125rem; }
+
+    .submission-panel {
+      max-width: 900px;
+      margin: 0 auto;
+      background: linear-gradient(180deg, #1a1a24 0%, #16161f 100%);
+      border: 1px solid #2d3748;
+      border-radius: 16px;
+      padding: 48px;
+      position: relative;
+      overflow: hidden;
+    }
+    .submission-panel::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), #a855f7);
     }
 
-    /* ── Section divider ── */
-    .section-rule {
-      border: none;
-      border-top: 1px solid var(--border);
-      margin: 3rem 0;
-    }
+    .submission-rule { display: flex; gap: 24px; align-items: flex-start; padding: 24px; background: #0d0d12; border: 1px solid #2d3748; border-radius: 12px; margin-bottom: 24px; }
+    .submission-rule .num { flex-shrink: 0; width: 40px; height: 40px; border-radius: 10px; background: rgba(59, 130, 246, 0.15); border: 1px solid rgba(59, 130, 246, 0.35); color: var(--accent); font-weight: 700; font-size: 1.125rem; display: inline-flex; align-items: center; justify-content: center; }
+    .submission-rule .body { flex: 1; }
+    .submission-rule .body .rule-title { font-size: 1.125rem; font-weight: 600; color: #fff; margin-bottom: 6px; }
+    .submission-rule .body .rule-desc { color: var(--fg-muted); font-size: 0.975rem; line-height: 1.6; }
+    .submission-rule .body .rule-desc strong { color: #fff; }
 
-    /* ── Footer ── */
-    .footer {
-      background: var(--dark2);
-      color: rgba(255, 255, 255, 0.4);
-      text-align: center;
-      padding: 2.5rem 2rem;
-      font-family: var(--font-mono);
+    .submission-cheeky {
+      background: rgba(168, 85, 247, 0.08);
+      border: 1px dashed rgba(168, 85, 247, 0.4);
+      border-radius: 12px;
+      padding: 24px 28px;
+      margin-top: 24px;
+      color: #e2e8f0;
+      font-size: 1rem;
+      line-height: 1.65;
+    }
+    .submission-cheeky .cheeky-label {
+      display: inline-block;
       font-size: 0.7rem;
-      letter-spacing: 0.06em;
-      line-height: 2;
+      font-weight: 700;
+      color: #a855f7;
+      background: rgba(168, 85, 247, 0.15);
+      padding: 4px 10px;
+      border-radius: 20px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .submission-cheeky code {
+      background: rgba(255,255,255,0.06);
+      border: 1px solid #2d3748;
+      color: #fff;
+      padding: 2px 8px;
+      border-radius: 4px;
+      font-family: 'IBM Plex Mono', monospace;
+      font-size: 0.9em;
+      white-space: nowrap;
     }
 
-    .footer a {
-      color: rgba(255, 255, 255, 0.55);
-      text-decoration: none;
+    .registration-box { 
+      background: rgba(59, 130, 246, 0.05); 
+      border: 1px solid rgba(59, 130, 246, 0.3); 
+      border-radius: 16px; 
+      padding: 64px 48px; 
+      text-align: center; 
+      max-width: 800px; 
+      margin: 100px auto 0; 
+      position: relative;
+      overflow: hidden;
     }
-
-    .footer a:hover {
-      color: var(--gold);
+    .registration-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 4px;
+      background: linear-gradient(90deg, var(--accent), #a855f7);
     }
+    .registration-box h3 { font-size: 2.5rem; font-weight: 700; color: #fff; margin-bottom: 16px; }
+    .registration-box p { color: var(--fg-muted); font-size: 1.125rem; margin-bottom: 40px; }
+    
+    .checkbox-container { 
+      display: inline-flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 12px; 
+      margin-bottom: 32px; 
+      font-size: 1.125rem; 
+      color: #fff; 
+      cursor: pointer; 
+      background: rgba(255,255,255,0.05);
+      padding: 16px 24px;
+      border-radius: 8px;
+      border: 1px solid #2d3748;
+      transition: border-color 0.2s;
+    }
+    .checkbox-container:hover { border-color: var(--accent); }
+    .checkbox-container input[type="checkbox"] { width: 22px; height: 22px; accent-color: var(--accent); cursor: pointer; }
+    
+    .btn-primary { 
+      display: inline-block; 
+      background: var(--accent); 
+      color: #fff; 
+      font-weight: 600; 
+      font-size: 1.125rem; 
+      padding: 16px 48px; 
+      border-radius: 50px; 
+      transition: all 0.2s; 
+      border: none; 
+      cursor: pointer; 
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+    }
+    .btn-primary:hover { background: var(--accent-muted); transform: translateY(-2px); box-shadow: 0 10px 20px rgba(59, 130, 246, 0.2); }
+    .btn-primary:active { transform: translateY(0); }
+    .btn-primary.disabled { background: #333; color: #666; cursor: not-allowed; pointer-events: none; transform: none; box-shadow: none; border: 1px solid #444; }
 
-    @media (max-width: 600px) {
-      body {
-        font-size: 16px;
-      }
+    footer { border-top: 1px solid #2d3748; padding: 64px 0; color: var(--fg-muted); }
+    footer > div { text-align: center; }
+    footer p { font-size: 0.9rem; max-width: 600px; margin: 0 auto; line-height: 1.8; }
+    footer p + p { margin-top: 24px; color: var(--accent-muted); font-weight: 500; }
 
-      .hero {
-        padding: 3rem 1.25rem 1.5rem;
-      }
+    img.in-content { max-width: 100%; height: auto; margin: 64px 0 80px; display: block; border-radius: 12px; border: 1px solid #2d3748; }
 
-      .article {
-        padding: 2rem 1.25rem 3rem;
-      }
-
-      .stat-band-inner {
-        grid-template-columns: repeat(2, 1fr);
-      }
-
-      .pullquote {
-        padding: 2.5rem 1.25rem;
-      }
-
-      .timeline::before {
-        left: 80px;
-      }
-
-      .tl-row {
-        grid-template-columns: 80px 22px 1fr;
-        gap: 0.65rem;
-      }
-
-      .tl-time {
-        font-size: 0.65rem;
-      }
-
-      .quest-items {
-        grid-template-columns: 1fr;
-      }
-
-      .dim-criteria {
-        grid-template-columns: 1fr;
-      }
+    @media (max-width: 768px) {
+      header, section, nav, main, footer > div, .layout-timeline > div, .layout-eval > div > div { padding: 0 24px; }
+      section.hero h1 { font-size: 4.5rem; }
+      section.hero .event-details span { font-size: 1rem; padding: 10px 16px; }
+      nav[aria-label="Jump to section"] > div { justify-content: flex-start; }
+      main { grid-template-columns: 1fr; gap: 40px; }
+      main h2 { font-size: 2.25rem; margin-top: 64px; margin-bottom: 24px; }
+      main blockquote { grid-column: 1 / 2; }
+      .stat-blocks { grid-template-columns: repeat(2, 1fr); padding: 48px 24px; }
+      .stat-blocks .stat-val { font-size: 4rem; }
+      .cross-functional-teams span { font-size: 1rem; padding: 8px 16px; }
+      .timeline { grid-template-columns: 1fr; gap: 40px; margin-top: 64px; }
+      .timeline.elimination .checkpoint::before { left: 8px; display: block; }
+      .timeline.elimination .checkpoint .details { border-left: 1px solid #333; padding-left: 24px; margin-left: 16px; padding-top: 0; width: 100%; border: 1px solid #2d3748; border-radius: 8px; background: #0d0d1299; padding: 24px; }
+      .timeline.elimination .checkpoint .details-wrapper { flex-direction: column; width: 100%; }
+      .timeline.elimination .checkpoint .meta { width: 100%; margin-right: 0; padding-top: 0; padding-bottom: 12px; border-bottom: 1px solid #2d3748; margin-bottom: 20px; }
+      .eval-grid { grid-template-columns: 1fr; }
+      .eval-item:last-child { grid-column: 1 / 2; width: 100%; }
+      .registration-box { padding: 48px 24px; }
+      .layout-matrix > div { padding: 0 24px; }
+      .layout-matrix h3 { font-size: 2.25rem; }
+      .matrix-equation { font-size: 1rem; gap: 12px; }
+      .matrix-equation .chip { padding: 12px 20px; }
+      .matrix-subhead-title { font-size: 1.5rem; }
+      .prompts-grid { grid-template-columns: 1fr; }
+      .domains-grid { grid-template-columns: 1fr; }
+      .layout-submission > div { padding: 0 24px; }
+      .layout-submission h3 { font-size: 2.25rem; }
+      .submission-panel { padding: 32px 24px; }
+      .submission-rule { flex-direction: column; gap: 16px; padding: 20px; }
+      .layout-evaluation > div { padding: 0 24px; }
+      .layout-evaluation h3 { font-size: 2.25rem; }
+      .dimensions-grid { grid-template-columns: 1fr; }
+      .scoring-split .split-bar { grid-template-columns: 1fr; }
+      .scoring-split .split-half.ai { border-right: none; border-bottom: 1px solid #2d3748; }
+      .scoring-split .split-plus { top: auto; bottom: -18px; right: 50%; transform: translateX(50%); }
+      .scoring-split .split-percent { font-size: 2.75rem; }
+      .protip-callout { padding: 24px; }
+      .protip-callout .prompt-block { font-size: 0.85rem; padding: 14px 16px; }
     }
   </style>
 </head>
-
 <body>
 
-  <div id="progress"></div>
-
-  <!-- ── Masthead ── -->
-  <header class="masthead">
-    <div class="masthead-inner">
-      <a href="#" class="masthead-brand">Gramener · Rhapsody · Pitch Deck</a>
-      <div class="masthead-right">
-        <span class="masthead-date">Hyderabad · Rhapsody '26</span>
-        <a href="Stage1.md" class="masthead-link" target="_blank">📄 Source Notes</a>
+  <header>
+    <div>
+      <a href="#" class="brand">INVENT' 26 · Hackathon</a>
+      <div class="meta">
+        <span>Hyderabad / Virtual · July '26</span>
+        <a href="#registration">📅 Register Now</a>
       </div>
     </div>
   </header>
 
-  <!-- ── Hero ── -->
   <section class="hero">
-    <p class="hero-kicker">Rhapsody · A Tech Event Proposal · Hyderabad</p>
-    <h1 class="hero-title"><span class="init-mark">INIT</span><span class="arrow">(0→1)</span></h1>
-    <p class="hero-subtitle">A 24-hour internal hackathon — initialize something from nothing. Cross-functional teams.
-      Real pain points from Sales. Working prototypes, and decks.</p>
-    <div class="hero-meta">
-      <span>Proposed by <strong>Naga Sushanth Kumar</strong> · Associate Data Scientist, Gramener Hyderabad</span>
-      <span>Rhapsody · Late July / Early August 2026</span>
+    <p class="tagline">Official Participant Guidelines</p>
+    
+    <h1>INVENT' 26</h1>
+    <p class="desc">A 18-hour internal hackathon — <strong>Build Working prototypes.</strong> Cross-functional teams. Real pain points.</p>
+    
+    <div class="event-details">
+      <span><i>🕒</i> 22 July (Wed) 3:00 PM – 23 July (Thu) 9:00 AM</span>
+      <span><i>📍</i> Hyd Office / Virtual</span>
     </div>
   </section>
 
-  <!-- ── Quick links ── -->
-  <nav class="quick-links" aria-label="Jump to section">
-    <div class="quick-links-inner">
-      <a href="#why" class="quick-link">The Why</a>
-      <a href="#format" class="quick-link">The Format</a>
-      <a href="#timeline" class="quick-link">24-Hour Timeline</a>
-      <a href="#evaluation" class="quick-link">Evaluation</a>
-      <a href="#sidequests" class="quick-link">Side Quests</a>
-      <a href="#awards" class="quick-link">Awards</a>
-      <a href="#takeaways" class="quick-link primary">Top Takeaways</a>
+  <nav aria-label="Jump to section">
+    <div>
+      <a href="#challenge">The Challenge</a>
+      <a href="#matrix">The Matrix</a>
+      <a href="#prompts">Strategic Prompts</a>
+      <a href="#domains">GCC Domains</a>
+      <a href="#evaluation">Evaluation</a>
+      <a href="#submission">Submission</a>
     </div>
   </nav>
 
-  <!-- ── Article body ── -->
-  <main class="article">
-
-    <!-- SECTION 1: OPENING NARRATIVE -->
-    <p class="dropcap">Gramener has POC methodology of <strong>72 hours, end to
-        end.</strong> We build a working solution — not a deck, not a roadmap, an actual thing that runs. </p>
-
-    <p>And yet for all the times we have proven this to outsiders, we have never quite turned the same lens on
-      ourselves. We have never asked, on a single weekend, what would happen if our own people — the designers, the data
-      scientists, the marketers, the consultants, the managers — were given a real problem and 24 hours to invent
-      something new for it. Not improve something. <em>Invent.</em></p>
-
-    <p>This is a pitch for that weekend. The vehicle is Rhapsody — Gramener's annual day, already on the calendar for
-      late July or early August, already a celebration of sports and a party. The proposal is to add a tech component to
-      it that lives in the same spirit as everything else Gramener does, but with a sharper edge.</p>
+  <main>
+    <p id="challenge">Build actual, runnable solutions in short sprints. We have proven this to outside clients countless times, but now, we are turning that same focus inward. Over 18 hours, your cross-functional team will tackle a single problem statement and build a working prototype. This isn't just about writing code; it's about validating an inventive idea in a high-pressure environment.</p>
 
     <blockquote>
-      We already prove our capabilities to clients in 72 hours. <strong>INIT(0→1)</strong> proves our capabilities to
-      ourselves in 24.
-      <cite>— The Pitch in One Line</cite>
+      Build something that doesn’t just look like a product, but *works* like one. <strong>INVENT' 26</strong> is your arena to prove your prototyping capabilities in 18 hours.
+      <cite>— The Core Objective</cite>
     </blockquote>
 
-    <!-- SECTION 2: WHY -->
-    <h2 id="why">The Why — A Hackathon That Looks Like Us</h2>
+    <h2>The Challenge — Solving Real Pain Points</h2>
 
-    <p>Hackathons are not new. Most companies run them. Most hackathons are <em>tech-only echo chambers.</em> They
-      optimize for the thing
-      that's easiest to demo — a screen with something blinking on it — and they exclude the people who would have told
-      you, on hour two, that no real client would ever pay for that thing. The engineers are correct. The engineers are
-      also, by themselves, not the company.</p>
+    <p>Many hackathons are just tech-focused echo chambers. They optimize for what is easy to demo and exclude the voices of those who know what clients actually want. INVENT' 26 is structured differently. The problem statements you will choose from are sourced directly from our Sales team, representing real, unmet market pain points. You will work in strictly cross-functional teams because each member brings a piece of the puzzle that the others miss.</p>
 
-    <p>INIT(0→1) is structured to fix this from the first hour. Teams are <strong>strictly cross-functional</strong> —
-      every team has a Data Consultant, a Data Scientist or Engineer, someone from Marketing, and a Manager or Business
-      person. The roles are interchangeable and they're decorative. Each is there because each, on their own,
-      sees a part of the problem the others can't see.</p>
-
-    <div class="team-formula">
-      <span class="team-pill">Data Consultant</span>
-      <span class="team-plus">+</span>
-      <span class="team-pill">Data Scientist / Engineer</span>
-      <span class="team-plus">+</span>
-      <span class="team-pill">Marketing</span>
-      <span class="team-plus">+</span>
-      <span class="team-pill">Manager / Business</span>
-      <span class="team-plus">=</span>
-      <span class="team-pill" style="background:var(--accent);color:#fff;border-color:var(--accent);">One INIT(0→1)
-        Team</span>
-    </div>
-
-    <p>The themes do not come out of thin air. <strong>Vijayam Sirikonda, SVP Sales,</strong> sits closer to the market
-      than anyone else in the building. He hears, every week, what clients are frustrated by and what they wish existed.
-      He pitches the real pain points and trends; we distill them into hackathon themes; employees pick and build on
-      them. The problem statement is not invented for the event — it is sourced from the market the event is supposed to
-      serve.</p>
-
-    <p>This is talent-powered innovation at near-zero cost. The office is already paid for. The people are already
-      employed. The clients have already told Sales what they need. All we are doing is putting those three facts in the
-      same room for one weekend.</p>
-
+    <p>This 18-hour continuous sprint is designed to turn internal talent into a product-creation engine for <strong>Global Capability Centers (GCCs)</strong>. By pairing <em>5 Strategic Prompts</em> with <em>4 High-Value GCC Domains</em>, we form a <strong>Hackathon Matrix</strong> — guaranteeing maximum output variance and delivering a ready-to-demo portfolio.</p>
   </main>
 
-  <!-- Stats band -->
-  <div class="stat-band">
-    <div class="stat-band-inner">
-      <div class="stat-card">
-        <div class="stat-number">24</div>
-        <div class="stat-label">Hours, kickoff to final</div>
+  <section class="layout-matrix" id="matrix">
+    <div>
+      <h4>The Framework</h4>
+      <h3>The Hackathon Matrix</h3>
+      <p>Every cross-functional team selects <strong style="color:#fff">one unique matrix pairing</strong>. No two teams are allowed to claim the exact same combination — guaranteeing 20 distinct GCC applications by demo day.</p>
+
+      <div class="matrix-equation">
+        <div class="chip"><small>Choose One</small>5 Strategic Prompts</div>
+        <div class="op">×</div>
+        <div class="chip"><small>Pair With One</small>4 GCC Domains</div>
+        <div class="op">=</div>
+        <div class="chip result"><small>Unique Combinations</small>20 Possible Builds</div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">4–5</div>
-        <div class="stat-label">People per cross-functional team</div>
+
+      <h4 class="matrix-subhead" id="prompts">Axis 1</h4>
+      <div class="matrix-subhead-title">The 5 Strategic Prompts</div>
+
+      <div class="prompts-grid">
+        <div class="prompt-card">
+          <div class="badge">A</div>
+          <div class="title">The AI-Native Day One</div>
+          <div class="quote">"Build what a GCC's first AI-native hire would build on day one."</div>
+          <div class="focus"><strong>Focus:</strong> Rapid-impact, lightweight, immediately deployable copilots and workflow tools.</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="badge">B</div>
+          <div class="title">The Value-Center Inversion</div>
+          <div class="quote">"Build the thing a GCC would quietly steal from its parent company."</div>
+          <div class="focus"><strong>Focus:</strong> High-value capability demonstrators proving the Hyderabad office leads innovation over offshore headquarters.</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="badge">C</div>
+          <div class="title">The 2031 Vision</div>
+          <div class="quote">"Build the artefact that justifies a GCC's existence in 2031."</div>
+          <div class="focus"><strong>Focus:</strong> Strategic, future-proof AI solutions that address long-term operational shifts.</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="badge">D</div>
+          <div class="title">The Deal Closer</div>
+          <div class="quote">"Build the demo that closes a GCC client in the next meeting."</div>
+          <div class="focus"><strong>Focus:</strong> Direct commercial pitch assets designed specifically to convert live sales leads.</div>
+        </div>
+
+        <div class="prompt-card">
+          <div class="badge">E</div>
+          <div class="title">The Friction Killer</div>
+          <div class="quote">"Build the thing a GCC head would expense without asking their CFO."</div>
+          <div class="focus"><strong>Focus:</strong> Scoped, high-utility micro-apps that eliminate daily operational headaches without bureaucratic overhead.</div>
+        </div>
       </div>
-      <div class="stat-card">
-        <div class="stat-number">3</div>
-        <div class="stat-label">Mark checkpoints across the night</div>
-      </div>
-      <div class="stat-card">
-        <div class="stat-number">5</div>
-        <div class="stat-label">Evaluation dimensions, none dominant</div>
-      </div>
-    </div>
-  </div>
 
-  <main class="article" style="margin-top:0;">
+      <h4 class="matrix-subhead" id="domains">Axis 2</h4>
+      <div class="matrix-subhead-title">The 4 High-Impact GCC Domains</div>
 
-    <!-- SECTION 3: THE NORTH STAR -->
-    <h2 id="format">The North Star — 0→1, Not 1→2</h2>
-
-    <p>Every hackathon needs a filter. Without one, teams default to the safest path: take something that exists, change
-      one thing about it, ship the variant. You get a competent project; you do not get a memorable one.</p>
-
-    <p>The filter for INIT(0→1) is in the name. <strong>0→1.</strong> Build something that doesn't exist yet. Not an
-      improvement to an existing tool, not a polished version of a thing already in the pipeline — genuine creation. New
-      tools, new solutions to problems that have so far been unsolved or unsolved well.</p>
-
-    <p>This is a hard filter. It will rule out comfortable ideas. That is the point. The whole reason for compressing
-      the format to 24 hours and forcing cross-functional teams is to make sure the output isn't another version of what
-      we already do — it's the thing we <em>haven't</em> done yet, that we should have.</p>
-
-    <p>The title itself is the philosophy. <strong>INIT(0→1)</strong> — initialize something from nothing. Technical
-      enough to excite engineers. Conceptual enough to excite the business side. Communicates the entire premise in one
-      glance. We are not improving — we are starting.</p>
-
-    <blockquote>
-      Build something that doesn't exist yet. Not improving what's already there. Genuine creation — new tools, new
-      solutions to unsolved problems.
-      <cite>— The North Star</cite>
-    </blockquote>
-
-    <h3>Structure</h3>
-    <ul>
-      <li><strong>24 hours</strong>, kickoff Saturday 9 AM → finals Sunday 9 AM.</li>
-      <li>Divided into <strong>3 Marks</strong> — Mark 1, Mark 2, Mark 3 — each a checkpoint, each timed.</li>
-      <li>Teams of <strong>4–5</strong>, strictly cross-functional.</li>
-      <li>Teams formed via a <strong>registration form</strong> rolled out to all Hyderabad employees, balanced across
-        roles.</li>
-      <li>Themes pitched by <strong>Vijayam Sirikonda</strong> from Sales — sourced from real client pain points.</li>
-    </ul>
-
-  </main>
-
-  <!-- ── TIMELINE EXPLAINER (full-bleed dark) ── -->
-  <div class="explainer" id="timeline">
-    <div class="explainer-inner">
-      <h4>The Run of Play</h4>
-      <h3 class="exp-title">24 Hours, Three Marks</h3>
-      <p class="exp-sub">From kickoff to final pitch, the weekend is paced by milestone checkpoints. Each Mark resets
-        the room — teams present, judges score, the field narrows.</p>
-
-      <div class="timeline">
-
-        <div class="tl-row">
-          <div class="tl-time">9:00 AM<span class="day">Saturday</span></div>
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-title">Kickoff <span class="tl-mark">Hour 0</span></div>
-            <div class="tl-desc">Teams revealed. Topics released, sourced from Vijayam's market pain points. Briefing.
-              The clock starts.</div>
-          </div>
+      <div class="domains-grid">
+        <div class="domain-card">
+          <span class="icon">📊</span>
+          <div class="name">Financial Planning &amp; Analysis</div>
+          <span class="abbr">FP&amp;A</span>
+          <div class="desc">Automated variance analysis, forecasting tools, and narrative reporting engines.</div>
         </div>
 
-        <div class="tl-row">
-          <div class="tl-time">1:00 PM<span class="day">Saturday</span></div>
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-title">Lunch at office <span class="tl-mark">Hour 4</span></div>
-            <div class="tl-desc">Teams in flow. First version of the idea forming. Last meal before the first cut.</div>
-          </div>
+        <div class="domain-card">
+          <span class="icon">📦</span>
+          <div class="name">Procurement</div>
+          <span class="abbr">Sourcing &amp; Spend</span>
+          <div class="desc">Contract intelligence, vendor spend analytics, and compliance and risk-triage tools.</div>
         </div>
 
-        <div class="tl-row major">
-          <div class="tl-time">5:00 PM<span class="day">Saturday</span></div>
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-title">Mark 1 — Evaluation <span class="tl-mark">Hour 8</span></div>
-            <div class="tl-desc">First checkpoint. Problem clarity, direction, originality. Elimination round — teams
-              that aren't going anywhere stop here.</div>
-          </div>
+        <div class="domain-card">
+          <span class="icon">🏦</span>
+          <div class="name">Banking &amp; Financial Services</div>
+          <span class="abbr">BFSI</span>
+          <div class="desc">Regulatory filing copilots, fraud &amp; reconciliation dashboards, and risk engines.</div>
         </div>
 
-        <div class="tl-row">
-          <div class="tl-time">Evening<span class="day">Saturday</span></div>
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-title">Dinner at office <span class="tl-mark">Hour 12</span></div>
-            <div class="tl-desc">Qualified teams only. Fuel for the long night. The room thins, the survivors lock in.
-            </div>
-          </div>
+        <div class="domain-card">
+          <span class="icon">🩺</span>
+          <div class="name">Healthcare &amp; Life Sciences</div>
+          <span class="abbr">HLS</span>
+          <div class="desc">Regulatory compliance trackers, clinical data intelligence, and supply chain visibility apps.</div>
         </div>
-
-        <div class="tl-row major">
-          <div class="tl-time">1:00 AM<span class="day">Sunday</span></div>
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-title">Mark 2 — Evaluation <span class="tl-mark">Hour 16</span></div>
-            <div class="tl-desc">Second checkpoint. Working version of something must exist. Elimination round.
-              Cross-functional contribution starts to matter visibly here.</div>
-          </div>
-        </div>
-
-        <div class="tl-row final">
-          <div class="tl-time">9:00 AM<span class="day">Sunday</span></div>
-          <div class="tl-dot"></div>
-          <div class="tl-body">
-            <div class="tl-title">Mark 3 — Final pitches <span class="tl-mark">Hour 24</span></div>
-            <div class="tl-desc">Final submissions and presentations. Working prototype, live demo, full evaluation
-              across all 5 dimensions. The winner is the team that genuinely went 0→1.</div>
-          </div>
-        </div>
-
       </div>
     </div>
-  </div>
+  </section>
 
-  <main class="article" style="margin-top:0;">
+  <section class="layout-evaluation" id="evaluation">
+    <div>
+      <h4>How You're Scored</h4>
+      <h3>The Evaluation Framework</h3>
+      <p>Three dimensions. None dominant.</p>
 
-    <p>The Marks are deliberate. They are not arbitrary stage-gates — they are the rhythm that keeps a 24-hour event
-      from collapsing into a sleep-deprived blur. <strong>Mark 1 at hour 8</strong> tests whether the idea is real.
-      <strong>Mark 2 at hour 16</strong> tests whether it's getting built. <strong>Mark 3 at hour 24</strong> tests
-      whether the team can sell it.
-    </p>
-
-    <!-- Open questions inline -->
-    <div class="callout">
-      <span class="callout-label">⚠ Open Questions on Format — for Management</span>
-      <div class="oq-list">
-        <div class="oq-item"><span class="oq-q">Q1</span><span><strong>Elimination at Mark 1 &amp; 2 — cut or
-              cumulative?</strong> Are teams eliminated, or does everyone continue with cumulative scoring? Cumulative
-            keeps energy up; elimination raises stakes.</span></div>
-        <div class="oq-item"><span class="oq-q">Q2</span><span><strong>Final output — demo, deck, or link?</strong> At 9
-            AM Sunday, do teams give a live demo, a presentation, or submit a working prototype URL?</span></div>
-        <div class="oq-item"><span class="oq-q">Q3</span><span><strong>Judges panel.</strong> Who evaluates at each
-            Mark? Is Vijayam one of them at all 3? Is upper management present at the final? Same panel throughout, or a
-            rotating set?</span></div>
-        <div class="oq-item"><span class="oq-q">Q4</span><span><strong>Tools allowed.</strong> No restrictions,
-            including AI? </span></div>
-        <div class="oq-item"><span class="oq-q">Q5</span><span><strong>Team size — 4 or 5?</strong> Cross-functional
-            structure works at both, but the final number affects total team count and judging load.</span></div>
+      <div class="eval-principle">
+        The single most important design principle in INVENT'26: <strong>no single dimension wins on its own.</strong> A team with zero working code but a brilliant, well-argued, high-impact idea can still beat a team that shipped something shallow. A team with the slickest demo can still lose to a team that genuinely thought harder about the problem.
       </div>
-    </div>
 
+      <div class="scoring-split">
+        <div class="split-label">Who's Judging You</div>
+        <div class="split-bar">
+          <div class="split-half ai">
+            <div class="split-percent">50%</div>
+            <div class="split-who">🤖 AI Evaluation</div>
+            <div class="split-what">Automated scoring against the criteria — objective, consistent, and impossible to charm.</div>
+            <div class="split-plus">+</div>
+          </div>
+          <div class="split-half human">
+            <div class="split-percent">50%</div>
+            <div class="split-who">👥 Human Judges</div>
+            <div class="split-what">A panel of Sales, Engineering and Leadership — the humans who'll actually take this to clients.</div>
+          </div>
+        </div>
+      </div>
 
-    <!-- SECTION 4: EVALUATION FRAMEWORK -->
-    <h2 id="evaluation">The Evaluation Framework — Five Dimensions, None Dominant</h2>
-
-    <p>The single most important design principle in INIT(0→1) is this: <strong>no single dimension wins on its
-        own.</strong> A team with zero working code but a brilliant, well-argued, high-impact idea can still beat a team
-      that shipped something shallow. A team with the slickest demo can still lose to a team that genuinely thought
-      harder about the problem.</p>
-
-    <p>This is deliberate departure from typical hackathon scoring, which over-rewards whatever happens to compile by
-      Sunday morning. Compiling is a low bar; <em>creating something worth compiling</em> is a much higher one. The
-      framework below makes that explicit.</p>
-
-  </main>
-
-  <!-- ── EVALUATION FRAMEWORK (full-bleed dark with cards) ── -->
-  <div class="explainer" style="background:#0f1923;">
-    <div class="explainer-inner">
-      <h4>5-Dimension Evaluation Framework</h4>
-      <h3 class="exp-title">No single dimension dominates</h3>
-      <p class="exp-sub">A brilliant idea can beat a shallow prototype. A working prototype can beat a vague concept. A
-        team that pitches well can beat one that mumbles. The five dimensions weigh together — the final weightages are
-        for management to set.</p>
-
-      <div class="dim-grid">
-
-        <div class="dim-card d-green">
+      <div class="dimensions-grid">
+        <div class="dim-card">
           <div class="dim-head">
-            <div class="dim-name">Problem &amp; Originality</div>
-            <div class="dim-tag">Weightage: TBD</div>
+            <div class="dim-num">Dimension 1</div>
+            <div class="dim-weight">Weightage: TBD</div>
           </div>
-          <div class="dim-desc">Is this a genuine 0→1 idea? Does it address a real, unsolved pain point — not something
-            already being done inside or outside the company?</div>
-          <div class="dim-criteria">
-            <div class="dim-chip">Is the problem real &amp; validated?</div>
-            <div class="dim-chip">Is the idea truly new (0→1)?</div>
-            <div class="dim-chip">Is the scope well defined?</div>
-          </div>
+          <div class="dim-title">Problem &amp; Originality</div>
+          <div class="dim-desc">Is the problem worth solving? Is the framing sharp and specific to the GCC domain — or is this just a rehash of what everyone else already built? Judges reward teams that pick a real pain point and attack it from a non-obvious angle.</div>
         </div>
 
-        <div class="dim-card d-blue">
+        <div class="dim-card">
           <div class="dim-head">
-            <div class="dim-name">Business Impact</div>
-            <div class="dim-tag">Weightage: TBD</div>
+            <div class="dim-num">Dimension 2</div>
+            <div class="dim-weight">Weightage: TBD</div>
           </div>
-          <div class="dim-desc">If this solution were implemented tomorrow, what would the measurable impact be?
-            Revenue, efficiency, client acquisition, cost saving?</div>
-          <div class="dim-criteria">
-            <div class="dim-chip">Scale of impact (team, org, market)</div>
-            <div class="dim-chip">Measurability of outcome</div>
-            <div class="dim-chip">Alignment with Gramener's goals</div>
-          </div>
+          <div class="dim-title">Solution &amp; Implementation</div>
+          <div class="dim-desc">How well is the solution designed and executed? <strong>A working prototype scores here</strong> — but so does a deeply reasoned architecture with a clear build path.</div>
         </div>
 
-        <div class="dim-card d-orange">
+        <div class="dim-card">
           <div class="dim-head">
-            <div class="dim-name">Solution &amp; Implementation</div>
-            <div class="dim-tag">Weightage: TBD</div>
+            <div class="dim-num">Dimension 3</div>
+            <div class="dim-weight">Weightage: TBD</div>
           </div>
-          <div class="dim-desc">How well is the solution designed and executed? A working prototype scores here — but so
-            does a deeply reasoned architecture with a clear build path.</div>
-          <div class="dim-criteria">
-            <div class="dim-chip">Soundness of the approach</div>
-            <div class="dim-chip">Working demo / prototype</div>
-            <div class="dim-chip">Tech &amp; data choices made</div>
-          </div>
+          <div class="dim-title">Persuasion &amp; Pitch Quality</div>
+          <div class="dim-desc">Did the team convince the judges? Storytelling, clarity, confidence, and how well they sold the idea — the <strong>"effort to convince us"</strong> dimension.</div>
         </div>
-
-        <div class="dim-card d-purple">
-          <div class="dim-head">
-            <div class="dim-name">Persuasion &amp; Pitch Quality</div>
-            <div class="dim-tag">Weightage: TBD</div>
-          </div>
-          <div class="dim-desc">Did the team convince the judges? Storytelling, clarity, confidence, and how well they
-            sold the idea — the "effort to convince us" dimension.</div>
-          <div class="dim-criteria">
-            <div class="dim-chip">Clarity of the narrative</div>
-            <div class="dim-chip">Strength of the case made</div>
-            <div class="dim-chip">Handling Q&amp;A from judges</div>
-          </div>
-        </div>
-
-        <div class="dim-card d-amber">
-          <div class="dim-head">
-            <div class="dim-name">Cross-Functional Collaboration</div>
-            <div class="dim-tag">Weightage: TBD</div>
-          </div>
-          <div class="dim-desc">Did the team truly leverage every role — or did the engineers do everything while the
-            others watched? The output should reflect multiple POVs.</div>
-          <div class="dim-criteria">
-            <div class="dim-chip">Visible contribution of each role</div>
-            <div class="dim-chip">Business + tech perspective merged</div>
-            <div class="dim-chip">Team dynamics &amp; synergy</div>
-          </div>
-        </div>
-
       </div>
 
-      <div
-        style="max-width:880px;margin:2rem auto 0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:1.1rem 1.4rem;color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.65;">
-        <strong style="color:#fff;">Weightages total to 100.</strong> Final distribution to be decided by upper
-        management. A working prototype does <em>not</em> automatically outrank a brilliantly argued, high-impact
-        concept — that's the whole point.
-      </div>
-
-    </div>
-  </div>
-
-  <main class="article" style="margin-top:0;">
-
-    <div class="callout">
-      <span class="callout-label">⚠ Open Questions on Evaluation</span>
-      <div class="oq-list">
-        <div class="oq-item"><span class="oq-q">Q6</span><span><strong>Do all 5 dimensions apply at every Mark, or does
-              the focus shift?</strong> For example, Mark 1 at hour 8 might focus on problem clarity and direction,
-            while Mark 3 at hour 24 is the full picture.</span></div>
-        <div class="oq-item"><span class="oq-q">Q7</span><span><strong>Final weightages — who sets them?</strong> The
-            framework deliberately leaves these open. A single VP, a panel vote, or a published default before the
-            event?</span></div>
-        <div class="oq-item"><span class="oq-q">Q8</span><span><strong>Human judges or an AI scoring layer?</strong>
-            Could a structured LLM-based rubric complement human judges for consistency across teams?</span></div>
+      <div class="protip-callout">
+        <span class="protip-label">💡 Pro Tip — Free Points</span>
+        <div class="protip-title">Add a "Guided Tour" to your demo</div>
+        <p>One useful feature we're seeing in recent demos is a <strong>Guided Tour</strong>. From here, it's a small step to add audio. Claude Code, Codex, and other coding agents can add this easily with a one-line prompt — something like:</p>
+        <div class="prompt-block">
+          "Add a guided tour to this application, with timed transitions, visible simulated mouse clicks, and keyboard typing as required, to showcase key features. Explain using SPECIFIC insights at each step, showcasing why this helps."
+        </div>
+        <p class="protip-kicker">In short: <strong>ask your teams to add a Guided Tour to their demos.</strong> Low effort, high impact — and it directly boosts your <em>Persuasion &amp; Pitch Quality</em> score.</p>
       </div>
     </div>
+  </section>
 
-    <hr class="section-rule">
+  <section class="layout-submission" id="submission">
+    <div>
+      <h4>Handing It In</h4>
+      <h3>The Submission</h3>
+      <p>Ship it. Prove it. Send us the link. That's the entire spec.</p>
 
-    <!-- SECTION 5: SIDE QUESTS -->
-    <h2 id="sidequests">Side Quests — The Secret Weapon</h2>
-
-    <p>The single biggest failure mode of an overnight hackathon is not bad ideas. It's the <strong>2 AM energy
-        crash.</strong> Around that hour, every team hits the same wall — the room goes quiet, screens dim, the original
-      spark from kickoff feels distant. Most events lose their best people right there.</p>
-
-    <p>INIT(0→1) builds in a counter. <strong>Side Quests</strong> — bonus point challenges that run in parallel to the
-      main hackathon throughout the 24 hours. Completely optional, completely random, completely fun. Announced on the
-      spot, no preparation, no penalty for skipping.</p>
-
-    <p>The points sit on top of the main evaluation. They don't replace it — a strong side-quest run cannot win the
-      hackathon on its own — but they can be the tiebreaker in a close final. More importantly, they keep the room alive
-      when energy is at its lowest.</p>
-
-    <blockquote>
-      The side quests are the secret weapon. They solve the biggest problem with overnight hackathons — the 2 AM energy
-      crash. Push-ups, MonkeyType, helping other teams — that keeps the room alive and human.
-      <cite>— Why Side Quests Matter</cite>
-    </blockquote>
-
-  </main>
-
-  <!-- ── SIDE QUESTS EXPLAINER (full-bleed dark) ── -->
-  <div class="explainer" style="background:#0d0a18;">
-    <div class="explainer-inner">
-      <h4>Side Quest Categories</h4>
-      <h3 class="exp-title">Bonus points across the 24 hours</h3>
-      <p class="exp-sub">Five categories. A dedicated quest-master tracks claims and verifies them throughout the night.
-        Points stack on top of main evaluation scores.</p>
-
-      <div class="quest-grid">
-
-        <div class="quest-card q-physical">
-          <div class="quest-head">
-            <div class="quest-icon">⚡</div>
-            <div class="quest-name">Physical challenges</div>
-            <div class="quest-sub">Keep the energy alive</div>
-          </div>
-          <div class="quest-items">
-            <div class="quest-item"><span class="quest-item-title">30 push-ups</span><span class="quest-item-desc">Any
-                team member, verified on the spot</span></div>
-            <div class="quest-item"><span class="quest-item-title">60-second plank</span><span
-                class="quest-item-desc">Whole team planks together</span></div>
-            <div class="quest-item"><span class="quest-item-title">3 AM survivor badge</span><span
-                class="quest-item-desc">Whole team still present at 3 AM</span></div>
-            <div class="quest-item"><span class="quest-item-title">Office lap sprint</span><span
-                class="quest-item-desc">Fastest team member around the floor</span></div>
+      <div class="submission-panel">
+        <div class="submission-rule">
+          <div class="num">1</div>
+          <div class="body">
+            <div class="rule-title">Drop a working link into the Google Form</div>
+            <div class="rule-desc">Submit <strong>one link</strong> to the official Google Form before the 18-hour timer hits zero. When the judges click it, it must <strong>open, load, and work</strong> — no local demos, no "it works on my machine", no zip files.</div>
           </div>
         </div>
 
-        <div class="quest-card q-tech">
-          <div class="quest-head">
-            <div class="quest-icon">⌨</div>
-            <div class="quest-name">Tech skill challenges</div>
-            <div class="quest-sub">For the nerds in the room</div>
-          </div>
-          <div class="quest-items">
-            <div class="quest-item"><span class="quest-item-title">MonkeyType 100 WPM</span><span
-                class="quest-item-desc">Screenshot required as proof</span></div>
-            <div class="quest-item"><span class="quest-item-title">First GitHub commit</span><span
-                class="quest-item-desc">First team to push a public repo</span></div>
-            <div class="quest-item"><span class="quest-item-title">Best prompt award</span><span
-                class="quest-item-desc">Wildest LLM prompt that actually worked</span></div>
-            <div class="quest-item"><span class="quest-item-title">Live demo in under 60s</span><span
-                class="quest-item-desc">Speed-pitch your idea in one minute</span></div>
+        <div class="submission-rule">
+          <div class="num">2</div>
+          <div class="body">
+            <div class="rule-title">Use whatever AI tools or deployment services you need</div>
+            <div class="rule-desc">Cursor, Claude, ChatGPT, Copilot, Windsurf, Bolt, v0, Lovable, Replit, Vercel, Netlify, Cloudflare Pages, Hugging Face Spaces, Streamlit Cloud — <strong>use all of them, use none of them, we don't care</strong>. The only thing being judged is what shows up when the link loads.</div>
           </div>
         </div>
 
-        <div class="quest-card q-collab">
-          <div class="quest-head">
-            <div class="quest-icon">♥</div>
-            <div class="quest-name">Collaboration bonus</div>
-            <div class="quest-sub">The spirit of INIT(0→1)</div>
-          </div>
-          <div class="quest-items">
-            <div class="quest-item"><span class="quest-item-title">Help another team</span><span
-                class="quest-item-desc">Verified by the team you helped</span></div>
-            <div class="quest-item"><span class="quest-item-title">Knowledge share session</span><span
-                class="quest-item-desc">Teach something useful to the room</span></div>
-            <div class="quest-item"><span class="quest-item-title">Cross-team feedback</span><span
-                class="quest-item-desc">Give structured feedback to another team</span></div>
-            <div class="quest-item"><span class="quest-item-title">The Good Samaritan</span><span
-                class="quest-item-desc">Help 3 different teams in 24 hours</span></div>
-          </div>
-        </div>
-
-        <div class="quest-card q-wild">
-          <div class="quest-head">
-            <div class="quest-icon">✦</div>
-            <div class="quest-name">Wildcard &amp; creative</div>
-            <div class="quest-sub">Announced on the spot — no prep</div>
-          </div>
-          <div class="quest-items">
-            <div class="quest-item"><span class="quest-item-title">Best team name story</span><span
-                class="quest-item-desc">Most creative explanation of team name</span></div>
-            <div class="quest-item"><span class="quest-item-title">Meme of the night</span><span
-                class="quest-item-desc">Funniest meme about their own project</span></div>
-            <div class="quest-item"><span class="quest-item-title">Surprise trivia</span><span
-                class="quest-item-desc">Random data/AI trivia — first to answer wins</span></div>
-            <div class="quest-item"><span class="quest-item-title">Best desk setup</span><span
-                class="quest-item-desc">Most impressive / creative workspace</span></div>
-          </div>
-        </div>
-
-        <div class="quest-card q-milestone">
-          <div class="quest-head">
-            <div class="quest-icon">⏱</div>
-            <div class="quest-name">Milestone unlocks</div>
-            <div class="quest-sub">Time-locked bonus moments</div>
-          </div>
-          <div class="quest-items">
-            <div class="quest-item"><span class="quest-item-title">Hour 1 declaration</span><span
-                class="quest-item-desc">First team to post their idea publicly</span></div>
-            <div class="quest-item"><span class="quest-item-title">Midnight checkpoint</span><span
-                class="quest-item-desc">All members present at midnight check-in</span></div>
-            <div class="quest-item"><span class="quest-item-title">Pivot badge</span><span class="quest-item-desc">Team
-                that changed direction &amp; recovered</span></div>
-            <div class="quest-item"><span class="quest-item-title">Early bird bonus</span><span
-                class="quest-item-desc">First team to submit final output before 9 AM</span></div>
-          </div>
-        </div>
-
-      </div>
-
-      <div
-        style="max-width:920px;margin:2rem auto 0;background:rgba(255,255,255,0.04);border:1px solid rgba(255,255,255,0.1);padding:1.1rem 1.4rem;color:rgba(255,255,255,0.65);font-size:0.9rem;line-height:1.65;">
-        <strong style="color:#fff;">Side quest points are bonus.</strong> They cannot replace a weak main submission —
-        but in a close final, they absolutely can be the tiebreaker. A dedicated <em>quest-master</em> (1 person,
-        ideally from outside the participating teams) tracks and verifies all claims throughout the night.
-      </div>
-
-    </div>
-  </div>
-
-  <main class="article" style="margin-top:0;">
-
-    <!-- SECTION 6: AWARDS -->
-    <h2 id="awards">Awards — Built for Story</h2>
-
-    <p>If the evaluation framework is how teams are scored, the awards are how they're <em>remembered.</em> Single
-      trophy at the end. Single team's name on it. That's a thin event. What we want is a room where, by 10 AM Sunday, a
-      dozen teams walk away with something — a story, a badge, a thing to put on LinkedIn.</p>
-
-    <p>The award categories below cover the spectrum: the overall winner, the strongest in each dimension of judging,
-      the spirit awards, and the side-quest king. They are written so that there's a meaningful award for every kind of
-      team that walks in.</p>
-
-    <div class="award-section">
-      <div class="award-section-label">Main Awards</div>
-      <div class="award-grid">
-        <div class="award-card gold">
-          <div class="award-title"><span class="award-marker"></span>INIT Champion</div>
-          <div class="award-desc">Overall winner. Best across all 5 dimensions. The team that truly went from 0 to 1.
-          </div>
-        </div>
-        <div class="award-card silver">
-          <div class="award-title"><span class="award-marker"></span>First Commit</div>
-          <div class="award-desc">Runner-up. Second best overall — strong across the board, just edged out.</div>
+        <div class="submission-cheeky">
+          <span class="cheeky-label">A gentle nudge on what counts as "a link"</span>
+          A workable link is anything a judge can click without begging IT for access. A <code>Claude Artifact</code>, a <code>Gemini Gem</code>, an <code>AI Studio</code> share URL, a scrappy <code>Vercel</code> deploy, a <code>Streamlit</code> app duct-taped together at 3 AM, a <code>Hugging Face Space</code>, or literally a <code>&lt;canvas&gt;</code> you drew in a browser tab — all fair game. If it loads and does the thing, it counts. If it needs a Zoom call and your laptop to demo, it doesn't.
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="award-section">
-      <div class="award-section-label">Idea &amp; Impact</div>
-      <div class="award-grid">
-        <div class="award-card idea">
-          <div class="award-title"><span class="award-marker"></span>North Star</div>
-          <div class="award-desc">Highest business impact. If one idea had to be built next Monday, it's this one.</div>
-        </div>
-        <div class="award-card idea">
-          <div class="award-title"><span class="award-marker"></span>The Blueprint</div>
-          <div class="award-desc">Best concept or idea — even if not fully built. The vision was undeniable.</div>
-        </div>
-        <div class="award-card idea">
-          <div class="award-title"><span class="award-marker"></span>Zero Day</div>
-          <div class="award-desc">Most original 0→1 idea. Nobody has thought of this before — inside or outside
-            Gramener.</div>
-        </div>
-        <div class="award-card build">
-          <div class="award-title"><span class="award-marker"></span>Moon Shot</div>
-          <div class="award-desc">Most ambitious idea. Swung the biggest — even if it didn't fully land.</div>
-        </div>
-      </div>
+  <footer>
+    <div>
+      <p>Official Participant Guidelines for INVENT' 26, the tech track for the Gramener Annual Day event, July 2026.</p>
+      <p>INVENT' 26 · Gramener Internal</p>
     </div>
-
-    <div class="award-section">
-      <div class="award-section-label">Build &amp; Execution</div>
-      <div class="award-grid">
-        <div class="award-card build">
-          <div class="award-title"><span class="award-marker"></span>Ship It</div>
-          <div class="award-desc">Best working product or prototype. Something real, live, and demonstrable at 9 AM.
-          </div>
-        </div>
-        <div class="award-card build">
-          <div class="award-title"><span class="award-marker"></span>Full Stack</div>
-          <div class="award-desc">Best technical execution. Cleanest architecture, smartest use of tools and AI.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="award-section">
-      <div class="award-section-label">Pitch &amp; Storytelling</div>
-      <div class="award-grid">
-        <div class="award-card pitch">
-          <div class="award-title"><span class="award-marker"></span>The Pitch</div>
-          <div class="award-desc">Best presentation and persuasion. The judges were sold — even the skeptical ones.
-          </div>
-        </div>
-        <div class="award-card pitch">
-          <div class="award-title"><span class="award-marker"></span>Data Story</div>
-          <div class="award-desc">Best use of data to tell a compelling story. Very Gramener — this one's in the DNA.
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div class="award-section">
-      <div class="award-section-label">Spirit &amp; Culture</div>
-      <div class="award-grid">
-        <div class="award-card spirit">
-          <div class="award-title"><span class="award-marker"></span>The Samaritan</div>
-          <div class="award-desc">Most collaborative team. Helped others, shared knowledge, lifted the whole room.</div>
-        </div>
-        <div class="award-card spirit">
-          <div class="award-title"><span class="award-marker"></span>The Pivot</div>
-          <div class="award-desc">Team that changed direction mid-hackathon and recovered brilliantly.</div>
-        </div>
-        <div class="award-card spirit">
-          <div class="award-title"><span class="award-marker"></span>Night Owl</div>
-          <div class="award-desc">Most resilient team. All members present and pushing at every Mark — no dropouts.
-          </div>
-        </div>
-        <div class="award-card spirit">
-          <div class="award-title"><span class="award-marker"></span>People's Choice</div>
-          <div class="award-desc">Voted by all participants — not judges. The team everyone else loved the most.</div>
-        </div>
-      </div>
-    </div>
-
-    <div class="award-section">
-      <div class="award-section-label">Side Quest</div>
-      <div class="award-grid">
-        <div class="award-card gold">
-          <div class="award-title"><span class="award-marker"></span>Quest Master</div>
-          <div class="award-desc">Most side-quest points accumulated across the 24 hours. The chaos champion.</div>
-        </div>
-        <div class="award-card pitch">
-          <div class="award-title"><span class="award-marker"></span>Meme of the Night</div>
-          <div class="award-desc">Best meme created during the hackathon. Crowd voted. Purely for glory.</div>
-        </div>
-      </div>
-    </div>
-
-    <!-- SECTION 7: ROI -->
-    <h2 id="roi">The ROI — What Upper Management Actually Gets</h2>
-
-    <p>Every event has a budget question behind it. The budget question for INIT(0→1) is unusually easy to answer:
-      <strong>the cost is near-zero.</strong> The office is paid for. The people are employed. The food was already in
-      the Rhapsody budget. The differentiator is one weekend, an SVP's hour to pitch themes, and a small panel of
-      judges.
-    </p>
-
-    <p>What comes back, in exchange, is a list that is hard to manufacture any other way:</p>
-
-    <ul>
-      <li><strong>Working prototypes</strong> sourced from real client pain points, surfaced by Sales — not theoretical
-        R&amp;D.</li>
-      <li><strong>Cross-functional muscle memory.</strong> A marketer and a data scientist who have shipped together
-        once will work together better forever.</li>
-      <li><strong>A signal to the rest of the company</strong> that Gramener takes its own people seriously as
-        inventors, not just executors of client work.</li>
-      <li><strong>Knowledge sharing.</strong> Twenty-four hours of side quests, demos, and pivots is a year's worth of
-        informal learning compressed into a weekend.</li>
-      <li><strong>A pipeline of ideas</strong> for next year's roadmap. Even the losing teams generate insight that's
-        worth capturing.</li>
-      <li><strong>Internal marketing.</strong> Photos, clips, quotes — the story of teams grinding at 2 AM, the side
-        quests, the final pitches — is the thing that sells next year's Rhapsody before it's announced.</li>
-    </ul>
-
-    <blockquote>
-      It's talent-powered innovation, at near-zero cost, solving real pain points sourced directly from Sales — with
-      cross-functional collaboration, knowledge sharing, and working prototypes (not decks) as output.
-      <cite>— The ROI in One Paragraph</cite>
-    </blockquote>
-
-    <p>One more thing worth saying explicitly. <strong>If this goes well in 2026, it doesn't stay a one-time
-        event.</strong> It becomes the thing people look forward to at Rhapsody every year — the Pro-Plus-Max version of
-      Anand's Innovation team, the cinematic <em>Mudhalvan</em> moment where the whole company becomes the Innovation
-      team for one day. That kind of ritual is not built by repeating talks. It's built by one weekend that goes right,
-      and then doing it again.</p>
-
-    <!-- SECTION 8: OPEN LOGISTICS QUESTIONS -->
-    <h2 id="logistics">Open Logistics Questions</h2>
-
-    <p>A handful of practical questions that need a yes/no from management before the registration form goes out:</p>
-
-    <div class="callout">
-      <span class="callout-label">⚠ Open Questions on Logistics</span>
-      <div class="oq-list">
-        <div class="oq-item"><span class="oq-q">Q9</span><span><strong>Prizes &amp; rewards.</strong> What do winners
-            actually get? Cash, certificates, time off, conference budget, internal recognition? The strength of the
-            prize sets the seriousness of the event.</span></div>
-        <div class="oq-item"><span class="oq-q">Q10</span><span><strong>Post-hackathon fate of winning ideas.</strong>
-            Do they get resourced and built? This is a <em>huge</em> motivator. If teams know the winning idea actually
-            ships, the quality of submissions changes.</span></div>
-        <div class="oq-item"><span class="oq-q">Q11</span><span><strong>Office logistics.</strong> Is the Hyderabad
-            office open all night? Seating, power, internet, security confirmed for a 24-hour event?</span></div>
-        <div class="oq-item"><span class="oq-q">Q12</span><span><strong>Internal announcement.</strong> How and when do
-            employees first hear about INIT(0→1)? An all-hands? An email? Vijayam framing the themes live?</span></div>
-        <div class="oq-item"><span class="oq-q">Q13</span><span><strong>Documentation.</strong> Assign 1–2 people to
-            photograph, record short clips, capture quotes. The story of INIT(0→1) is internal marketing gold for next
-            year's edition.</span></div>
-      </div>
-    </div>
-
-  </main>
-
-  <!-- ── Takeaways ── -->
-  <div class="takeaways-band" id="takeaways">
-    <div class="takeaways-inner">
-      <h2>Top Takeaways</h2>
-      <p class="sub">What we want upper management to remember</p>
-      <ul class="takeaway-list">
-        <li class="takeaway-item">
-          <div class="takeaway-num">1</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">INIT(0→1) is the 72-hour client model, inverted on ourselves</div>
-            <div class="takeaway-desc">We already prove our capabilities to clients in 72 hours. This is the 24-hour
-              version, pointed inward. Same engine, half the runtime, applied to our own people.</div>
-          </div>
-        </li>
-        <li class="takeaway-item">
-          <div class="takeaway-num">2</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">Cross-functional teams are non-negotiable</div>
-            <div class="takeaway-desc">Most hackathons are tech echo chambers. Forcing a marketer, a manager, a
-              consultant, and a data scientist to share one problem is how genuinely different ideas surface. This is
-              the structural difference, and it's the smartest decision in the design.</div>
-          </div>
-        </li>
-        <li class="takeaway-item">
-          <div class="takeaway-num">3</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">0→1 is the filter that protects against forgettable output</div>
-            <div class="takeaway-desc">"Build something new" rules out comfortable variants of what we already do. It is
-              a hard filter on purpose. Without it, teams default to safe; with it, they have to invent.</div>
-          </div>
-        </li>
-        <li class="takeaway-item">
-          <div class="takeaway-num">4</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">Themes from Sales make the event commercially serious</div>
-            <div class="takeaway-desc">Vijayam pitches real client pain points. The hackathon stops being abstract play
-              and starts being a 24-hour answer to questions the market is actually asking. The winning ideas have a
-              buyer already.</div>
-          </div>
-        </li>
-        <li class="takeaway-item">
-          <div class="takeaway-num">5</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">A 5-dimension scoring framework — none of them dominant</div>
-            <div class="takeaway-desc">A brilliant idea can beat a shallow prototype. A working build can beat a vague
-              concept. A great pitch can beat a mumbled one. The framework is intellectually honest — and forces teams
-              to be balanced.</div>
-          </div>
-        </li>
-        <li class="takeaway-item">
-          <div class="takeaway-num">6</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">Side quests solve the 2 AM problem</div>
-            <div class="takeaway-desc">The biggest failure mode of overnight events is the energy crash. Push-ups,
-              MonkeyType, "help another team" — these keep the room alive and human. They cost nothing and pay back in
-              stories.</div>
-          </div>
-        </li>
-        <li class="takeaway-item">
-          <div class="takeaway-num">7</div>
-          <div class="takeaway-body">
-            <div class="takeaway-title">Near-zero cost, high-signal output, high-story output</div>
-            <div class="takeaway-desc">The budget is essentially marginal — food, judges' time, prizes. The output is
-              working prototypes from cross-functional teams, an idea pipeline for next year's roadmap, and one
-              weekend's worth of internal-marketing gold that sells Rhapsody '27 before it's announced.</div>
-          </div>
-        </li>
-      </ul>
-    </div>
-  </div>
-
-  <!-- ── Pullquote close ── -->
-  <div class="pullquote">
-    <div class="pullquote-text">"We already prove our capabilities to clients in 72 hours. INIT(0→1) proves our
-      capabilities to ourselves in 24."</div>
-    <div class="pullquote-attr">— The Pitch, In One Line</div>
-  </div>
-
-  <!-- ── Footer ── -->
-  <footer class="footer">
-    <p>Pitch by <strong>Naga Sushanth Kumar</strong> · Associate Data Scientist, Gramener Hyderabad · For Rhapsody '26
-    </p>
-    <p><a href="Stage1.md" target="_blank">Source Notes</a> · <a href="init_evaluation_framework.html"
-        target="_blank">Evaluation Framework</a> · <a href="init_side_quests.html" target="_blank">Side Quests</a> · <a
-        href="init_awards.html" target="_blank">Awards</a></p>
-    <p style="margin-top:0.5rem;font-size:0.62rem;opacity:.5;">A proposal to add a 24-hour internal hackathon to
-      Gramener's annual Rhapsody event. All weightages, prizes, and final logistics to be decided by upper management.
-    </p>
   </footer>
 
   <script>
-    // Reading progress
-    const prog = document.getElementById('progress');
-    window.addEventListener('scroll', () => {
-      const total = document.documentElement.scrollHeight - window.innerHeight;
-      prog.style.width = (window.scrollY / total * 100) + '%';
-    });
+    document.addEventListener('DOMContentLoaded', () => {
+      const checkbox = document.getElementById('confirm-participation');
+      const regBtn = document.getElementById('register-btn');
 
-    // Trigger timeline animation only when scrolled into view (otherwise replay each time)
-    const tlObserver = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.querySelectorAll('.tl-row').forEach(r => {
-            r.style.animationPlayState = 'running';
-          });
-          tlObserver.unobserve(e.target);
-        }
-      });
-    }, { threshold: 0.15 });
-    document.querySelectorAll('.timeline').forEach(t => tlObserver.observe(t));
+      if (checkbox && regBtn) {
+        checkbox.addEventListener('change', (e) => {
+          if (e.target.checked) {
+            regBtn.classList.remove('disabled');
+          } else {
+            regBtn.classList.add('disabled');
+          }
+        });
+      }
+    });
   </script>
 </body>
-
 </html>
